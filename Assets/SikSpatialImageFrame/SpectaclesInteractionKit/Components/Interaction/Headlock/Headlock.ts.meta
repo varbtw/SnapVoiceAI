@@ -1,30 +1,30 @@
 - !<AssetImportMetadata/f4ca1ba0-65f8-4f58-a4bd-b69ed7342bd1>
-  ImporterSettings: !<AssetImporterSettings>
-    {}
   ImportedAssetIds:
     TypeScriptAsset: !<reference> 66989826-a44d-4789-abe1-e68f6ee64644
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 66989826-a44d-4789-abe1-e68f6ee64644
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 5751f875-f67e-491a-aed5-483ece0c2abc
-  PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5751f875-f67e-491a-aed5-483ece0c2abc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<TypeScriptAssetData/5751f875-f67e-491a-aed5-483ece0c2abc>
-  Icon: ""
+  SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: bf3043ec-18c7-4420-96eb-2b3881a57d27
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     _distance: false
     _lockedPitch: false
@@ -42,6 +42,12 @@
     _yawOffsetDegrees: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
     - _distance: !<float> 50.000000
       _xzEnabled: true
@@ -81,5 +87,3 @@
     - '// @input float _yawBufferDegrees {"hint":"How many degrees of leeway along each direction (left/right) before change starts to occur"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"group_end"}'
-  SvgIcon: ""
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

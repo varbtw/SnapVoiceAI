@@ -1,35 +1,31 @@
 - !<AssetCache>
   AssetFiles:
     c403bf42-b482-4aef-8906-13532712a354: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/Rocket_clouds_emit.vfxgraph
-    e39c2cb3-7589-46a8-9aa2-088e261992bc: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/script_39.js
-    091dffa2-3f69-418a-855f-87734a6792dc: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/feedback_39.mat
-    cf8b25f3-0ed2-470a-9ee0-eb8da382c1c6: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/feedback_39.glsl
-    7349b40a-9603-48c4-9e9c-347785ae2101: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/render_39.mat
-    246083df-b2ea-4da1-97e5-0448c4e9dfd8: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/render_39.glsl
-    f2db7ab9-6be9-4661-9cb7-f909e9c4bd1e: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/simulate_39.mat
-    3a1eaa22-b9d1-4a9a-8b4e-ca0aa0072706: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/c852756/System_39/simulate_39.glsl
+    bf3eab8f-91c5-4a79-924a-bbd5075aa468: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/script_39.js
+    567f5b3e-0589-489b-a47f-cf059fecbd4e: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/feedback_39.mat
+    af45c9cf-eee0-47c3-b96c-3a48fbfe7e99: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/feedback_39.glsl
+    cbef80f9-1759-4699-b695-b0350bc4b27b: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/render_39.mat
+    dd462e9d-fd95-4f8c-a324-f15d8bf95555: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/render_39.glsl
+    63b85e9e-1fc4-43c3-b1f3-2ef0cc701632: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/simulate_39.mat
+    228bf0b5-fa60-428d-830a-be80ef4ad7df: 5830691d-46dd-4493-8254-c5bb46b48e86/b85e960e468dfcc762d37b7d1365232c/Data/b5ee535/System_39/simulate_39.glsl
   Assets:
     - !<VFXAsset/c403bf42-b482-4aef-8906-13532712a354>
       PackagePath: ""
-      GraphPath: ""
       Systems:
-        39: !<VFXSystem/40843602-b723-4615-8022-8d65468fdd11>
-          FeedbackMaterial: !<Material/091dffa2-3f69-418a-855f-87734a6792dc>
+        39: !<VFXSystem/780127b2-e907-4d0d-8a0b-2eafaf83776e>
+          FeedbackMaterial: !<Material/567f5b3e-0589-489b-a47f-cf059fecbd4e>
             PackagePath: ""
             PassesInfo:
-              - !<own> 956d59c2-2aec-4e87-920b-402abf2d567e
-            Name: Material_Feedback
-          SimulateMaterial: !<Material/f2db7ab9-6be9-4661-9cb7-f909e9c4bd1e>
+              - !<own> 4a81bb9e-956a-4781-a522-fd5e1eda9ec6
+          SimulateMaterial: !<Material/63b85e9e-1fc4-43c3-b1f3-2ef0cc701632>
             PackagePath: ""
             PassesInfo:
-              - !<own> ea898ece-4ffb-49fd-a8d2-60a1053f970b
-            Name: Material_Simulate
-          RenderMaterial: !<Material/7349b40a-9603-48c4-9e9c-347785ae2101>
+              - !<own> b8b3dbd3-24e6-470e-9bf5-318076abf7db
+          RenderMaterial: !<Material/cbef80f9-1759-4699-b695-b0350bc4b27b>
             PackagePath: ""
             PassesInfo:
-              - !<own> 949873b0-1eac-4124-addd-f411dee38787
-            Name: Material_Render
-          FeedbackPass: !<Pass/cf8b25f3-0ed2-470a-9ee0-eb8da382c1c6>
+              - !<own> 3de0b28f-b929-45aa-bb85-e306096361d0
+          FeedbackPass: !<Pass/af45c9cf-eee0-47c3-b96c-3a48fbfe7e99>
             PackagePath: ""
             DefaultDefines:
               []
@@ -552,7 +548,8 @@
                 []
               PassBindings:
                 []
-          SimulatePass: !<Pass/3a1eaa22-b9d1-4a9a-8b4e-ca0aa0072706>
+              ShaderType: Mesh3d
+          SimulatePass: !<Pass/228bf0b5-fa60-428d-830a-be80ef4ad7df>
             PackagePath: ""
             DefaultDefines:
               []
@@ -1154,7 +1151,8 @@
                   mDefaultVal: 0.500000
                   mValues:
                     []
-          RenderPass: !<Pass/246083df-b2ea-4da1-97e5-0448c4e9dfd8>
+              ShaderType: PostProcessing
+          RenderPass: !<Pass/dd462e9d-fd95-4f8c-a324-f15d8bf95555>
             PackagePath: ""
             DefaultDefines:
               []
@@ -1690,19 +1688,21 @@
                   mDefaultVal: 0.500000
                   mValues:
                     []
-          Script: !<JavaScriptAsset/e39c2cb3-7589-46a8-9aa2-088e261992bc>
+              ShaderType: PostProcessing
+          Script: !<JavaScriptAsset/bf3eab8f-91c5-4a79-924a-bbd5075aa468>
             PackagePath: Manager_Script
             Description: ""
             SvgIcon: ""
-            InternalVersion: 0
+            SetupScript:
+              code: ""
             VersionMajor: 0
             VersionMinor: 0
             VersionPatch: 0
             UpdateCheckpoint: 0
+            ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
             ExportUid: 00000000-0000-0000-0000-000000000000
             ComponentUid: 00000000-0000-0000-0000-000000000000
-            CurrentVisibility: Editable
-            MaxVisibility: Editable
+            PackagePolicy: CanBeUnpacked
             ScriptInputsHidden:
               Material_Simulate: false
               Material_Feedback: false
@@ -1711,9 +1711,18 @@
               usingScreenTransform: false
               screenTransformMat: false
               emitParticle: false
+              pauseParticle: false
+              particleTime: false
+              particlePlayRate: false
+              useFixedDeltaTime: false
+              fixedDeltaTime: false
             ScriptTypesHidden:
               {}
             DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+            Tags:
+              []
+            Attachments:
+              []
             ScriptInputs:
               "": !<property>
                 value:
@@ -1721,13 +1730,18 @@
                   Material_Feedback: !<reference.Material> 00000000-0000-0000-0000-000000000000
                   Material_Render: !<reference.Material> 00000000-0000-0000-0000-000000000000
                   Render_Mesh: !<reference.RenderMesh> 00000000-0000-0000-0000-000000000000
-                  usingScreenTransform: !<float> 0.000000
+                  usingScreenTransform: false
                   screenTransformMat: !<Mat4>
                     0: {x: 1.000000, y: 0.000000, z: 0.000000, w: 0.000000}
                     1: {x: 0.000000, y: 1.000000, z: 0.000000, w: 0.000000}
                     2: {x: 0.000000, y: 0.000000, z: 1.000000, w: 0.000000}
                     3: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
                   emitParticle: false
+                  pauseParticle: false
+                  particleTime: !<float> 0.000000
+                  particlePlayRate: !<float> 0.000000
+                  useFixedDeltaTime: false
+                  fixedDeltaTime: !<float> 0.000000
                 uiData:
                   layout:
                     - Material_Simulate
@@ -1737,6 +1751,11 @@
                     - usingScreenTransform
                     - screenTransformMat
                     - emitParticle
+                    - pauseParticle
+                    - particleTime
+                    - particlePlayRate
+                    - useFixedDeltaTime
+                    - fixedDeltaTime
             ScriptTypes:
               -
                 {}
@@ -1745,7 +1764,7 @@
   FileHash: 738caff7ba659a9503cd8d2b8fbee7fa
   NativePackageItems:
     []
-- !<PassInfo/949873b0-1eac-4124-addd-f411dee38787>
+- !<PassInfo/3de0b28f-b929-45aa-bb85-e306096361d0>
   CachedProperties:
     []
   DepthWrite: true
@@ -1831,7 +1850,100 @@
     Port_Value3_N068:
       typeIdx: 5
       value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    overrideTimeElapsed:
+    "overrideTimeElapsed[0]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[10]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[11]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[12]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[13]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[14]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[15]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[16]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[17]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[18]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[19]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[1]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[20]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[21]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[22]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[23]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[24]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[25]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[26]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[27]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[28]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[29]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[2]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[30]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[31]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[3]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[4]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[5]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[6]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[7]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[8]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[9]":
       typeIdx: 1
       value: 0.000000
     overrideTimeEnabled:
@@ -1993,8 +2105,8 @@
     vfxTargetWidth:
       typeIdx: 0
       value: 0
-  Pass: !<reference> 246083df-b2ea-4da1-97e5-0448c4e9dfd8
-- !<PassInfo/956d59c2-2aec-4e87-920b-402abf2d567e>
+  Pass: !<reference> dd462e9d-fd95-4f8c-a324-f15d8bf95555
+- !<PassInfo/4a81bb9e-956a-4781-a522-fd5e1eda9ec6>
   CachedProperties:
     []
   DepthWrite: false
@@ -2059,8 +2171,8 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
-  Pass: !<reference> cf8b25f3-0ed2-470a-9ee0-eb8da382c1c6
-- !<PassInfo/ea898ece-4ffb-49fd-a8d2-60a1053f970b>
+  Pass: !<reference> af45c9cf-eee0-47c3-b96c-3a48fbfe7e99
+- !<PassInfo/b8b3dbd3-24e6-470e-9bf5-318076abf7db>
   CachedProperties:
     - uReset:
         typeIdx: 0
@@ -2238,7 +2350,100 @@
     overrideTimeDelta:
       typeIdx: 1
       value: 0.000000
-    overrideTimeElapsed:
+    "overrideTimeElapsed[0]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[10]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[11]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[12]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[13]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[14]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[15]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[16]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[17]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[18]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[19]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[1]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[20]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[21]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[22]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[23]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[24]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[25]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[26]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[27]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[28]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[29]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[2]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[30]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[31]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[3]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[4]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[5]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[6]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[7]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[8]":
+      typeIdx: 1
+      value: 0.000000
+    "overrideTimeElapsed[9]":
       typeIdx: 1
       value: 0.000000
     overrideTimeEnabled:
@@ -2642,4 +2847,4 @@
     vfxTargetWidth:
       typeIdx: 0
       value: 0
-  Pass: !<reference> 3a1eaa22-b9d1-4a9a-8b4e-ca0aa0072706
+  Pass: !<reference> 228bf0b5-fa60-428d-830a-be80ef4ad7df

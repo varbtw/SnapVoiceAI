@@ -4,7 +4,15 @@
     - !<own> 0e462c13-5d47-4c2b-bc3f-d912aa4c0f52
 - !<PassInfo/0e462c13-5d47-4c2b-bc3f-d912aa4c0f52>
   CachedProperties:
-    []
+    - overrideTimeDelta:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeElapsed:
+        typeIdx: 1
+        value: 0.000000
+    - overrideTimeEnabled:
+        typeIdx: 0
+        value: 0
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -100,15 +108,4 @@
     cornerRadius:
       typeIdx: 1
       value: 0.050000
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
   Pass: !<reference> c965d282-6604-4033-a256-a72fe93447cc
-  RTCaster: false
-  RTReceiver: false

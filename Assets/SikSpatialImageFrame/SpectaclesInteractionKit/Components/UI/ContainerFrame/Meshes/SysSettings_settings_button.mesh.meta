@@ -4,7 +4,9 @@
   ImporterName: FileMeshImporter
   PrimaryAsset: !<reference> 0b6e3c09-37b2-4fea-9b13-37d94c78dbf5
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
   AssetDataMap:
     {}
   DependentFiles:
@@ -18,5 +20,3 @@
   CompressionSettings: !<SingleCompressionSettings>
     CompressorName: None
     CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}

@@ -4,7 +4,7 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> 14b561ac-8b35-433c-9655-3bb4521a17ba
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
@@ -16,15 +16,15 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ScriptAssetData/080952a3-a73b-41c7-93a9-6b1506f74146>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 06bf918d-4a2e-4f59-961d-74cc44a869a8
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     generatedImage: false
     image: false
@@ -35,21 +35,20 @@
     ttsComponent: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
-    - text: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      image: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      apiKey: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      remoteServiceModule: !<reference.Asset> 00000000-0000-0000-0000-000000000000
-      textInput: !<reference.Text> 00000000-0000-0000-0000-000000000000
+    - textInput: !<reference.Text> 00000000-0000-0000-0000-000000000000
       textOutput: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      interactable: !<reference.Interactable> 00000000-0000-0000-0000-000000000000
+      image: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      generatedImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       ttsComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       interactableObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      containerFrameComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      generatedImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       openAiApiKey: ""
-      spatialImageFrameComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

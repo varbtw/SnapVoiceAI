@@ -4,7 +4,9 @@
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> 4af91f0b-dfd5-4e60-9ae1-e13c6ac3c8f7
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
+  ExtraData:
+    AssetLibraryId: 3pSS78N86NN7AmQn7vDmZy
   AssetDataMap:
     TypeScriptAsset: !<own> 7c22d378-8820-4894-85b8-1b5f42c71395
   DependentFiles:
@@ -12,19 +14,17 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    AssetLibraryId: 3pSS78N86NN7AmQn7vDmZy
 - !<TypeScriptAssetData/7c22d378-8820-4894-85b8-1b5f42c71395>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 2f53a112-f9aa-43cb-96be-5064063bb956
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     filterEnabled: false
     hitIndicator: false
@@ -32,13 +32,19 @@
     objectsToSpawn: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
-    - objectsToSpawn: !<reference.SceneObject[]>
+    - hitIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectsToSpawn: !<reference.SceneObject[]>
         []
-      filterEnabled: false
-      hitIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       objectPreviews: !<reference.SceneObject[]>
         []
+      filterEnabled: false
   ScriptTypes:
     -
       {}
@@ -47,4 +53,3 @@
     - "// @input SceneObject[] objectsToSpawn"
     - "// @input SceneObject[] objectPreviews"
     - // @input bool filterEnabled
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

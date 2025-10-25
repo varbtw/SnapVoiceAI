@@ -9,7 +9,7 @@
     - !<ObjectPrefab/7695719d-651e-438d-a5dc-11357ed1f590>
       PackagePath: ""
       objects:
-        - !<own> d1417027-210b-47f1-ab87-1557abebefe1
+        - !<own> 860dabc1-e042-480c-a67b-2f6c913605fc
       LazyLoading: false
       RetainAssets: true
     - !<FileMesh/1c065281-a141-4c80-8025-2330f333f430>
@@ -84,6 +84,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input2_N043:
           typeIdx: 1
           value: 0.000000
@@ -96,6 +102,9 @@
         Port_Opacity_N405:
           typeIdx: 1
           value: 1.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_RayDirection_N004:
           typeIdx: 4
           value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -1853,7 +1862,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 75f9fac6-14d7-4f36-931a-dd9d3056db75/b9214c8b9c39ae29f0ca7c05b1f7e6bb/Data/.hidden/cfd37fa/Rug.001.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 75f9fac6-14d7-4f36-931a-dd9d3056db75/b9214c8b9c39ae29f0ca7c05b1f7e6bb/Data/.hidden/bf73d32/Rug.001.glsl
       Defines:
         []
       Properties:
@@ -1862,22 +1872,52 @@
   FileHash: 88b4d72b81180a9f54762d5141f025ca
   NativePackageItems:
     []
-- !<SceneObject/03ba6eb9-b03b-423c-8d97-a6d479e574e4>
+- !<SceneObject/2186fb8b-0ff6-4f2c-b205-3e520e957c9e>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> f38e5926-141f-481f-91e3-016a8659a550
+  Components:
+    []
+- !<SceneObject/3e76a7c9-1522-4bc6-b3e0-9eca648b7fe4>
   PrefabRemaps:
     []
   Name: Sketchfab_model
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
-    - !<own> ac66aecb-902a-446b-9b47-f20c58e4a474
+    - !<own> c30607b5-0322-4c56-8999-fcf779c183ca
   Components:
     []
-- !<RenderMeshVisual/18188806-00c4-476f-884a-75ac51efb7b9>
+- !<SceneObject/43b3d17e-a877-4d1a-841f-c567cf910c64>
+  PrefabRemaps:
+    []
+  Name: GLTF_SceneRootNode
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> a1efcf78-3abd-4305-86ec-565f3fd16f8a
+  Components:
+    []
+- !<RenderMeshVisual/4b44e806-1652-4596-a61f-dd96573f1f38>
   PrefabRemaps:
     []
   Name: Object_0
@@ -1897,161 +1937,91 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<AnimationPlayer/43cfc79a-75e4-4db5-852b-7bf7d353e633>
+- !<SceneObject/860dabc1-e042-480c-a67b-2f6c913605fc>
   PrefabRemaps:
-    []
-  Name: component_1
-  Enabled: true
-  Autoplay: true
-  ClipRangeType: Frames
-  AnimationClips:
-    []
-- !<SceneObject/69f95d28-d3aa-484b-89d3-bcf1d320da6d>
-  PrefabRemaps:
-    []
-  Name: Scenes
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> 893da269-6883-48fc-8d5d-16f7cc2ea1da
-  Components:
-    []
-- !<SceneObject/893da269-6883-48fc-8d5d-16f7cc2ea1da>
-  PrefabRemaps:
-    []
-  Name: Sketchfab_Scene
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> 03ba6eb9-b03b-423c-8d97-a6d479e574e4
-  Components:
-    - !<own> 43cfc79a-75e4-4db5-852b-7bf7d353e633
-- !<SceneObject/903b748a-5708-4c0e-a005-fa80484e2671>
-  PrefabRemaps:
-    []
-  Name: Rug_2
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: -0.117155, y: 0.013023, z: -0.031621}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 0.500000, y: 1.000000, z: 0.955000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> e9d786ea-370c-42ca-a51e-315e639cab6b
-  Components:
-    []
-- !<SceneObject/ac66aecb-902a-446b-9b47-f20c58e4a474>
-  PrefabRemaps:
-    []
-  Name: root
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> f6cf3d71-2b9e-4fc2-91f1-c0ff1f2dd848
-  Components:
-    []
-- !<SceneObject/d1417027-210b-47f1-ab87-1557abebefe1>
-  PrefabRemaps:
-    []
+    - 2186fb8b-0ff6-4f2c-b205-3e520e957c9e: 2186fb8b-0ff6-4f2c-4dfa-c1adf16a8361
+    - 3e76a7c9-1522-4bc6-b3e0-9eca648b7fe4: 3e76a7c9-1522-4bc6-4c1f-61359b74801b
+    - 43b3d17e-a877-4d1a-841f-c567cf910c64: 43b3d17e-a877-4d1a-7be0-3a98306ef39b
+    - 4b44e806-1652-4596-a61f-dd96573f1f38: 4b44e806-1652-4596-59e0-2269a8c0e0c7
+    - 860dabc1-e042-480c-a67b-2f6c913605fc: 860dabc1-e042-480c-5984-d0936ec9fa03
+    - 9de85c2c-4730-4577-aa51-b7f1f0a9b6fa: 9de85c2c-4730-4577-55ae-480e0f564905
+    - a1efcf78-3abd-4305-86ec-565f3fd16f8a: a1efcf78-3abd-4305-7913-a9a0c02e9075
+    - c30607b5-0322-4c56-8999-fcf779c183ca: c30607b5-0322-4c56-7666-0308863e7c35
+    - f38e5926-141f-481f-91e3-016a8659a550: f38e5926-141f-481f-6e1c-fe9579a65aaf
   Name: Boho_rug
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
   Children:
-    - !<own> 69f95d28-d3aa-484b-89d3-bcf1d320da6d
+    - !<own> 2186fb8b-0ff6-4f2c-b205-3e520e957c9e
   Components:
     []
-- !<SceneObject/e9d786ea-370c-42ca-a51e-315e639cab6b>
+- !<SceneObject/9de85c2c-4730-4577-aa51-b7f1f0a9b6fa>
   PrefabRemaps:
     []
   Name: Object_4
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 18188806-00c4-476f-884a-75ac51efb7b9
-- !<SceneObject/f6cf3d71-2b9e-4fc2-91f1-c0ff1f2dd848>
+    - !<own> 4b44e806-1652-4596-a61f-dd96573f1f38
+- !<SceneObject/a1efcf78-3abd-4305-86ec-565f3fd16f8a>
   PrefabRemaps:
     []
-  Name: GLTF_SceneRootNode
+  Name: Rug_2
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.117155, y: 0.013023, z: -0.031621}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.500000, y: 1.000000, z: 0.955000}
+    HasSegmentScaleCompensation: false
   Children:
-    - !<own> 903b748a-5708-4c0e-a005-fa80484e2671
+    - !<own> 9de85c2c-4730-4577-aa51-b7f1f0a9b6fa
+  Components:
+    []
+- !<SceneObject/c30607b5-0322-4c56-8999-fcf779c183ca>
+  PrefabRemaps:
+    []
+  Name: root
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 43b3d17e-a877-4d1a-841f-c567cf910c64
+  Components:
+    []
+- !<SceneObject/f38e5926-141f-481f-91e3-016a8659a550>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3e76a7c9-1522-4bc6-b3e0-9eca648b7fe4
   Components:
     []
 - !<PassInfo/fe4c21a8-481d-4b90-8d68-16aaeeb1b0ee>
   CachedProperties:
-    - Port_AO_N405:
-        typeIdx: 4
-        value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    - Port_Depth_N004:
-        typeIdx: 1
-        value: 1.000000
-    - Port_FinalColor1_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor2_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor3_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_GSplatPointSize_N004:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Input2_N043:
-        typeIdx: 1
-        value: 0.000000
-    - Port_Input2_N062:
-        typeIdx: 1
-        value: 0.000000
-    - Port_RayDirection_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 1.000000, z: 0.000000}
-    - Port_RayOrigin_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_WorldNormal_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 1.000000, z: 0.000000}
-    - Port_WorldPosition_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_WorldTangent_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 1.000000}
     - alpha:
         typeIdx: 1
         value: 0.000000
@@ -2086,22 +2056,16 @@
   Properties:
     Port_Albedo_N405:
       typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_DebugSheenEnvLightMult_N003:
-      typeIdx: 1
-      value: 1.000000
-    Port_DebugSheenPunctualLightMult_N003:
-      typeIdx: 1
-      value: 1.000000
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
     Port_Emissive_N405:
       typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
     Port_Metallic_N405:
       typeIdx: 1
       value: 0.000000
     Port_Opacity_N405:
       typeIdx: 1
-      value: 1.000000
+      value: 0.000000
     Port_SpecularAO_N036:
       typeIdx: 4
       value: {x: 1.000000, y: 1.000000, z: 1.000000}
@@ -2132,132 +2096,9 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    baseColorTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    baseColorTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    baseColorTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatFactor:
-      typeIdx: 1
-      value: 0.000000
-    clearcoatNormalTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatNormalTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatNormalTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatNormalTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatNormalTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatRoughnessFactor:
-      typeIdx: 1
-      value: 0.000000
-    clearcoatRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     emissiveFactor:
       typeIdx: 4
       value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    emissiveTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    emissiveTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    emissiveTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    emissiveTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    emissiveTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     metallicFactor:
       typeIdx: 1
       value: 0.000000
@@ -2279,15 +2120,6 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    metallicRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    metallicRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    metallicRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     normalTexture:
       typeIdx: 9
       value:
@@ -2309,136 +2141,10 @@
         0: {x: 1.000000, y: 0.000000, z: 0.000000}
         1: {x: 0.000000, y: 1.000000, z: 0.000000}
         2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    normalTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    normalTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    normalTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     occlusionTextureStrength:
       typeIdx: 1
       value: 1.000000
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     roughnessFactor:
       typeIdx: 1
       value: 1.000000
-    screenTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    screenTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenColorFactor:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    sheenColorTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    sheenColorTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenColorTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenColorTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    sheenColorTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenRoughnessFactor:
-      typeIdx: 1
-      value: 1.000000
-    sheenRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    sheenRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    sheenRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    transmissionFactor:
-      typeIdx: 1
-      value: 0.000000
-    transmissionTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    transmissionTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    transmissionTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    transmissionTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    transmissionTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
   Pass: !<reference> bee543c1-1d90-48d5-90f0-8d6a7aecd064

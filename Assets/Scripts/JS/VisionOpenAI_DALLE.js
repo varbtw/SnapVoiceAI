@@ -79,8 +79,8 @@ async function handleTriggerEnd() {
             script.textOutput.text = content;
             print("✅ GPT Success: " + content);
 
-            if (script.ttsComponent && script.ttsComponent.api.generateAndPlaySpeech) {
-                script.ttsComponent.api.generateAndPlaySpeech(content);
+            if (script.ttsComponent && script.ttsComponent.generateAndPlaySpeech) {
+                script.ttsComponent.generateAndPlaySpeech(content);
             }
 
             const imagePrompt = `${content}. Layout: ${roomDescription}`;

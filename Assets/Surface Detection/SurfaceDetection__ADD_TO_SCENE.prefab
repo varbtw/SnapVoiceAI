@@ -10,11 +10,11 @@
   Name: SurfaceDetector
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 147b8681-0b62-4679-9138-decce2cdfb44
   Components:
@@ -25,11 +25,11 @@
   Name: VisualAnchor
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 3054cb73-4236-4e13-8b82-98da94d5868d
   Components:
@@ -41,11 +41,11 @@
   Name: CalibrationWheel
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 45.000000, y: 45.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 45.000000, y: 45.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -81,7 +81,7 @@
     "":
       camObj: !<reference.SceneObject> 3e7c2195-4744-4350-8fbf-f15a3dd72ded
       visualObj: !<reference.SceneObject> 147b8681-0b62-4679-9138-decce2cdfb44
-      animation: !<MappingBased.CircleAnimation> 73f4fb65-0609-4b36-8304-958c7fade083
+      animation: !<MappingBased.AssignableType> 73f4fb65-0609-4b36-8304-958c7fade083
   ScriptTypes:
     "":
       {}
@@ -118,8 +118,6 @@
   DecayType: None
   DecayLimit: false
   DecayRange: 40.000000
-  UseEstimation: false
-  EstimationIntensity: !<float> 1.000000
 - !<RenderMeshVisual/60cb0da5-b114-4ef8-b051-d066dccf098c>
   PrefabRemaps:
     []
@@ -146,11 +144,11 @@
   Name: "Visuals [REPLACE CONTENT]"
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> ae004180-bf97-44f9-aa13-ce319f00fef3
     - !<own> c78cca1e-4115-4d8e-b8ef-b21274bd6e0f
@@ -199,11 +197,11 @@
   Name: Light
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 85.000000, z: 60.000000}
-    rotation: {x: -50.000015, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 85.000000, z: 60.000000}
+    Rotation: {x: -50.000015, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -214,11 +212,11 @@
   Name: groundPlane
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 45.000000, y: 45.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 45.000000, y: 45.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -236,7 +234,7 @@
   ScriptInputs:
     "":
       objectVisuals: !<reference.SceneObject> 688409ba-0854-41e8-b2b6-44f4e770d2e0
-      surfaceDetection: !<MappingBased.SurfaceDetection> 51b645cd-285a-4e66-afa3-219f4ff62448
+      surfaceDetection: !<MappingBased.AssignableType> 51b645cd-285a-4e66-afa3-219f4ff62448
   ScriptTypes:
     "":
       {}
@@ -262,15 +260,31 @@
     {}
 - !<SceneObject/bee4c0b3-4634-4d68-9016-450ba83a8167>
   PrefabRemaps:
-    []
+    - 1310f45e-97d3-4c31-9463-82a46060a0b2: 1310f45e-97d3-4c31-6b9c-7d5b9f9f5f4d
+    - 147b8681-0b62-4679-9138-decce2cdfb44: 147b8681-0b62-4679-6ec7-21331d3204bb
+    - 3054cb73-4236-4e13-8b82-98da94d5868d: 3054cb73-4236-4e13-747d-67256b2a7972
+    - 48c1a684-c400-4061-9ffd-3ee40388d18f: 48c1a684-c400-4061-6002-c11bfc772e70
+    - 51b645cd-285a-4e66-afa3-219f4ff62448: 51b645cd-285a-4e66-505c-de60b009dbb7
+    - 566a191a-e30d-4c23-9d61-667c76a97c01: 566a191a-e30d-4c23-629e-9983895683fe
+    - 60cb0da5-b114-4ef8-b051-d066dccf098c: 60cb0da5-b114-4ef8-4fae-2f992330f673
+    - 688409ba-0854-41e8-b2b6-44f4e770d2e0: 688409ba-0854-41e8-4d49-bb0b188f2d1f
+    - 73f4fb65-0609-4b36-8304-958c7fade083: 73f4fb65-0609-4b36-7cfb-6a7380521f7c
+    - 956b7a02-09b6-4d82-83f0-eec14b921daa: 956b7a02-09b6-4d82-7c0f-113eb46de255
+    - a4662bdd-bffe-4832-b524-ff4c93669648: a4662bdd-bffe-4832-4adb-00b36c9969b7
+    - ae004180-bf97-44f9-aa13-ce319f00fef3: ae004180-bf97-44f9-55ec-31ce60ff010c
+    - b47f2244-bfe9-4725-a257-89e68fe85fc8: b47f2244-bfe9-4725-5da8-76197017a037
+    - b659d3df-1f54-4d1d-9bc7-6fecc00fe671: b659d3df-1f54-4d1d-6438-90133ff0198e
+    - bee4c0b3-4634-4d68-9016-450ba83a8167: bee4c0b3-4634-4d68-6fe9-baf457c57e98
+    - c78cca1e-4115-4d8e-b8ef-b21274bd6e0f: c78cca1e-4115-4d8e-4710-4ded8b4291f0
+    - cd88693e-ddf8-4447-9d7d-7f0030fab411: cd88693e-ddf8-4447-6282-80ffcf054bee
   Name: SurfaceDetection
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 1310f45e-97d3-4c31-9463-82a46060a0b2
     - !<own> cd88693e-ddf8-4447-9d7d-7f0030fab411
@@ -282,11 +296,11 @@
   Name: cube
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 15.000000, z: 0.000000}
-    rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 30.000000, y: 30.000000, z: 30.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 15.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 30.000000, y: 30.000000, z: 30.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -297,11 +311,11 @@
   Name: "Example [EDIT ME]"
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 688409ba-0854-41e8-b2b6-44f4e770d2e0
     - !<own> a4662bdd-bffe-4832-b524-ff4c93669648

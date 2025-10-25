@@ -4,7 +4,9 @@
   ImporterName: JavaScriptAssetImporter
   PrimaryAsset: !<reference> f774a90b-d5ff-4472-8028-d07020287a92
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
   AssetDataMap:
     JavaScriptAsset: !<own> 21a4dcc0-d76f-459a-a30c-4e2cf918b5fa
   DependentFiles:
@@ -12,19 +14,17 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}
 - !<ScriptAssetData/21a4dcc0-d76f-459a-a30c-4e2cf918b5fa>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: bda8054e-b9cd-4dac-bdf3-4656de9d16d8
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     bottomMidSection: false
     deviceCameraTexture: false
@@ -35,6 +35,12 @@
     toolbarScreenT: false
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
     - deviceCameraTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       toolbarScreenT: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
@@ -42,9 +48,7 @@
       toolbarRightSection: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
       toolbarMidSection: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
       bottomMidSection: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
-      cameraImage: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
       previewZone: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

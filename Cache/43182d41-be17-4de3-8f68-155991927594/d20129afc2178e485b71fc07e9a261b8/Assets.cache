@@ -8,7 +8,7 @@
     - !<ObjectPrefab/5d1ca8bc-4e7a-4f3e-8d56-49d836412553>
       PackagePath: ""
       objects:
-        - !<own> bdccc8e2-c1e0-48dc-92a5-e0235ae8a805
+        - !<own> 8c104120-25ab-494a-828d-0d6b3ea8ed7d
       LazyLoading: false
       RetainAssets: true
     - !<FileMesh/8e46239a-80b8-4fd8-b723-732329fb1416>
@@ -82,6 +82,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input2_N043:
           typeIdx: 1
           value: 0.000000
@@ -94,6 +100,9 @@
         Port_Opacity_N405:
           typeIdx: 1
           value: 1.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_RayDirection_N004:
           typeIdx: 4
           value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -1851,7 +1860,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 43182d41-be17-4de3-8f68-155991927594/d20129afc2178e485b71fc07e9a261b8/Data/.hidden/cfd37fa/photo.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 43182d41-be17-4de3-8f68-155991927594/d20129afc2178e485b71fc07e9a261b8/Data/.hidden/bf73d32/photo.glsl
       Defines:
         []
       Properties:
@@ -1864,56 +1874,8 @@
   FileHash: 606135de3e0a50c43b8729b02e6a3bfe
   NativePackageItems:
     []
-- !<SceneObject/062bf82e-2522-4929-bee5-fea6f294bc37>
-  PrefabRemaps:
-    []
-  Name: Scenes
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> 68805b88-bb6c-426f-92b8-2c2b320965d0
-  Components:
-    []
 - !<PassInfo/12424fc5-d694-45b0-bd11-3e82ab06de84>
   CachedProperties:
-    - Port_AO_N405:
-        typeIdx: 4
-        value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    - Port_Depth_N004:
-        typeIdx: 1
-        value: 1.000000
-    - Port_FinalColor1_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor2_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor3_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_GSplatPointSize_N004:
-        typeIdx: 1
-        value: 0.000000
-    - Port_RayDirection_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 1.000000, z: 0.000000}
-    - Port_RayOrigin_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_WorldNormal_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 1.000000, z: 0.000000}
-    - Port_WorldPosition_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_WorldTangent_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 1.000000}
     - alpha:
         typeIdx: 1
         value: 0.000000
@@ -1944,28 +1906,16 @@
   Properties:
     Port_Albedo_N405:
       typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_DebugSheenEnvLightMult_N003:
-      typeIdx: 1
-      value: 1.000000
-    Port_DebugSheenPunctualLightMult_N003:
-      typeIdx: 1
-      value: 1.000000
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
     Port_Emissive_N405:
       typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_Input2_N043:
-      typeIdx: 1
-      value: 0.000000
-    Port_Input2_N062:
-      typeIdx: 1
-      value: 0.000000
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
     Port_Metallic_N405:
       typeIdx: 1
       value: 0.000000
     Port_Opacity_N405:
       typeIdx: 1
-      value: 1.000000
+      value: 0.000000
     Port_SpecularAO_N036:
       typeIdx: 4
       value: {x: 1.000000, y: 1.000000, z: 1.000000}
@@ -1990,320 +1940,20 @@
           borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: true
         type: Texture2D
-    baseColorTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    baseColorTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    baseColorTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    baseColorTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatFactor:
-      typeIdx: 1
-      value: 0.000000
-    clearcoatNormalTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatNormalTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatNormalTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatNormalTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatNormalTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatRoughnessFactor:
-      typeIdx: 1
-      value: 0.000000
-    clearcoatRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     emissiveFactor:
       typeIdx: 4
       value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    emissiveTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    emissiveTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    emissiveTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    emissiveTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    emissiveTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     metallicFactor:
       typeIdx: 1
       value: 0.000000
-    metallicRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    metallicRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    metallicRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    metallicRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    metallicRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    normalTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    normalTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    normalTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    normalTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    normalTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     roughnessFactor:
       typeIdx: 1
       value: 1.000000
-    screenTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    screenTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenColorFactor:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    sheenColorTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    sheenColorTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenColorTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenColorTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    sheenColorTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenRoughnessFactor:
-      typeIdx: 1
-      value: 1.000000
-    sheenRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    sheenRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    sheenRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    transmissionFactor:
-      typeIdx: 1
-      value: 0.000000
-    transmissionTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    transmissionTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    transmissionTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    transmissionTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    transmissionTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
   Pass: !<reference> a66ba5d2-eec1-4cb1-8ff1-fdb173845681
-- !<RenderMeshVisual/401b0d38-913b-4eb4-abcb-90377526701c>
+- !<RenderMeshVisual/21bcf075-a425-4a46-81b9-6c7d0633b3ee>
   PrefabRemaps:
     []
-  Name: Plane.006
+  Name: Plane.003
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
@@ -2313,64 +1963,46 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 92b5f5cc-fb8a-4d01-b5ac-a42617787ba3
-  Mesh: !<reference> 9bb89457-8374-4b94-b729-742d1f52193f
+    - !<reference> 9e36c76c-508a-4b97-8fcb-c7c1a0af4db7
+  Mesh: !<reference> 8e46239a-80b8-4fd8-b723-732329fb1416
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/68805b88-bb6c-426f-92b8-2c2b320965d0>
+- !<SceneObject/3b1be087-4e88-4840-9bc8-908a9ccb7f33>
+  PrefabRemaps:
+    []
+  Name: Plane.002
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.034000, z: -0.004091}
+    Rotation: {x: 0.000000, y: 0.000000, z: -180.000000}
+    Scale: {x: -21.298193, y: -21.298193, z: -21.298193}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 21bcf075-a425-4a46-81b9-6c7d0633b3ee
+- !<SceneObject/641c3a0c-5633-45c4-8649-f4f70bdc09d1>
   PrefabRemaps:
     []
   Name: Scene
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
-    - !<own> bd80e983-4e51-43d9-9341-b9c356438a61
-    - !<own> d77cc90f-1a10-4f0c-bdce-672c7afee4ae
+    - !<own> 3b1be087-4e88-4840-9bc8-908a9ccb7f33
+    - !<own> de3bfda7-ab0f-4511-8a31-936f97acb69c
   Components:
-    - !<own> d51b3131-ba41-49e4-8069-299e4fa550d6
+    []
 - !<PassInfo/85d64994-444b-4e7a-88c3-3b676dd13d60>
   CachedProperties:
-    - Port_AO_N405:
-        typeIdx: 4
-        value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    - Port_Depth_N004:
-        typeIdx: 1
-        value: 1.000000
-    - Port_FinalColor1_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor2_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_FinalColor3_N004:
-        typeIdx: 5
-        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    - Port_GSplatPointSize_N004:
-        typeIdx: 1
-        value: 0.000000
-    - Port_RayDirection_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 1.000000, z: 0.000000}
-    - Port_RayOrigin_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_WorldNormal_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 1.000000, z: 0.000000}
-    - Port_WorldPosition_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    - Port_WorldTangent_N004:
-        typeIdx: 4
-        value: {x: 0.000000, y: 0.000000, z: 1.000000}
     - alpha:
         typeIdx: 1
         value: 0.000000
@@ -2399,28 +2031,16 @@
   Properties:
     Port_Albedo_N405:
       typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_DebugSheenEnvLightMult_N003:
-      typeIdx: 1
-      value: 1.000000
-    Port_DebugSheenPunctualLightMult_N003:
-      typeIdx: 1
-      value: 1.000000
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
     Port_Emissive_N405:
       typeIdx: 4
-      value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_Input2_N043:
-      typeIdx: 1
-      value: 0.000000
-    Port_Input2_N062:
-      typeIdx: 1
-      value: 0.000000
+      value: {x: 1.000000, y: 1.000000, z: 1.000000}
     Port_Metallic_N405:
       typeIdx: 1
       value: 0.000000
     Port_Opacity_N405:
       typeIdx: 1
-      value: 1.000000
+      value: 0.000000
     Port_SpecularAO_N036:
       typeIdx: 4
       value: {x: 1.000000, y: 1.000000, z: 1.000000}
@@ -2433,386 +2053,56 @@
     baseColorFactor:
       typeIdx: 5
       value: {x: 0.049995, y: 0.005389, z: 0.005389, w: 1.000000}
-    baseColorTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    baseColorTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    baseColorTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    baseColorTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    baseColorTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatFactor:
-      typeIdx: 1
-      value: 0.000000
-    clearcoatNormalTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatNormalTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatNormalTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatNormalTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatNormalTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatRoughnessFactor:
-      typeIdx: 1
-      value: 0.000000
-    clearcoatRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    clearcoatTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    clearcoatTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    clearcoatTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    clearcoatTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     emissiveFactor:
       typeIdx: 4
       value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    emissiveTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    emissiveTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    emissiveTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    emissiveTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    emissiveTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
     metallicFactor:
       typeIdx: 1
       value: 0.000000
-    metallicRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    metallicRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    metallicRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    metallicRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    metallicRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    normalTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    normalTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    normalTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    normalTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    normalTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    overrideTimeDelta:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeElapsed:
-      typeIdx: 1
-      value: 0.000000
-    overrideTimeEnabled:
-      typeIdx: 0
-      value: 0
     roughnessFactor:
       typeIdx: 1
       value: 0.488124
-    screenTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    screenTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenColorFactor:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    sheenColorTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    sheenColorTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenColorTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenColorTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    sheenColorTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenRoughnessFactor:
-      typeIdx: 1
-      value: 1.000000
-    sheenRoughnessTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    sheenRoughnessTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    sheenRoughnessTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    sheenRoughnessTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    sheenRoughnessTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    transmissionFactor:
-      typeIdx: 1
-      value: 0.000000
-    transmissionTexture:
-      typeIdx: 9
-      value:
-        id: 00000000-0000-0000-0000-000000000000
-        sampler:
-          filteringMode: Trilinear
-          wrapModeU: Repeat
-          wrapModeV: Repeat
-          wrapModeW: Repeat
-          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
-          mipmaps: false
-        type: Texture2D
-    transmissionTextureTransform:
-      typeIdx: 7
-      value:
-        0: {x: 1.000000, y: 0.000000, z: 0.000000}
-        1: {x: 0.000000, y: 1.000000, z: 0.000000}
-        2: {x: 0.000000, y: 0.000000, z: 1.000000}
-    transmissionTexture_offset:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
-    transmissionTexture_rotation:
-      typeIdx: 1
-      value: 1.000000
-    transmissionTexture_scale:
-      typeIdx: 3
-      value: {x: 1.000000, y: 1.000000}
   Pass: !<reference> a66ba5d2-eec1-4cb1-8ff1-fdb173845681
-- !<SceneObject/bd80e983-4e51-43d9-9341-b9c356438a61>
+- !<SceneObject/8c104120-25ab-494a-828d-0d6b3ea8ed7d>
   PrefabRemaps:
-    []
-  Name: Plane.002
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.034000, z: -0.004091}
-    rotation: {x: 0.000000, y: 0.000000, z: -180.000000}
-    scale: {x: -21.298193, y: -21.298193, z: -21.298193}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> f991c7c8-4314-43a2-9b1c-e3b179a11ca9
-- !<SceneObject/bdccc8e2-c1e0-48dc-92a5-e0235ae8a805>
-  PrefabRemaps:
-    []
+    - 21bcf075-a425-4a46-81b9-6c7d0633b3ee: 21bcf075-a425-4a46-7e46-9382f9cc4c11
+    - 3b1be087-4e88-4840-9bc8-908a9ccb7f33: 3b1be087-4e88-4840-6437-6f75633480cc
+    - 641c3a0c-5633-45c4-8649-f4f70bdc09d1: 641c3a0c-5633-45c4-79b6-0b08f423f62e
+    - 8c104120-25ab-494a-828d-0d6b3ea8ed7d: 8c104120-25ab-494a-7d72-f294c1571282
+    - de3bfda7-ab0f-4511-8a31-936f97acb69c: de3bfda7-ab0f-4511-75ce-6c9068534963
+    - e791c4c2-a9c4-464d-af71-e34fd01552c6: e791c4c2-a9c4-464d-508e-1cb02feaad39
+    - f7887dc6-02a9-401d-9d15-fae8383cff93: f7887dc6-02a9-401d-62ea-0517c7c3006c
   Name: Boho_paint
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
   Children:
-    - !<own> 062bf82e-2522-4929-bee5-fea6f294bc37
+    - !<own> f7887dc6-02a9-401d-9d15-fae8383cff93
   Components:
     []
-- !<AnimationPlayer/d51b3131-ba41-49e4-8069-299e4fa550d6>
-  PrefabRemaps:
-    []
-  Name: component_2
-  Enabled: true
-  Autoplay: true
-  ClipRangeType: Frames
-  AnimationClips:
-    []
-- !<SceneObject/d77cc90f-1a10-4f0c-bdce-672c7afee4ae>
+- !<SceneObject/de3bfda7-ab0f-4511-8a31-936f97acb69c>
   PrefabRemaps:
     []
   Name: Plane.001
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.034000, z: -0.001091}
-    rotation: {x: 0.000000, y: 0.000000, z: -180.000000}
-    scale: {x: -21.298193, y: -21.298193, z: -21.298193}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.034000, z: -0.001091}
+    Rotation: {x: 0.000000, y: 0.000000, z: -180.000000}
+    Scale: {x: -21.298193, y: -21.298193, z: -21.298193}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 401b0d38-913b-4eb4-abcb-90377526701c
-- !<RenderMeshVisual/f991c7c8-4314-43a2-9b1c-e3b179a11ca9>
+    - !<own> e791c4c2-a9c4-464d-af71-e34fd01552c6
+- !<RenderMeshVisual/e791c4c2-a9c4-464d-af71-e34fd01552c6>
   PrefabRemaps:
     []
-  Name: Plane.003
+  Name: Plane.006
   Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
@@ -2822,10 +2112,25 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 9e36c76c-508a-4b97-8fcb-c7c1a0af4db7
-  Mesh: !<reference> 8e46239a-80b8-4fd8-b723-732329fb1416
+    - !<reference> 92b5f5cc-fb8a-4d01-b5ac-a42617787ba3
+  Mesh: !<reference> 9bb89457-8374-4b94-b729-742d1f52193f
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/f7887dc6-02a9-401d-9d15-fae8383cff93>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 641c3a0c-5633-45c4-8649-f4f70bdc09d1
+  Components:
+    []

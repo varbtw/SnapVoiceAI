@@ -57,6 +57,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N044:
           typeIdx: 1
           value: 1.000000
@@ -99,6 +105,9 @@
         Port_Metallic_N036:
           typeIdx: 1
           value: 0.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_RayDirection_N004:
           typeIdx: 4
           value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -1269,7 +1278,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: "7d359363-c481-44e1-b78e-4d556a3f4285/a9ed83de0316f1a25767c2c670c59510/Data/cfd37fa/ui_loading [EDIT_ME].glsl"
+        ShaderType: Mesh3d
+      ShaderPath: "7d359363-c481-44e1-b78e-4d556a3f4285/a9ed83de0316f1a25767c2c670c59510/Data/bf73d32/ui_loading [EDIT_ME].glsl"
       Defines:
         []
       Properties:

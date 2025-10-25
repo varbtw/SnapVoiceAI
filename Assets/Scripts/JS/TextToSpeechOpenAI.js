@@ -8,7 +8,7 @@ var remoteServiceModule = require("LensStudio:RemoteServiceModule");
 const apiKey = "sk-proj-XXX";
 
 // Make generateAndPlaySpeech globally accessible
-script.api.generateAndPlaySpeech = async function(inputText) {
+script.generateAndPlaySpeech = async function(inputText) {
     if (!inputText) {
         print("No text provided for speech synthesis.");
         return;
@@ -117,5 +117,5 @@ script.createEvent("OnStartEvent").bind(() => {
         return;
     }
 
-    script.api.generateAndPlaySpeech("TextToSpeechOpenAI Ready!");
+    script.generateAndPlaySpeech("TextToSpeechOpenAI Ready!");
 });

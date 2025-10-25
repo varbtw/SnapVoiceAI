@@ -4,37 +4,42 @@
   ImporterName: TypeScriptAssetImporter
   PrimaryAsset: !<reference> a686d8a8-1429-4dc0-96dc-d366757a292f
   PackageType: NotAPackage
-  AssetDataMap:
-    TypeScriptAsset: !<own> 015a7d37-f8af-4355-94f0-0f0ba6de2442
-  ImporterSettings: !<AssetImporterSettings>
-    {}
-  PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
-  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  LegacyPackagePolicy: ~
   ExtraData:
     {}
-- !<TypeScriptAssetData/015a7d37-f8af-4355-94f0-0f0ba6de2442>
-  InputLines:
+  AssetDataMap:
+    TypeScriptAsset: !<own> 015a7d37-f8af-4355-94f0-0f0ba6de2442
+  DependentFiles:
     []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/015a7d37-f8af-4355-94f0-0f0ba6de2442>
   SvgIcon: ""
+  SetupScript:
+    code: ""
   Description: ""
-  InternalVersion: 0
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
   ComponentUid: 236a4dff-7d96-4441-a34e-d1d7ad96c5c6
   ExportUid: 00000000-0000-0000-0000-000000000000
-  CurrentVisibility: Editable
-  MaxVisibility: Editable
+  PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     {}
   ScriptTypesHidden:
     {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
   DefaultScriptInputs:
     -
       {}
   ScriptTypes:
     -
       {}
-  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  InputLines:
+    []

@@ -13,6 +13,7 @@
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
+    isScrollable: true
     allowMultipleInteractors: true
     enablePokeDirectionality: true
     acceptableXDirections: true
@@ -24,6 +25,7 @@
     "":
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
+      isScrollable: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
       acceptableXDirections: !<float> 3.000000
@@ -55,15 +57,17 @@
     Z depth: 1.000000
 - !<SceneObject/f158fb80-77c2-418e-ba74-e85443c12392>
   PrefabRemaps:
-    []
+    - 3ea7d40a-5491-47ee-80da-ef3a7586f662: 3ea7d40a-5491-47ee-7f25-10c58a79099d
+    - a9aa1255-c523-4dce-8329-fa8fe61530af: a9aa1255-c523-4dce-7cd6-057019eacf50
+    - f158fb80-77c2-418e-ba74-e85443c12392: f158fb80-77c2-418e-458b-17abbc3edc6d
   Name: container-button
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: -1.935684, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -1.935684, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:

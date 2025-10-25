@@ -79,11 +79,11 @@
   Name: LeftPinchButtonSphere
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: -10.000000, y: 0.000000, z: 5.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 4.000000, y: 4.000000, z: 4.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: -10.000000, y: 0.000000, z: 5.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> c8b85ed3-4411-4dfd-a5cd-eeb23fdee085
     - !<own> c800a19f-085a-4397-a78d-376a10eb4fa5
@@ -139,11 +139,11 @@
   Name: 3DLoadingIndicator
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 3.000000}
-    rotation: {x: -89.999992, y: 0.000000, z: 180.000000}
-    scale: {x: 50.000000, y: 50.000000, z: 50.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 3.000000}
+    Rotation: {x: -89.999992, y: 0.000000, z: 180.000000}
+    Scale: {x: 50.000000, y: 50.000000, z: 50.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -190,11 +190,11 @@
   Name: ContainerFrameUI
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: -57.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -57.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 14bffa3c-6bcb-4309-a08d-4b64c769dc49
     - !<own> cbc8414c-15f1-4c16-be84-d3f4e0d87ea4
@@ -327,11 +327,11 @@
   Name: FlatImage
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -393,15 +393,63 @@
       {}
 - !<SceneObject/58e811a4-8405-41fe-9fd9-6742c5f93bde>
   PrefabRemaps:
-    []
+    - 01a90125-3d9b-42b9-803e-598328c84504: 01a90125-3d9b-42b9-7fc1-a67cd737bafb
+    - 0603feca-7b27-4ff6-8944-82a48583fbed: 0603feca-7b27-4ff6-76bb-7d5b7a7c0412
+    - 10d29499-8100-4974-b95b-114e98057f7d: 10d29499-8100-4974-46a4-eeb167fa8082
+    - 14bffa3c-6bcb-4309-a08d-4b64c769dc49: 14bffa3c-6bcb-4309-5f72-b49b389623b6
+    - 1875d61f-e587-4bbf-bd77-d265cc7ce793: 1875d61f-e587-4bbf-4288-2d9a3383186c
+    - 207d9e10-972b-4580-9fb5-aa6364766f04: 207d9e10-972b-4580-604a-559c9b8990fb
+    - 34770d92-a05c-4dc9-87e1-c5eea2844ffc: 34770d92-a05c-4dc9-781e-3a115d7bb003
+    - 37a639c9-bb96-4b31-bb1b-ac7becef91c4: 37a639c9-bb96-4b31-44e4-538413106e3b
+    - 396130a0-7d8e-487b-8007-2dd3e359d798: 396130a0-7d8e-487b-7ff8-d22c1ca62867
+    - 3aaca87c-4f3b-4029-af23-1651c36ab2fe: 3aaca87c-4f3b-4029-50dc-e9ae3c954d01
+    - 3d0859a8-cb39-44a0-a868-788eac6ea076: 3d0859a8-cb39-44a0-5797-877153915f89
+    - 40a1daf7-7349-4842-b0dc-662cf54ab5b1: 40a1daf7-7349-4842-4f23-99d30ab54a4e
+    - 4174cda0-09dc-48ee-8f33-5a7e2db617ff: 4174cda0-09dc-48ee-70cc-a581d249e800
+    - 48682806-ee3e-4bdb-9f40-bcf27b7c9dba: 48682806-ee3e-4bdb-60bf-430d84836245
+    - 48a77ec6-1153-444e-9bfa-c4e0a520758e: 48a77ec6-1153-444e-6405-3b1f5adf8a71
+    - 4ebd0799-de6c-4cd4-a55a-5262f1ba4ee6: 4ebd0799-de6c-4cd4-5aa5-ad9d0e45b119
+    - 4edb9ecd-1395-44d3-8ff9-9878b31c341a: 4edb9ecd-1395-44d3-7006-67874ce3cbe5
+    - 58e811a4-8405-41fe-9fd9-6742c5f93bde: 58e811a4-8405-41fe-6026-98bd3a06c421
+    - 5ea425c2-71bb-4d4a-9d97-9056f86074f4: 5ea425c2-71bb-4d4a-6268-6fa9079f8b0b
+    - 615a4409-0549-48f9-b1b6-61fd6cef48a8: 615a4409-0549-48f9-4e49-9e029310b757
+    - 69d5c867-779f-4f89-bb4e-66f8c09b1167: 69d5c867-779f-4f89-44b1-99073f64ee98
+    - 6b3aff1b-e2a8-465e-9f7b-896349e5d6a8: 6b3aff1b-e2a8-465e-6084-769cb61a2957
+    - 6b57dda5-2ab1-4d9d-a692-ead2dabf7849: 6b57dda5-2ab1-4d9d-596d-152d254087b6
+    - 6bd6a939-7a74-4d05-a47b-b1aadd1a7705: 6bd6a939-7a74-4d05-5b84-4e5522e588fa
+    - 70499546-b004-4f43-9272-52f4c4f6d6b7: 70499546-b004-4f43-6d8d-ad0b3b092948
+    - 73aada40-1af4-4a1f-bfff-3d1aa0cef649: 73aada40-1af4-4a1f-4000-c2e55f3109b6
+    - 73b68b17-6385-4eed-8181-e73fe71bf274: 73b68b17-6385-4eed-7e7e-18c018e40d8b
+    - 74824d6c-46a9-488b-9942-ba8073a9e7c6: 74824d6c-46a9-488b-66bd-457f8c561839
+    - 77caff0d-1c29-42f4-b31e-823268c53265: 77caff0d-1c29-42f4-4ce1-7dcd973acd9a
+    - 7dd72c5a-3543-4668-8a5f-3bfc1aea2cf3: 7dd72c5a-3543-4668-75a0-c403e515d30c
+    - 86f6455a-5f00-49f2-a1fa-eea5ab9c9fc9: 86f6455a-5f00-49f2-5e05-115a54636036
+    - 89c40684-edd1-4384-9be2-b08c02931016: 89c40684-edd1-4384-641d-4f73fd6cefe9
+    - 8e53dfff-bc62-48ba-8e72-79f4469f66d3: 8e53dfff-bc62-48ba-718d-860bb960992c
+    - 8f14bb01-3745-45f2-8a29-fc3e409d49bf: 8f14bb01-3745-45f2-75d6-03c1bf62b640
+    - 97ecfda6-e2ff-4d1d-b8e6-5d48e896374e: 97ecfda6-e2ff-4d1d-4719-a2b71769c8b1
+    - 980b9665-0dfd-46dc-957c-19e8ac6dd252: 980b9665-0dfd-46dc-6a83-e61753922dad
+    - a25435ad-6807-4202-97d0-50ebb4c7ac3c: a25435ad-6807-4202-682f-af144b3853c3
+    - a40c82e6-fc31-4f3d-84bf-33d12f612d62: a40c82e6-fc31-4f3d-7b40-cc2ed09ed29d
+    - a628f212-2ded-4f66-88f9-a1290ef22173: a628f212-2ded-4f66-7706-5ed6f10dde8c
+    - aacb00e4-484c-4034-9c1e-57d89afa9a10: aacb00e4-484c-4034-63e1-a827650565ef
+    - b56ac2b1-09fc-4cb2-811e-6658c54049ff: b56ac2b1-09fc-4cb2-7ee1-99a73abfb600
+    - c6821db1-9cf1-4e2c-b8aa-e835f2687caa: c6821db1-9cf1-4e2c-4755-17ca0d978355
+    - c800a19f-085a-4397-a78d-376a10eb4fa5: c800a19f-085a-4397-5872-c895ef14b05a
+    - c8b85ed3-4411-4dfd-a5cd-eeb23fdee085: c8b85ed3-4411-4dfd-5a32-114dc0211f7a
+    - cbc8414c-15f1-4c16-be84-d3f4e0d87ea4: cbc8414c-15f1-4c16-417b-2c0b1f27815b
+    - d7166ed3-4b55-48b4-ad0d-f9d1bf5245af: d7166ed3-4b55-48b4-52f2-062e40adba50
+    - e7cd1813-103e-479c-a17e-a3dd71d74456: e7cd1813-103e-479c-5e81-5c228e28bba9
+    - ecd1894d-25a8-4531-95cd-51f58fa033c4: ecd1894d-25a8-4531-6a32-ae0a705fcc3b
+    - fb3dcff1-25a3-4acc-add9-da5faab71175: fb3dcff1-25a3-4acc-5226-25a05548ee8a
   Name: SikSpatialImageFrame
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 5ea425c2-71bb-4d4a-9d97-9056f86074f4
     - !<own> 3aaca87c-4f3b-4029-af23-1651c36ab2fe
@@ -414,11 +462,11 @@
   Name: BaseFrame
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 0.800000, y: 0.800000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.800000, y: 0.800000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 4ebd0799-de6c-4cd4-a55a-5262f1ba4ee6
     - !<own> a40c82e6-fc31-4f3d-84bf-33d12f612d62
@@ -431,6 +479,8 @@
   Enabled: true
   ScriptAsset: !<reference> 43db254e-4cc6-4a86-a330-2baecef523da
   ScriptInputsDefault:
+    meshMaterial: true
+    remoteServiceModule: true
     imageTexture: true
     advancedSettings: true
     _frameHeight: true
@@ -442,6 +492,8 @@
     {}
   ScriptInputs:
     "":
+      meshMaterial: !<reference.Material> 474daaa3-1eea-4435-9e87-62a31e5e48b1
+      remoteServiceModule: !<reference.RemoteServiceModule> 498b9bdf-f926-4ac5-bfe0-f3f44c53141b
       imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
       advancedSettings: false
       _frameHeight: 100
@@ -563,7 +615,7 @@
   ScriptInputs:
     "":
       spatializer: !<Typename.SpatialImage> 615a4409-0549-48f9-b1b6-61fd6cef48a8
-      angleValidator: !<MappingBased.SpatialImageAngleValidator> a628f212-2ded-4f66-88f9-a1290ef22173
+      angleValidator: !<MappingBased.AssignableType> a628f212-2ded-4f66-88f9-a1290ef22173
       animateSpeed: 0.500000
       minDepth: 0.050000
   ScriptTypes:
@@ -735,15 +787,18 @@
     Mode: Solid
     Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
@@ -754,6 +809,7 @@
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
@@ -765,6 +821,7 @@
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
@@ -779,7 +836,6 @@
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-    CapitilizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<ColliderComponent/89c40684-edd1-4384-9be2-b08c02931016>
@@ -809,6 +865,7 @@
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
+    isScrollable: true
     allowMultipleInteractors: true
     enablePokeDirectionality: true
     acceptableXDirections: true
@@ -820,6 +877,7 @@
     "":
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
+      isScrollable: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
       acceptableXDirections: !<float> 3.000000
@@ -834,11 +892,11 @@
   Name: Button Mesh
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -874,15 +932,18 @@
     Mode: Solid
     Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     TileCount: 5.000000
     TileZone: Rect
     TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
   Outline: !<OutlineSettings>
     Enabled: false
     Fill: !<TextFill>
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
@@ -893,6 +954,7 @@
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
@@ -904,6 +966,7 @@
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
       Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
       TileCount: 5.000000
       TileZone: Rect
       TextureStretch: FitWidth
@@ -918,7 +981,6 @@
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-    CapitilizationOverride: None
   DepthTest: false
   TwoSided: false
 - !<ScriptComponent/980b9665-0dfd-46dc-957c-19e8ac6dd252>
@@ -943,11 +1005,11 @@
   Name: Label >
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 1.200000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 1.200000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -959,11 +1021,11 @@
   Name: SpatialImage
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -986,7 +1048,7 @@
   ScriptInputs:
     "":
       image: !<reference.SceneObject> a40c82e6-fc31-4f3d-84bf-33d12f612d62
-      frame: !<MappingBased.ContainerFrame> 4edb9ecd-1395-44d3-8ff9-9878b31c341a
+      frame: !<MappingBased.AssignableType> 4edb9ecd-1395-44d3-8ff9-9878b31c341a
       validZoneFocal: !<float> 2.000000
       validZoneAngle: !<float> 25.000000
       validZoneThreshold: !<float> 5.000000
@@ -1036,6 +1098,7 @@
   ScriptInputsDefault:
     targetingMode: true
     enableInstantDrag: true
+    isScrollable: true
     allowMultipleInteractors: true
     enablePokeDirectionality: true
     acceptableXDirections: true
@@ -1047,6 +1110,7 @@
     "":
       targetingMode: !<float> 3.000000
       enableInstantDrag: false
+      isScrollable: false
       allowMultipleInteractors: true
       enablePokeDirectionality: false
       acceptableXDirections: !<float> 3.000000
@@ -1067,9 +1131,9 @@
     {}
   ScriptInputs:
     "":
-      container: !<MappingBased.ContainerFrame> 4edb9ecd-1395-44d3-8ff9-9878b31c341a
+      container: !<MappingBased.AssignableType> 4edb9ecd-1395-44d3-8ff9-9878b31c341a
       spatializer: !<Typename.SpatialImage> 615a4409-0549-48f9-b1b6-61fd6cef48a8
-      spatialImageSwapper: !<MappingBased.SpatialImageSwapper> 48a77ec6-1153-444e-9bfa-c4e0a520758e
+      spatialImageSwapper: !<MappingBased.AssignableType_1> 48a77ec6-1153-444e-9bfa-c4e0a520758e
       camera: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -1081,11 +1145,11 @@
   Name: Label <
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 1.200000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 1.200000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1097,11 +1161,11 @@
   Name: Button Mesh
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
   Children:
     []
   Components:
@@ -1113,11 +1177,11 @@
   Name: RightPinchButtonSphere
   Enabled: true
   Layers: 1
-  LocalTransform:
-    position: {x: 10.000000, y: 0.000000, z: 5.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 4.000000, y: 4.000000, z: 4.000000}
-    hasSegmentScaleCompensation: false
+  LocalTransform: !<TransformEntity>
+    Position: {x: 10.000000, y: 0.000000, z: 5.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 4.000000, y: 4.000000, z: 4.000000}
+    HasSegmentScaleCompensation: false
   Children:
     - !<own> 8f14bb01-3745-45f2-8a29-fc3e409d49bf
     - !<own> a25435ad-6807-4202-97d0-50ebb4c7ac3c

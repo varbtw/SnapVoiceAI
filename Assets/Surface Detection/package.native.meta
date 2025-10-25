@@ -4,7 +4,9 @@
   ImporterName: NativePackageDescriptorImporter
   PrimaryAsset: !<reference> 9bfec9c0-556c-424a-8e20-d8eebcf441da
   PackageType: NotAPackage
-  PackagePolicy: CannotBeUnpacked
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
   AssetDataMap:
     {}
   DependentFiles:
@@ -12,5 +14,3 @@
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-  ExtraData:
-    {}

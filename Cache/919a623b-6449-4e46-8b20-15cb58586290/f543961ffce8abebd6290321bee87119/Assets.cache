@@ -46,6 +46,12 @@
         Port_GSplatPointSize_N004:
           typeIdx: 1
           value: 0.000000
+        Port_GSplatRotation_N004:
+          typeIdx: 5
+          value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+        Port_GSplatScale_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_Input1_N002:
           typeIdx: 1
           value: 1.000000
@@ -79,6 +85,9 @@
         Port_Position2_N078:
           typeIdx: 1
           value: 1.000000
+        Port_PrevWorldPosition_N004:
+          typeIdx: 4
+          value: {x: 0.000000, y: 0.000000, z: 0.000000}
         Port_RayDirection_N004:
           typeIdx: 4
           value: {x: 0.000000, y: 1.000000, z: 0.000000}
@@ -931,7 +940,8 @@
             mDefaultVal: 0.500000
             mValues:
               []
-      ShaderPath: 919a623b-6449-4e46-8b20-15cb58586290/f543961ffce8abebd6290321bee87119/Data/cfd37fa/PinchDarkRadial.glsl
+        ShaderType: Mesh3d
+      ShaderPath: 919a623b-6449-4e46-8b20-15cb58586290/f543961ffce8abebd6290321bee87119/Data/bf73d32/PinchDarkRadial.glsl
       Defines:
         []
       Properties:

@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/4171fa4c-84c7-4516-92a7-1a2be0dc5ff2>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 0d8c0024-3ac4-4c4b-9ced-e21080647af5
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 0d8c0024-3ac4-4c4b-9ced-e21080647af5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 7fd09010-8f84-46e0-8180-00245e7a4b24
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/7fd09010-8f84-46e0-8180-00245e7a4b24>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c41d8441-3d72-4ef4-b6bc-d2158f77a8c6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    analysisInterval: false
+    cameraTexture: false
+    emotionText: false
+    enableDebugMode: false
+    rekaApiKey: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      emotionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      analysisInterval: !<float> 3.000000
+      rekaApiKey: ""
+      enableDebugMode: true
+  ScriptTypes:
+    -
+      {}
