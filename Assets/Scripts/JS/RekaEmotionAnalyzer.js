@@ -4,7 +4,7 @@
 // @input string rekaApiKey {"hint":"Your REKA API key"}
 // @input bool enableDebugMode = true
 
-const remoteServiceModule = require("LensStudio:RemoteServiceModule");
+const Internet = require("LensStudio:InternetModule");
 
 let isProcessing = false;
 let lastAnalysisTime = 0;
@@ -151,7 +151,7 @@ async function sendToRekaAPI(base64Image) {
     print("📤 [API] Sending request to REKA API...");
     
     try {
-        const response = await remoteServiceModule.fetch(new Request(
+        const response = await Internet.fetch(new Request(
             "https://api.reka.ai/v1/chat",
             {
                 method: "POST",
@@ -168,25 +168,59 @@ async function sendToRekaAPI(base64Image) {
         if (response.status === 200) {
             const data = await response.json();
             print("✅ [API] Response parsed successfully");
-            
-            if (data && data.choices && data.choices.length > 0) {
-                const emotionText = data.choices[0].message.content.trim();
-                print("🎯 [API] Raw emotion from REKA: '" + emotionText + "'");
-                
+
+            // Robust extraction of emotion text from various possible response shapes
+            let emotionText = "";
+
+            // REKA response shape: { responses: [ { message: { content: "... Neutral." } } ] }
+            if (!emotionText && Array.isArray(data?.responses) && data.responses.length > 0) {
+                var firstResp = data.responses[0];
+                if (firstResp && firstResp.message && typeof firstResp.message.content === 'string') {
+                    var raw = firstResp.message.content.trim();
+                    // Take the last word, strip punctuation
+                    var parts = raw.split(/\s+/);
+                    var lastWord = parts.length > 0 ? parts[parts.length - 1] : "";
+                    lastWord = lastWord.replace(/[^A-Za-z]+$/g, "");
+                    emotionText = lastWord;
+                    print("🎯 [API] REKA responses[0].message.content last word: '" + emotionText + "'");
+                }
+            }
+
+            // OpenAI-like shape
+            if (data && data.choices && data.choices.length > 0 &&
+                data.choices[0] && data.choices[0].message && typeof data.choices[0].message.content === 'string') {
+                emotionText = data.choices[0].message.content.trim();
+            }
+
+            // Claude/Anthropic-like shape: content is an array of blocks with {type, text}
+            if (!emotionText && Array.isArray(data?.content) && data.content.length > 0) {
+                const textBlock = data.content.find(function (c) { return typeof c?.text === 'string' && c.text.length > 0; });
+                if (textBlock) { emotionText = textBlock.text.trim(); }
+            }
+
+            // Generic fallbacks
+            if (!emotionText && typeof data?.text === 'string') { emotionText = data.text.trim(); }
+            if (!emotionText && typeof data?.output === 'string') { emotionText = data.output.trim(); }
+            if (!emotionText && typeof data?.message === 'string') { emotionText = data.message.trim(); }
+            if (!emotionText && typeof data?.result === 'string') { emotionText = data.result.trim(); }
+
+            if (emotionText) {
+                print("🎯 [API] Raw emotion text: '" + emotionText + "'");
+
                 const emotion = parseEmotion(emotionText);
                 print("🔍 [Parse] Parsed emotion: " + emotion);
-                
+
                 // Add to history
                 emotionHistory.push(emotion);
                 if (emotionHistory.length > MAX_HISTORY) {
                     emotionHistory.shift();
                 }
                 print("📊 [History] Emotion added. History size: " + emotionHistory.length);
-                
+
                 // Get smoothed emotion (most common in recent history)
                 const smoothedEmotion = getSmoothedEmotion();
                 print("📈 [Smooth] Smoothed emotion: " + smoothedEmotion + " (previous: " + currentEmotion + ")");
-                
+
                 if (smoothedEmotion !== currentEmotion) {
                     currentEmotion = smoothedEmotion;
                     updateEmotionDisplay(smoothedEmotion);
@@ -195,7 +229,11 @@ async function sendToRekaAPI(base64Image) {
                     print("➡️ [Result] Emotion UNCHANGED: " + currentEmotion);
                 }
             } else {
-                print("❗ [API] Invalid REKA response format - no choices found");
+                // Debug: print a compact snapshot of the response for troubleshooting
+                var keys = Object.keys(data || {});
+                var preview = JSON.stringify(data).slice(0, 500);
+                print("❗ [API] Unexpected REKA response shape. Keys: " + keys.join(","));
+                print("📝 [API] Body preview: " + preview + (preview.length === 500 ? "..." : ""));
             }
         } else {
             print("❗ [API] REKA API error - Status: " + response.status);
