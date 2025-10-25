@@ -1,0 +1,156 @@
+- !<AssetImportMetadata/39e65524-a835-4173-b19e-68a675a0593f>
+  ImportedAssetIds:
+    .hidden/Old_Persian_carpet: !<reference> 08778999-49bb-439b-b3ec-5521881c5365
+    4a3e924fad0e2f27: !<reference> a7259279-4374-4721-a538-f7d20ae05134
+    66780cf3a4dcb2b8: !<reference> b06bc72f-c6cd-4205-9644-76723eff2890
+    6a2c6cff5074c374: !<reference> 65aa395a-37c9-49d1-8e7b-8883948dea4c
+    96f664b015fcd573: !<reference> 47e3113b-725c-4bca-80c0-357cf6baeb1a
+    Materials/Old_Persian_carpet: !<reference> e6d69ed4-9749-4ff0-9f2c-63b20f76fc76
+    Materials/Old_Persian_carpet|Old_Persian_carpet|GraphPassInfo: !<reference> 5ab626dc-ea30-4bee-8346-7039372ad439
+    Meshes/Old_Persian_carpet_Old Persian carpet_0: !<reference> b167a7b6-e19e-4942-a2e8-af5cf79142ea
+    Scene: !<reference> e2b3da75-4cb6-4894-bc63-ccf1006549ad
+    Textures/Old_Persian_carpet_baseColor: !<reference> bbba2db5-4ea7-4bec-ab83-2e2ead88bc7f
+    Textures/Old_Persian_carpet_metallicRoughness: !<reference> 2c2e6fb7-c8e4-4ad4-af72-9b0aa1d90e43
+    e59c7fb44f9b0c66: !<reference> 7166577d-e38d-44f6-b7d6-1563fb49bb4d
+    f7823ed8e3d3f631: !<reference> 94c83f68-dd26-4cca-a22a-bc8a087ad1d9
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> e2b3da75-4cb6-4894-bc63-ccf1006549ad
+  PackageType: LegacyPackage
+  PackagePolicy: CanBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> 5f47507a-1719-40a3-a2eb-adf50ad6398f
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+      Performance Compression: !<SingleCompressionSettings>
+        CompressorName: Performance
+        CompressionSettings: !<TextureCompressionSettings>
+          Level: Medium
+    ExtensionMappings:
+      mesh: None Compression
+      png: Performance Compression
+    Overrides:
+      {}
+- !<RenderMeshVisual/019df54d-11e7-4589-92e1-1a9843738bd5>
+  PrefabRemaps:
+    []
+  Name: Old_Persian_carpet_Old Persian carpet_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> e6d69ed4-9749-4ff0-9f2c-63b20f76fc76
+  Mesh: !<reference> b167a7b6-e19e-4942-a2e8-af5cf79142ea
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/2d625834-4671-4d6c-abe8-f89d54150241>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 45e4295b-ceef-4e6a-a629-da450e0178a8
+  Components:
+    []
+- !<ObjectPrefab/4493cab1-6327-409c-9b1e-1ec4f6b23e70>
+  PackagePath: ""
+  objects:
+    - !<own> f7aa5aa9-b982-4c20-b67a-9ff127f1ab07
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/45e4295b-ceef-4e6a-a629-da450e0178a8>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d573f156-74ec-4014-add2-0638b7b2fffc
+  Components:
+    - !<own> cf84ef1b-3f75-44b8-986e-32443f6845af
+- !<ObjectPrefabAssetData/5f47507a-1719-40a3-a2eb-adf50ad6398f>
+  SourceRemaps:
+    - 47e3113b-725c-4bca-80c0-357cf6baeb1a: 45e4295b-ceef-4e6a-a629-da450e0178a8
+    - 65aa395a-37c9-49d1-8e7b-8883948dea4c: d573f156-74ec-4014-add2-0638b7b2fffc
+    - 7166577d-e38d-44f6-b7d6-1563fb49bb4d: 019df54d-11e7-4589-92e1-1a9843738bd5
+    - 94c83f68-dd26-4cca-a22a-bc8a087ad1d9: cf84ef1b-3f75-44b8-986e-32443f6845af
+    - a7259279-4374-4721-a538-f7d20ae05134: 2d625834-4671-4d6c-abe8-f89d54150241
+    - b06bc72f-c6cd-4205-9644-76723eff2890: f7aa5aa9-b982-4c20-b67a-9ff127f1ab07
+    - e2b3da75-4cb6-4894-bc63-ccf1006549ad: 4493cab1-6327-409c-9b1e-1ec4f6b23e70
+  SourceState: !<own> 4493cab1-6327-409c-9b1e-1ec4f6b23e70
+- !<AnimationPlayer/cf84ef1b-3f75-44b8-986e-32443f6845af>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []
+- !<SceneObject/d573f156-74ec-4014-add2-0638b7b2fffc>
+  PrefabRemaps:
+    []
+  Name: Old_Persian_carpet_Old Persian carpet_0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.060089, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.005686, y: 0.005686, z: 0.005686}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 019df54d-11e7-4589-92e1-1a9843738bd5
+- !<SceneObject/f7aa5aa9-b982-4c20-b67a-9ff127f1ab07>
+  PrefabRemaps:
+    []
+  Name: Vintage_Persian_Rug
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2d625834-4671-4d6c-abe8-f89d54150241
+  Components:
+    []

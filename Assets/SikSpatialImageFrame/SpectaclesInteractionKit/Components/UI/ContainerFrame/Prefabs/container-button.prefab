@@ -1,0 +1,71 @@
+- !<ObjectPrefab/1e83dde5-4611-4715-8a66-6c5ffb58ed04>
+  PackagePath: ""
+  objects:
+    - !<own> f158fb80-77c2-418e-ba74-e85443c12392
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/3ea7d40a-5491-47ee-80da-ef3a7586f662>
+  PrefabRemaps:
+    []
+  Name: Interactable
+  Enabled: true
+  ScriptAsset: !<reference> cc50fe65-e330-4d4f-8e87-5e879a57b54a
+  ScriptInputsDefault:
+    targetingMode: true
+    enableInstantDrag: true
+    allowMultipleInteractors: true
+    enablePokeDirectionality: true
+    acceptableXDirections: true
+    acceptableYDirections: true
+    acceptableZDirections: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetingMode: !<float> 3.000000
+      enableInstantDrag: false
+      allowMultipleInteractors: true
+      enablePokeDirectionality: false
+      acceptableXDirections: !<float> 3.000000
+      acceptableYDirections: !<float> 3.000000
+      acceptableZDirections: !<float> 3.000000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/a9aa1255-c523-4dce-8329-fa8fe61530af>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  RenderOrder: 1
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 0ad0ba05-a747-4031-ae39-282604f34a09
+  Mesh: !<reference> 0b6e3c09-37b2-4fea-9b13-37d94c78dbf5
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: true
+  BlendShapes:
+    Pinch: 0.000000
+    Z depth: 1.000000
+- !<SceneObject/f158fb80-77c2-418e-ba74-e85443c12392>
+  PrefabRemaps:
+    []
+  Name: container-button
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -1.935684, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a9aa1255-c523-4dce-8329-fa8fe61530af
+    - !<own> 3ea7d40a-5491-47ee-80da-ef3a7586f662

@@ -1,0 +1,13 @@
+- !<AssetCache>
+  AssetFiles:
+    269a59c2-d9ab-47f2-af66-7fe13ff36578: 2a4e6590-f283-4799-a043-a7cc220bea33/735cc588cf43fc8624d5b1c22aaafa90/Data/container-button-matcap.jpg
+  Assets:
+    - !<FileTexture/269a59c2-d9ab-47f2-af66-7fe13ff36578>
+      PackagePath: ""
+      FileInfo: !<FileTextureInfo>
+        Width: 512
+        Height: 512
+  SourceHash: 735cc588cf43fc8624d5b1c22aaafa90
+  FileHash: 8c40c070ea089663557982c08e65d9b6
+  NativePackageItems:
+    []

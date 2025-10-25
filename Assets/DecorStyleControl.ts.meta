@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/7fc3f926-ced6-4a40-a647-ff3c4eab91c6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ef380c16-01b8-4f76-978c-b75eeb5fd98c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ef380c16-01b8-4f76-978c-b75eeb5fd98c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ca516234-878f-49ca-acb1-dca137deaa81
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ca516234-878f-49ca-acb1-dca137deaa81>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 189e098a-bf63-4036-8ab4-fc2fdf281127
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    bohoButton: false
+    bohoObject: false
+    bohoRug: false
+    debugText: false
+    rugPrefab: false
+    rugToggleButton: false
+    scandiButton: false
+    scandiObject: false
+    scandiRug: false
+    vintageButton: false
+    vintageObject: false
+    vintageRug: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - bohoButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scandiButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vintageButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bohoObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scandiObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vintageObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      debugText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      rugToggleButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bohoRug: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scandiRug: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      vintageRug: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rugPrefab: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject bohoButton
+    - // @input SceneObject scandiButton
+    - // @input SceneObject vintageButton
+    - // @input SceneObject bohoObject
+    - // @input SceneObject scandiObject
+    - // @input SceneObject vintageObject
+    - // @input SceneObject rugToggleButton
+    - // @input SceneObject rugPrefab
+    - // @input SceneObject bohoRug
+    - // @input SceneObject scandiRug
+    - // @input SceneObject vintageRug
+    - // @input Component.Text debugText

@@ -1,0 +1,946 @@
+- !<AssetImportMetadata/77bc03db-2553-4417-a101-70eacaf273d6>
+  ImportedAssetIds:
+    .hidden/Material.005: !<reference> 712e0318-ba6c-4be9-9b52-d300de512ead
+    0d890680f344b9d6: !<reference> 26b2783b-7b56-4e22-8b3c-d74c37654245
+    0dfe389fb909ee93: !<reference> 4f71a5b1-e80b-4486-ad6f-4618b9bc9121
+    0fbbdf3b0c7d7da8: !<reference> fe983ee4-e696-4d2f-9d43-3fccb91e71ed
+    12edc656c0b92b90: !<reference> cc405a42-6a9a-4a26-baf8-551b2b4582a3
+    15305adb99bae9e9: !<reference> 37009b03-8675-49ba-92c9-6e2daa6fbc1a
+    1e921263fe6b8747: !<reference> 92d91c44-0c77-4324-a458-9c7a2b864cbd
+    205d66942857a99d: !<reference> 1d8dc426-b4f9-43e9-b211-931107ec5968
+    2074197b38f3a1c1: !<reference> 4b6b94ea-a2ce-42c2-a647-f891fd203c1d
+    20f3df642aa1b53d: !<reference> 3ca8a369-342b-4774-a8a6-62fb1a1aced7
+    22a81395a022094f: !<reference> c8aca460-c018-4bc3-a702-6c89bbb221df
+    274411cf0d57558f: !<reference> 5d761d9f-228a-4e02-bfa1-5d33555edd58
+    3c4a7d9f1e72c616: !<reference> 5d22c94d-a200-4d09-b554-fd451eb125e7
+    450ff4f5ac8589be: !<reference> 0db58220-6c3e-42eb-b7b6-c73be6e0300d
+    4540cceb1947abdb: !<reference> a7e3179b-d705-4507-bd0e-b572a04bebcb
+    4a3e924fad0e2f27: !<reference> 813a4bec-8d60-42fe-90c3-101dbc5e157e
+    4eae0833bb578031: !<reference> c96b6f45-89c2-4434-8b2a-6eaac48c9e48
+    510edd4d6ac08b60: !<reference> 8d52905a-aebd-459f-8522-49a111fae354
+    57ba409f66c4ce33: !<reference> 247444fd-a01c-4c59-ab18-e6fb65ff74a9
+    5887e4fc7bf7ae40: !<reference> 304026c3-2d1d-4d4b-af53-8810222717e7
+    59ba44887c715a94: !<reference> bcef5839-e9c9-41a6-8492-5afcd509d3cc
+    5aaa37117b4f836a: !<reference> dee99d7f-1e75-4a46-b981-83179c96cff5
+    607e9636d234261d: !<reference> 44ed5430-ee48-46a1-a757-dc6e2ea87075
+    643b4df0c60713e8: !<reference> 1cafd496-5bed-48fb-8f0d-137a78c83d4c
+    64ef24b585e57975: !<reference> 6ff6280b-d1ee-4076-b2da-bf0dc4301d08
+    65938b7382efd6d0: !<reference> 71a73248-3a62-4705-92a7-81c52bd06704
+    66780cf3a4dcb2b8: !<reference> 90d0ed89-6c55-44ef-91fa-e76d73c405e2
+    6a61475e48deacd2: !<reference> 673385cd-537f-4662-b111-6be3df0fba96
+    7065c3cd29b84d58: !<reference> 63943e67-34ec-4fd2-a41c-57ad5089cf32
+    7def1d752c58a61e: !<reference> 71e253a5-4927-4265-8273-c002367f6082
+    83b2fcd8823b7854: !<reference> 59fbb7d7-795b-4f9b-9d4a-3d455f1bf35f
+    8a01a55cf17fb384: !<reference> 936905fc-06f5-4072-94ea-8e9fc2b61082
+    8d0e51b051dbe02c: !<reference> 36e6a590-64f2-4f04-998a-2b2eed58c1c8
+    96f664b015fcd573: !<reference> d0e59328-c51e-40b8-994b-b40cc037027c
+    9f217102dc56f4df: !<reference> 57e0a558-1e41-4aee-87b8-4c8ff5187139
+    Materials/Material.005: !<reference> 7491c84b-7adc-45e7-9eac-1d4800f71774
+    Materials/Material.005|Material.005|GraphPassInfo: !<reference> 44857f8a-fbe7-4e36-a34c-5231fa4f9a8a
+    Materials/Material_43.001: !<reference> dc884145-2b71-4a77-897d-16d8779b5b04
+    Materials/Material_43.001|Material_43.001|GraphPassInfo: !<reference> d1fd1d1c-1c98-4841-9ac2-c11659023f48
+    Materials/Vase: !<reference> fc082efb-d009-4122-a453-b678be9f840f
+    Materials/Vase|Vase|GraphPassInfo: !<reference> f9e60e0c-ea62-4eee-9c2e-221286b66a06
+    Materials/flowers_magnolia.001: !<reference> 31c70b64-df48-4781-a85f-9e2d04437c19
+    Materials/flowers_magnolia.001|flowers_magnolia.001|GraphPassInfo: !<reference> a563c997-9420-4db8-b13c-3be09df0f9f8
+    Materials/flowers_magnolia_stem.001: !<reference> d52e899d-2af7-4798-b148-8bc0010c1fd8
+    Materials/flowers_magnolia_stem.001|flowers_magnolia_stem.001|GraphPassInfo: !<reference> f8c20856-7f4d-4d13-a59c-05670d4d186b
+    Materials/material_0: !<reference> e89f575e-7621-4dee-b162-67af430b4871
+    Materials/material_0|material_0|GraphPassInfo: !<reference> b410df5b-53ec-45a1-bbad-5e3c5d321fc0
+    Meshes/Cube_Material_0: !<reference> c307bf66-6686-48fb-825e-ea92c2977d62
+    Meshes/Cylinder002_INSTALOD_INSTALOD_Livslang2_0: !<reference> cc4a9240-fbe3-476a-806c-5beed01b6650
+    "Meshes/Cylinder006_Material #43_0.001": !<reference> 9fc56582-e777-46c0-afc7-e1ac8b3a5cf7
+    Meshes/Object_0.002: !<reference> 2d050c5a-259a-4121-88be-c1b71dc80a48
+    Meshes/flowers_magnolia_003_flowers_magnolia_0.001: !<reference> 0fb9b393-7386-4428-99b9-0968c8f687a5
+    Meshes/flowers_magnolia_003_flowers_magnolia_stem_0.001: !<reference> 293aeb99-2044-4efc-a947-17e8f0b7d98f
+    Scene: !<reference> 2756e12a-6230-4f86-846f-93fcb45591bc
+    Textures/Image_0: !<reference> 8b905b6a-ade1-43ef-99d5-7d5cd0404641
+    Textures/Image_01: !<reference> 4d2e4328-b940-4720-8939-4fd972b74011
+    Textures/Image_1: !<reference> 1a3f7dac-d77d-4d9e-8101-4e6bf525872b
+    Textures/Image_1 4: !<reference> 9ade0438-2a27-4c08-b55b-c860b630474e
+    Textures/Image_2: !<reference> 22f03807-d5e9-4c4b-ba49-944635774879
+    Textures/Image_3: !<reference> 848bcb88-2238-40e7-876e-2deb45c30ce7
+    Textures/Material_baseColor: !<reference> a7bfd704-c6c2-40bc-a49b-99fb286d9d28
+    Textures/Vase_baseColor: !<reference> aec05631-ecac-4774-8515-299f25f548bf
+    Textures/Vase_normal: !<reference> 6e79d3d4-ca65-4e3f-81fc-2f05f70f931f
+    Textures/material_0_baseColor: !<reference> 660b62c1-018a-453b-a24a-1d540b63eef7
+    af9f8dc5df44f410: !<reference> 75a9d3c1-1ff1-41d1-ae22-10faab62f8c4
+    b7983832ca926c64: !<reference> 1059edf3-642f-4699-bb49-1a1c22dda67f
+    bdd7e090e10919be: !<reference> 911b6957-0f24-4f38-ad36-370dc9c7bd58
+    c62d24a1f8d66fe1: !<reference> a38ed701-938f-4abb-95b4-470e6d170ead
+    d106dbacca654e1f: !<reference> e35b1ae8-7004-4a29-82e4-6d2b60f8209e
+    d1add7f00801a58d: !<reference> 92437f0f-7bd0-41de-9cca-2cc791fa939b
+    d668f5cc65f8b000: !<reference> 22b88d05-66d4-4f9b-ba5d-54d6f56111ab
+    d822d2477e29fd74: !<reference> b0498cf9-4ff5-4dd2-bf50-1f76c9adbe2a
+    db03f2893b018f5e: !<reference> 78236c14-86b8-42f1-84d7-4cb961904548
+    e417d808c99581ec: !<reference> a520b8e2-317b-47f8-b453-0987bb451b37
+    f4e027ffbc689641: !<reference> a7737893-c1b5-4d94-b87b-7ffc3382e87f
+    f50bb7bec12e17d4: !<reference> 85b16676-bbf4-4261-9dfb-7632cec52a60
+    f6c1bfa2deec1223: !<reference> 8c37c280-ad71-42f9-98c0-c1640495b624
+    f7823ed8e3d3f631: !<reference> 1d8c761d-fb82-4078-b4c6-e8fc4fae885a
+    fc2f1d93efcba84f: !<reference> 96131a28-684c-4ba0-8044-417de33c33a6
+  ImporterName: GltfImporter
+  PrimaryAsset: !<reference> 2756e12a-6230-4f86-846f-93fcb45591bc
+  PackageType: LegacyPackage
+  PackagePolicy: CanBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> 14d0eb9c-3be2-4c6e-88a0-01ba87a79f3c
+  DependentFiles:
+    []
+  ImporterSettings: !<GltfImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangents: true
+    ImportMorphTargetAnimation: true
+    ConvertMetersToCentimeters: true
+    RegenerateTangents: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+      Performance Compression: !<SingleCompressionSettings>
+        CompressorName: Performance
+        CompressionSettings: !<TextureCompressionSettings>
+          Level: Medium
+    ExtensionMappings:
+      mesh: None Compression
+      jpeg: Performance Compression
+      png: Performance Compression
+    Overrides:
+      {}
+- !<SceneObject/01996eb8-28f0-487d-ad33-109e108f0b8e>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.177971, y: 0.000000, z: -0.133999}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.027889, y: 0.027889, z: 0.027889}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a88335ae-f2f6-4084-8f7f-5e5e983e3f3b
+  Components:
+    []
+- !<SceneObject/0212d12c-9cbd-488d-8269-d44cb91d3784>
+  PrefabRemaps:
+    []
+  Name: Cube_Material_0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.835089, y: 2.076841, z: -0.758770}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.104579, y: 1.104579, z: 1.104579}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> dd6624ed-2f17-4189-82bf-658c66846de4
+- !<SceneObject/058966b9-6a37-4a2b-839c-ce7f81e1f9f4>
+  PrefabRemaps:
+    []
+  Name: flowers_magnolia_003_flowers_magnolia_0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -14.586029, y: 0.012121, z: 58.342480}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.647955, y: 0.647955, z: 0.647955}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> decb9b74-a8a8-470b-be47-756251a3093d
+- !<SceneObject/0db0fc29-5169-44f6-9715-25cb986cd7a8>
+  PrefabRemaps:
+    []
+  Name: RootNode.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 8ea39c33-9172-4162-8053-2e8f000ee81f
+  Components:
+    []
+- !<SceneObject/114ad566-3f1b-4ef3-a9b1-4fed32164801>
+  PrefabRemaps:
+    []
+  Name: vintage_vase 2
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> b52c5bd0-de1e-4642-8984-9d09ba71ea12
+  Components:
+    []
+- !<SceneObject/135e86f3-a1cf-4165-b286-41e10be6f9c8>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.004
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.122378, y: 0.049872, z: -0.248032}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.000838, y: 0.000838, z: 0.000838}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> dbdf8c4c-960c-4607-97d8-dd1a3a0e05a2
+  Components:
+    []
+- !<ObjectPrefabAssetData/14d0eb9c-3be2-4c6e-88a0-01ba87a79f3c>
+  SourceRemaps:
+    - 0db58220-6c3e-42eb-b7b6-c73be6e0300d: ef4f22dd-a2c2-4295-aafd-b509bda02da6
+    - 1059edf3-642f-4699-bb49-1a1c22dda67f: dd6624ed-2f17-4189-82bf-658c66846de4
+    - 1cafd496-5bed-48fb-8f0d-137a78c83d4c: 25369bef-cc8b-4044-a16c-ef36ac21ffc3
+    - 1d8c761d-fb82-4078-b4c6-e8fc4fae885a: ff7505d8-4224-4ca1-944e-b7d978aacf39
+    - 1d8dc426-b4f9-43e9-b211-931107ec5968: 3abd2a23-f265-4a2b-adab-b12686bc80ad
+    - 22b88d05-66d4-4f9b-ba5d-54d6f56111ab: e0c59ada-2b50-4b7f-bb12-975691d6f9c6
+    - 247444fd-a01c-4c59-ab18-e6fb65ff74a9: 888255d1-dbe6-409a-ba7a-d7718d90b26e
+    - 26b2783b-7b56-4e22-8b3c-d74c37654245: 9a3ab282-788f-4953-9156-c7c899aec23a
+    - 2756e12a-6230-4f86-846f-93fcb45591bc: ed633e37-60af-4f90-8778-1ee0a48ecc9c
+    - 304026c3-2d1d-4d4b-af53-8810222717e7: 530ce2b1-58e7-4375-a283-d314c63fb5d7
+    - 36e6a590-64f2-4f04-998a-2b2eed58c1c8: 18bcf114-8605-4909-8c5d-45d9a0c71baf
+    - 37009b03-8675-49ba-92c9-6e2daa6fbc1a: aad1b0b2-5129-4596-89c0-536aff686360
+    - 3ca8a369-342b-4774-a8a6-62fb1a1aced7: d020a6d5-7d3c-4bb0-a489-82b603036090
+    - 44ed5430-ee48-46a1-a757-dc6e2ea87075: 600810fc-4016-4b21-92dd-7441c20425a9
+    - 4b6b94ea-a2ce-42c2-a647-f891fd203c1d: 541eaa46-a831-444b-b2d6-16fcd911af5a
+    - 4f71a5b1-e80b-4486-ad6f-4618b9bc9121: dbdf8c4c-960c-4607-97d8-dd1a3a0e05a2
+    - 57e0a558-1e41-4aee-87b8-4c8ff5187139: e2454b84-039f-4498-a1cf-8701fb3bbe3e
+    - 59fbb7d7-795b-4f9b-9d4a-3d455f1bf35f: 058966b9-6a37-4a2b-839c-ce7f81e1f9f4
+    - 5d22c94d-a200-4d09-b554-fd451eb125e7: efefdb0c-f691-4c4b-a3e3-5b006660c589
+    - 5d761d9f-228a-4e02-bfa1-5d33555edd58: 3c8ea4c0-c53a-4c3b-8f4c-4e23fcf0780c
+    - 63943e67-34ec-4fd2-a41c-57ad5089cf32: 792ccc56-81ab-422e-90c4-92babf5bb266
+    - 673385cd-537f-4662-b111-6be3df0fba96: 87e3fddd-3ddb-4aab-b90a-b7a7a89688c7
+    - 6ff6280b-d1ee-4076-b2da-bf0dc4301d08: a5c4c4b5-9c62-4cf0-85ca-2ebd74358454
+    - 71a73248-3a62-4705-92a7-81c52bd06704: a34bbe3e-3d04-4063-8636-08554fa52677
+    - 71e253a5-4927-4265-8273-c002367f6082: decb9b74-a8a8-470b-be47-756251a3093d
+    - 75a9d3c1-1ff1-41d1-ae22-10faab62f8c4: a88335ae-f2f6-4084-8f7f-5e5e983e3f3b
+    - 78236c14-86b8-42f1-84d7-4cb961904548: 3105b751-c0a5-4c63-a068-5179cf553a8d
+    - 813a4bec-8d60-42fe-90c3-101dbc5e157e: b52c5bd0-de1e-4642-8984-9d09ba71ea12
+    - 85b16676-bbf4-4261-9dfb-7632cec52a60: 8ea39c33-9172-4162-8053-2e8f000ee81f
+    - 8c37c280-ad71-42f9-98c0-c1640495b624: 0212d12c-9cbd-488d-8269-d44cb91d3784
+    - 8d52905a-aebd-459f-8522-49a111fae354: 793bcac7-b48d-4283-8f21-84b40e0746ae
+    - 90d0ed89-6c55-44ef-91fa-e76d73c405e2: 114ad566-3f1b-4ef3-a9b1-4fed32164801
+    - 911b6957-0f24-4f38-ad36-370dc9c7bd58: 592012ad-0cb7-4044-9db2-0daf601dd90a
+    - 92437f0f-7bd0-41de-9cca-2cc791fa939b: 8a948bbd-7a7e-4bfb-b048-d1a927c1c9ba
+    - 92d91c44-0c77-4324-a458-9c7a2b864cbd: ab567fce-408c-495d-b863-dd7f55922a52
+    - 936905fc-06f5-4072-94ea-8e9fc2b61082: 4242854d-9a6e-457b-beff-2610cd687966
+    - 96131a28-684c-4ba0-8044-417de33c33a6: 0db0fc29-5169-44f6-9715-25cb986cd7a8
+    - a38ed701-938f-4abb-95b4-470e6d170ead: c3d59a20-c2a3-41a7-a041-78602416640d
+    - a520b8e2-317b-47f8-b453-0987bb451b37: d28d522c-f3c5-4a2a-b8f2-b092f673da55
+    - a7737893-c1b5-4d94-b87b-7ffc3382e87f: ade28b22-a1f3-40c4-aac2-b09e096b12d9
+    - a7e3179b-d705-4507-bd0e-b572a04bebcb: 135e86f3-a1cf-4165-b286-41e10be6f9c8
+    - b0498cf9-4ff5-4dd2-bf50-1f76c9adbe2a: b522a45c-5485-4b0f-81d1-dd6f3f76554d
+    - bcef5839-e9c9-41a6-8492-5afcd509d3cc: 01996eb8-28f0-487d-ad33-109e108f0b8e
+    - c8aca460-c018-4bc3-a702-6c89bbb221df: 71404574-70f9-4240-86b8-8c11b7b935c1
+    - c96b6f45-89c2-4434-8b2a-6eaac48c9e48: 8b55f310-d283-4107-b2d0-69d877c7be13
+    - cc405a42-6a9a-4a26-baf8-551b2b4582a3: baca41c4-8e97-40f8-9d11-50dbd49b3437
+    - d0e59328-c51e-40b8-994b-b40cc037027c: 9e1841bb-761f-42b7-8a77-a92715979c87
+    - dee99d7f-1e75-4a46-b981-83179c96cff5: a8205dcf-3af6-4ed8-a48d-4b8ee6068737
+    - e35b1ae8-7004-4a29-82e4-6d2b60f8209e: b392a72b-b611-4908-944a-84ee2ad886de
+    - fe983ee4-e696-4d2f-9d43-3fccb91e71ed: f8e8d70e-4ffb-418d-b51c-9a8d98dffc56
+  SourceState: !<own> ed633e37-60af-4f90-8778-1ee0a48ecc9c
+- !<RenderMeshVisual/18bcf114-8605-4909-8c5d-45d9a0c71baf>
+  PrefabRemaps:
+    []
+  Name: Cylinder002_INSTALOD_INSTALOD_Livslang2_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> fc082efb-d009-4122-a453-b678be9f840f
+  Mesh: !<reference> cc4a9240-fbe3-476a-806c-5beed01b6650
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/25369bef-cc8b-4044-a16c-ef36ac21ffc3>
+  PrefabRemaps:
+    []
+  Name: "Cylinder006_Material #43_0.001"
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> dc884145-2b71-4a77-897d-16d8779b5b04
+  Mesh: !<reference> 9fc56582-e777-46c0-afc7-e1ac8b3a5cf7
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/3105b751-c0a5-4c63-a068-5179cf553a8d>
+  PrefabRemaps:
+    []
+  Name: GLTF_SceneRootNode.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 592012ad-0cb7-4044-9db2-0daf601dd90a
+  Components:
+    []
+- !<SceneObject/3abd2a23-f265-4a2b-adab-b12686bc80ad>
+  PrefabRemaps:
+    []
+  Name: "Cylinder006_Material #43_0.001"
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 20.792820, z: 0.000003}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 25369bef-cc8b-4044-a16c-ef36ac21ffc3
+- !<SceneObject/3c8ea4c0-c53a-4c3b-8f4c-4e23fcf0780c>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.005414, y: 0.005414, z: 0.005414}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 888255d1-dbe6-409a-ba7a-d7718d90b26e
+  Components:
+    []
+- !<SceneObject/4242854d-9a6e-457b-beff-2610cd687966>
+  PrefabRemaps:
+    []
+  Name: Cylinder002_INSTALOD_INSTALOD_Livslang2_0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.104486, y: 0.176693, z: -0.252979}
+    rotation: {x: -89.999969, y: 0.000000, z: 0.000000}
+    scale: {x: 0.014598, y: 0.014598, z: 0.014598}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 18bcf114-8605-4909-8c5d-45d9a0c71baf
+- !<SceneObject/530ce2b1-58e7-4375-a283-d314c63fb5d7>
+  PrefabRemaps:
+    []
+  Name: _0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> ef4f22dd-a2c2-4295-aafd-b509bda02da6
+  Components:
+    []
+- !<SceneObject/541eaa46-a831-444b-b2d6-16fcd911af5a>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.003
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.116838, y: 0.000000, z: -0.272625}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.288160, y: 0.288160, z: 0.288160}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 71404574-70f9-4240-86b8-8c11b7b935c1
+  Components:
+    []
+- !<SceneObject/592012ad-0cb7-4044-9db2-0daf601dd90a>
+  PrefabRemaps:
+    []
+  Name: Vert_3
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.486555, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/600810fc-4016-4b21-92dd-7441c20425a9>
+  PrefabRemaps:
+    []
+  Name: flowers_magnolia_003_flowers_magnolia_stem_0
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -14.586029, y: 0.012121, z: 58.342480}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.647955, y: 0.647955, z: 0.647955}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b522a45c-5485-4b0f-81d1-dd6f3f76554d
+- !<SceneObject/71404574-70f9-4240-86b8-8c11b7b935c1>
+  PrefabRemaps:
+    []
+  Name: root.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3105b751-c0a5-4c63-a068-5179cf553a8d
+  Components:
+    []
+- !<SceneObject/792ccc56-81ab-422e-90c4-92babf5bb266>
+  PrefabRemaps:
+    []
+  Name: RootNode.006
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> c3d59a20-c2a3-41a7-a041-78602416640d
+  Components:
+    []
+- !<SceneObject/793bcac7-b48d-4283-8f21-84b40e0746ae>
+  PrefabRemaps:
+    []
+  Name: Cylinder002_INSTALOD_INSTALOD
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 31.089930, y: -2.481242, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/87e3fddd-3ddb-4aab-b90a-b7a7a89688c7>
+  PrefabRemaps:
+    []
+  Name: flowers_magnolia_003.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.000015, y: -0.000008, z: 0.000000}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 058966b9-6a37-4a2b-839c-ce7f81e1f9f4
+    - !<own> 600810fc-4016-4b21-92dd-7441c20425a9
+  Components:
+    []
+- !<SceneObject/888255d1-dbe6-409a-ba7a-d7718d90b26e>
+  PrefabRemaps:
+    []
+  Name: 5d788d9b4ef94141ae1c90bb0f4c3e07.fbx
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0db0fc29-5169-44f6-9715-25cb986cd7a8
+  Components:
+    []
+- !<SceneObject/8a948bbd-7a7e-4bfb-b048-d1a927c1c9ba>
+  PrefabRemaps:
+    []
+  Name: Cube
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000031}
+    rotation: {x: 90.000000, y: 45.000000, z: -180.000000}
+    scale: {x: 100.000008, y: 100.000000, z: 100.000008}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0212d12c-9cbd-488d-8269-d44cb91d3784
+  Components:
+    []
+- !<SceneObject/8b55f310-d283-4107-b2d0-69d877c7be13>
+  PrefabRemaps:
+    []
+  Name: GLTF_SceneRootNode
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 530ce2b1-58e7-4375-a283-d314c63fb5d7
+  Components:
+    []
+- !<SceneObject/8ea39c33-9172-4162-8053-2e8f000ee81f>
+  PrefabRemaps:
+    []
+  Name: Cylinder006
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/9a3ab282-788f-4953-9156-c7c899aec23a>
+  PrefabRemaps:
+    []
+  Name: RootNode.002
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000031}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 8a948bbd-7a7e-4bfb-b048-d1a927c1c9ba
+  Components:
+    []
+- !<SceneObject/9e1841bb-761f-42b7-8a77-a92715979c87>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3c8ea4c0-c53a-4c3b-8f4c-4e23fcf0780c
+    - !<own> 01996eb8-28f0-487d-ad33-109e108f0b8e
+    - !<own> efefdb0c-f691-4c4b-a3e3-5b006660c589
+    - !<own> 541eaa46-a831-444b-b2d6-16fcd911af5a
+    - !<own> 135e86f3-a1cf-4165-b286-41e10be6f9c8
+    - !<own> d020a6d5-7d3c-4bb0-a489-82b603036090
+    - !<own> ade28b22-a1f3-40c4-aac2-b09e096b12d9
+    - !<own> 4242854d-9a6e-457b-beff-2610cd687966
+    - !<own> f8e8d70e-4ffb-418d-b51c-9a8d98dffc56
+  Components:
+    - !<own> ff7505d8-4224-4ca1-944e-b7d978aacf39
+- !<SceneObject/a34bbe3e-3d04-4063-8636-08554fa52677>
+  PrefabRemaps:
+    []
+  Name: RootNode.003
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000004, z: -0.000031}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> aad1b0b2-5129-4596-89c0-536aff686360
+  Components:
+    []
+- !<SceneObject/a5c4c4b5-9c62-4cf0-85ca-2ebd74358454>
+  PrefabRemaps:
+    []
+  Name: root
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 8b55f310-d283-4107-b2d0-69d877c7be13
+  Components:
+    []
+- !<SceneObject/a8205dcf-3af6-4ed8-a48d-4b8ee6068737>
+  PrefabRemaps:
+    []
+  Name: 70b59c24389b4e979be7c66fda7ab3fc.fbx
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 180.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> b392a72b-b611-4908-944a-84ee2ad886de
+  Components:
+    []
+- !<SceneObject/a88335ae-f2f6-4084-8f7f-5e5e983e3f3b>
+  PrefabRemaps:
+    []
+  Name: d87dc7480d1e40f8a48f60612ae18b7b.fbx
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 0.010000, y: 0.010000, z: 0.010000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9a3ab282-788f-4953-9156-c7c899aec23a
+  Components:
+    []
+- !<SceneObject/aad1b0b2-5129-4596-89c0-536aff686360>
+  PrefabRemaps:
+    []
+  Name: flowers_magnolia_003
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000004, z: -0.000031}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/ab567fce-408c-495d-b863-dd7f55922a52>
+  PrefabRemaps:
+    []
+  Name: 5d788d9b4ef94141ae1c90bb0f4c3e07.fbx.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 792ccc56-81ab-422e-90c4-92babf5bb266
+  Components:
+    []
+- !<SceneObject/ade28b22-a1f3-40c4-aac2-b09e096b12d9>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.006
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -4.921028, z: -5.113449}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 0.934448, y: 0.934448, z: 0.934448}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a8205dcf-3af6-4ed8-a48d-4b8ee6068737
+  Components:
+    []
+- !<SceneObject/b392a72b-b611-4908-944a-84ee2ad886de>
+  PrefabRemaps:
+    []
+  Name: RootNode.005
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> baca41c4-8e97-40f8-9d11-50dbd49b3437
+    - !<own> 793bcac7-b48d-4283-8f21-84b40e0746ae
+  Components:
+    []
+- !<RenderMeshVisual/b522a45c-5485-4b0f-81d1-dd6f3f76554d>
+  PrefabRemaps:
+    []
+  Name: flowers_magnolia_003_flowers_magnolia_stem_0.001
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> d52e899d-2af7-4798-b148-8bc0010c1fd8
+  Mesh: !<reference> 293aeb99-2044-4efc-a947-17e8f0b7d98f
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/b52c5bd0-de1e-4642-8984-9d09ba71ea12>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9e1841bb-761f-42b7-8a77-a92715979c87
+  Components:
+    []
+- !<SceneObject/baca41c4-8e97-40f8-9d11-50dbd49b3437>
+  PrefabRemaps:
+    []
+  Name: Cylinder001_INSTALOD_INSTALOD
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 11.247424, y: -2.405496, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.648593, y: 0.648593, z: 1.004202}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
+- !<SceneObject/c3d59a20-c2a3-41a7-a041-78602416640d>
+  PrefabRemaps:
+    []
+  Name: Cylinder006.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 3abd2a23-f265-4a2b-adab-b12686bc80ad
+  Components:
+    []
+- !<SceneObject/d020a6d5-7d3c-4bb0-a489-82b603036090>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.005
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.120466, y: 0.103261, z: -0.252900}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.000814, y: 0.000814, z: 0.000814}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> e0c59ada-2b50-4b7f-bb12-975691d6f9c6
+  Components:
+    []
+- !<SceneObject/d28d522c-f3c5-4a2a-b8f2-b092f673da55>
+  PrefabRemaps:
+    []
+  Name: RootNode.004
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.000015, y: -0.000008, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 87e3fddd-3ddb-4aab-b90a-b7a7a89688c7
+  Components:
+    []
+- !<SceneObject/dbdf8c4c-960c-4607-97d8-dd1a3a0e05a2>
+  PrefabRemaps:
+    []
+  Name: 14f21ed05e164600bdb6699474a4c541.fbx
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -0.000039, z: -0.000006}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a34bbe3e-3d04-4063-8636-08554fa52677
+  Components:
+    []
+- !<RenderMeshVisual/dd6624ed-2f17-4189-82bf-658c66846de4>
+  PrefabRemaps:
+    []
+  Name: Cube_Material_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7491c84b-7adc-45e7-9eac-1d4800f71774
+  Mesh: !<reference> c307bf66-6686-48fb-825e-ea92c2977d62
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/decb9b74-a8a8-470b-be47-756251a3093d>
+  PrefabRemaps:
+    []
+  Name: flowers_magnolia_003_flowers_magnolia_0.001
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 31c70b64-df48-4781-a85f-9e2d04437c19
+  Mesh: !<reference> 0fb9b393-7386-4428-99b9-0968c8f687a5
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/e0c59ada-2b50-4b7f-bb12-975691d6f9c6>
+  PrefabRemaps:
+    []
+  Name: 14f21ed05e164600bdb6699474a4c541.fbx.001
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.000015, y: -0.000048, z: -0.000019}
+    rotation: {x: 90.000023, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d28d522c-f3c5-4a2a-b8f2-b092f673da55
+  Components:
+    []
+- !<RenderMeshVisual/e2454b84-039f-4498-a1cf-8701fb3bbe3e>
+  PrefabRemaps:
+    []
+  Name: Object_0.002
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> e89f575e-7621-4dee-b162-67af430b4871
+  Mesh: !<reference> 2d050c5a-259a-4121-88be-c1b71dc80a48
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/ed633e37-60af-4f90-8778-1ee0a48ecc9c>
+  PackagePath: ""
+  objects:
+    - !<own> 114ad566-3f1b-4ef3-a9b1-4fed32164801
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/ef4f22dd-a2c2-4295-aafd-b509bda02da6>
+  PrefabRemaps:
+    []
+  Name: Object_4
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: -0.163680, y: 0.245383, z: -0.094624}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.705758, y: 0.705758, z: 0.705758}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e2454b84-039f-4498-a1cf-8701fb3bbe3e
+- !<SceneObject/efefdb0c-f691-4c4b-a3e3-5b006660c589>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.002
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -0.688520, z: -0.212215}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.825883, y: 0.825884, z: 0.825884}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> a5c4c4b5-9c62-4cf0-85ca-2ebd74358454
+  Components:
+    []
+- !<SceneObject/f8e8d70e-4ffb-418d-b51c-9a8d98dffc56>
+  PrefabRemaps:
+    []
+  Name: Sketchfab_model.007
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.117784}
+    rotation: {x: -90.000023, y: 0.000000, z: 0.000000}
+    scale: {x: 0.005414, y: 0.005414, z: 0.005414}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> ab567fce-408c-495d-b863-dd7f55922a52
+  Components:
+    []
+- !<AnimationPlayer/ff7505d8-4224-4ca1-944e-b7d978aacf39>
+  PrefabRemaps:
+    []
+  Name: component_6
+  Enabled: true
+  Autoplay: true
+  ClipRangeType: Frames
+  AnimationClips:
+    []

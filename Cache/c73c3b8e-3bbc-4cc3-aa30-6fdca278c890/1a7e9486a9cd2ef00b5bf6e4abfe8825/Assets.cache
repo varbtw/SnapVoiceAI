@@ -1,0 +1,462 @@
+- !<AssetCache>
+  AssetFiles:
+    {}
+  Assets:
+    []
+  SourceHash: 1a7e9486a9cd2ef00b5bf6e4abfe8825
+  FileHash: 086781278027c852521a75b25030dc36
+  NativePackageItems:
+    - !<own> e4d88369-2c44-4cf2-a222-462ca0e46045
+    - !<own> 27a62a35-e68a-489e-8e2a-e225a0c7713e
+    - !<own> 26bef1da-9746-4a30-9b95-d7c5ffbe208b
+    - !<own> 7991ddac-e202-4a86-b4f8-a40fc5405d28
+    - !<own> f86d3c14-2aa2-4a6c-8d70-3f5653a90697
+    - !<own> ee8c94dc-719f-47fd-8474-d8605b1d9636
+    - !<own> 82318e2c-406e-4921-82f5-426582104418
+    - !<own> 592d41ec-59d9-440b-97a6-370c297c6d27
+    - !<own> 398f25a0-f458-4e06-ba50-9f3e8912a67c
+    - !<own> abdbbc8f-0edf-4637-9505-aa8c03f45693
+    - !<own> 68e792af-a760-4d01-a766-98a4ff6072e5
+- !<TypeScriptAssetData/0987369b-941c-44f8-85a7-2ded0e58f610>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 519958cb-e76a-460e-9402-20f9507ec9e6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    []
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/26bef1da-9746-4a30-9b95-d7c5ffbe208b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9328396b-bb88-4d63-9988-a40f5ba7c4f4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9328396b-bb88-4d63-9988-a40f5ba7c4f4
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0987369b-941c-44f8-85a7-2ded0e58f610
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/27a62a35-e68a-489e-8e2a-e225a0c7713e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a356a1c1-d64a-45b7-8bfd-61c77ef67672
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a356a1c1-d64a-45b7-8bfd-61c77ef67672
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> c3034cea-7f26-448d-944b-578ba8b30eda
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/398f25a0-f458-4e06-ba50-9f3e8912a67c>
+  ImportedAssetIds:
+    RemoteServiceModule: !<reference> 498b9bdf-f926-4ac5-bfe0-f3f44c53141b
+  ImporterName: RemoteServiceModuleImporter
+  PrimaryAsset: !<reference> 498b9bdf-f926-4ac5-bfe0-f3f44c53141b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/3aa6cdfc-2084-4b96-bc68-76bda04d04b1>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e6c2cfe7-fd3c-49a5-a578-eb238cd312c6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    []
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/40b250d9-b340-4871-89bd-52232d35ecb5>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 3
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: fef77de1-8571-4a2e-8690-97fd90318d9b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    []
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4ec9d410-044e-46cb-ae3d-80e685ad9d69>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6bcfe110-3361-4453-9b04-701f12928c46
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    []
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/592d41ec-59d9-440b-97a6-370c297c6d27>
+  ImportedAssetIds:
+    ShaderGraph: !<reference> 0800c6ee-98f4-46a7-b474-415173372503
+  ImporterName: ShaderGraphPassImporter
+  PrimaryAsset: !<reference> 0800c6ee-98f4-46a7-b474-415173372503
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/68e792af-a760-4d01-a766-98a4ff6072e5>
+  ImportedAssetIds:
+    NativePackageDescriptor: !<reference> 911688cb-7af1-47a6-84ec-aa17aa880bb9
+  ImporterName: NativePackageDescriptorImporter
+  PrimaryAsset: !<reference> 911688cb-7af1-47a6-84ec-aa17aa880bb9
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/7991ddac-e202-4a86-b4f8-a40fc5405d28>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9451dff1-19c7-4f9c-aa76-177ca31bff61
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9451dff1-19c7-4f9c-aa76-177ca31bff61
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 40b250d9-b340-4871-89bd-52232d35ecb5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/82318e2c-406e-4921-82f5-426582104418>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7a83012a-6be8-4f5a-8689-80603f8b788e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7a83012a-6be8-4f5a-8689-80603f8b788e
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3aa6cdfc-2084-4b96-bc68-76bda04d04b1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<ScriptAssetData/96ee64fe-4131-4a01-9ea5-b50300d0107e>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 91839674-3a96-4ea4-8f7b-ae63e9c8ddf2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/abdbbc8f-0edf-4637-9505-aa8c03f45693>
+  ImportedAssetIds:
+    Material: !<reference> 474daaa3-1eea-4435-9e87-62a31e5e48b1
+  ImporterName: MaterialImporter
+  PrimaryAsset: !<reference> 474daaa3-1eea-4435-9e87-62a31e5e48b1
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<TypeScriptAssetData/c3034cea-7f26-448d-944b-578ba8b30eda>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 1
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9db4ec51-cfd0-4419-a0e7-7d5ca475e309
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    {}
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    -
+      {}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    []
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/cb2a7a5c-b3d1-478f-8b23-46d61798a759>
+  SvgIcon: |
+    <svg width="234" height="212" viewBox="0 0 234 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M55.3619 38.4378L11.4999 62.8613C4.38411 66.8235 4.55389 78.7239 11.7787 82.4069L113.738 134.383C116.083 135.578 118.749 135.578 121.094 134.383L223.053 82.4069C230.278 78.7239 230.448 66.8235 223.332 62.8613L121.373 6.08782C118.87 4.69412 115.962 4.69412 113.459 6.08782L86.3889 21.1612" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M179.162 73.767L121.064 41.417C118.562 40.0233 115.654 40.0233 113.151 41.417L55.0538 73.767M210.189 91.0436L223.024 98.1905C230.139 102.153 229.97 114.053 222.745 117.736L120.786 169.712C118.44 170.907 115.775 170.907 113.43 169.712L70.5673 147.862M24.0268 91.0436L11.1918 98.1905C4.07601 102.153 4.24578 114.053 11.4706 117.736L55.0538 139.953" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M148.135 92.1792L121.064 77.1058C118.562 75.7121 115.654 75.7121 113.151 77.1058L86.0808 92.1792M210.189 126.732L223.024 133.879C230.139 137.841 229.97 149.742 222.745 153.425L194.675 167.734M24.0268 126.732L11.1918 133.879C4.076 137.841 4.24579 149.742 11.4706 153.425L113.43 205.401C115.775 206.596 118.44 206.596 120.786 205.401L179.162 175.642" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+  Description: |
+    # SpatialImageComponent
+    
+    Spatial Image Component is a custom component that spatializes a 2D image texture, turning it into a 3D mesh to be viewed on Spectacles.
+    
+    ## API
+    
+    ### Properties
+    
+    #### frameHeight: number
+    
+    The height of the spatialized image in AR space.
+    
+    #### frameOffset: number
+    
+    The frameOffset, the focal point of the image.
+    
+    #### depthScale: number
+    
+    The depthScale of the image, which reflects how deep the image appears.
+    
+    #### fadeBorder: boolean
+    
+    If the border of the image should be faded.
+    
+    #### frameOn: boolean
+    
+    Enables and disables the image frame with rounded corners, that creates the viewing portal effect. _Note: if fadeBorder is applied, this will fade the frame border too and will also make the image appear in a frame_
+    
+    #### onLoaded: EventWrapper (readonly)
+    
+    An Event triggered when the image has been successfully spatialized and returned. Use `onLoaded .add(callback)` and `onLoaded .remove(callback)`.
+    
+    #### onLoadingStart: EventWrapper (readonly)
+    
+    A Event triggered when the image loading begins - when it's added to the queue to start spatializing. In the callback, checkSpatializing is a function that returns a boolean determining whether the image is currently spatializing or if it's still in the queue/rejected. Use `onLoadingStart .add(callback)` and `onLoadingStart .remove(callback)`.
+    
+    ### Methods
+    
+    #### setImage(image: Texture): void
+    
+    Requests the image to be spatialized and updates the mesh when this returns.
+    
+    #### getImageTexture(): Texture | undefined
+    
+    If present, returns the flat texture that is or is being spatialized.
+    
+    #### getLoadStatus(): LoadStatus
+    
+    Returns if the image is in the process of being spatialized or if this has been completed.
+    
+    #### setMaterialProperties(height: number, offset: number, scale: number): void
+    
+    Allows for all the material properties to be set in a single call.
+    
+    #### setFrameOffset(offset: number): void
+    
+    Sets the frameOffset, the focal point of the image. Added for use with scene sliders.
+    
+    #### setDepthScale(scale: number): void
+    
+    Sets the depthScale of the image, which reflects how deep the image appears. Added for use with scene sliders.
+    
+    ## Troubleshooting
+    
+    ### The spatial image's background is cut off
+    
+    Try increasing the far clipping plane of the camera.
+    
+    ### The spatial image doesn't show up in the lens studio preview
+    
+    Make sure the preview device is set to Spectacles and check internet connection.
+
+  InternalVersion: 4
+  VersionMajor: 1
+  VersionMinor: 0
+  VersionPatch: 1
+  ComponentUid: d26401c9-9f79-402e-98e6-e491cc34d6d5
+  ExportUid: 204f14fe-751b-4df8-8d01-408e4657005a
+  CurrentVisibility: Locked
+  MaxVisibility: Locked
+  ScriptInputsHidden:
+    _depthScale: false
+    _fadeBorder: false
+    _frameHeight: false
+    _frameOffset: false
+    _frameOn: false
+    advancedSettings: false
+    imageTexture: false
+    meshMaterial: true
+    remoteServiceModule: true
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - meshMaterial: !<reference.Material> 474daaa3-1eea-4435-9e87-62a31e5e48b1
+      remoteServiceModule: !<reference.RemoteServiceModule> 498b9bdf-f926-4ac5-bfe0-f3f44c53141b
+      imageTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      advancedSettings: false
+      _frameHeight: 100
+      _frameOffset: -200
+      _depthScale: 100
+      _fadeBorder: true
+      _frameOn: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.Material meshMaterial
+    - // @input Asset.RemoteServiceModule remoteServiceModule
+    - // @input Asset.Texture imageTexture
+    - // @input bool advancedSettings
+    - '// @input int _frameHeight = "100" {"label":"Frame Height", "hint":"The height of the image in AR space.", "showIf":"advancedSettings"}'
+    - '// @input int _frameOffset = "-200" {"label":"Frame Offset", "hint":"The frameOffset, the focal point of the image.", "showIf":"advancedSettings"}'
+    - '// @input int _depthScale = "100" {"label":"Depth Scale", "hint":"Reflects how deep the image appears.", "showIf":"advancedSettings"}'
+    - '// @input bool _fadeBorder = true {"label":"Fade Border", "hint":"Fades the border of the spatial image.", "showIf":"advancedSettings"}'
+    - '// @input bool _frameOn = true {"label":"Frame On", "hint":"Enables the image frame with rounded corners, that creates the viewing portal effect.", "showIf":"advancedSettings"}'
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+- !<AssetImportMetadata/e4d88369-2c44-4cf2-a222-462ca0e46045>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 60e5386b-5895-4017-80e4-fe8949aa35bb
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 60e5386b-5895-4017-80e4-fe8949aa35bb
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> 96ee64fe-4131-4a01-9ea5-b50300d0107e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/ee8c94dc-719f-47fd-8474-d8605b1d9636>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b11a21b4-a7b0-4457-bb20-f0f9106eb738
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b11a21b4-a7b0-4457-bb20-f0f9106eb738
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4ec9d410-044e-46cb-ae3d-80e685ad9d69
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
+- !<AssetImportMetadata/f86d3c14-2aa2-4a6c-8d70-3f5653a90697>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 43db254e-4cc6-4a86-a330-2baecef523da
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 43db254e-4cc6-4a86-a330-2baecef523da
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> cb2a7a5c-b3d1-478f-8b23-46d61798a759
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+  ExtraData:
+    {}
