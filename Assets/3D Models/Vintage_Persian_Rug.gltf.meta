@@ -1,17 +1,17 @@
 - !<AssetImportMetadata/39e65524-a835-4173-b19e-68a675a0593f>
   ImportedAssetIds:
     .hidden/Old_Persian_carpet: !<reference> 08778999-49bb-439b-b3ec-5521881c5365
-    4a3e924fad0e2f27: !<reference> f1d54fbf-0adc-4933-a6e0-9b78cedb29cf
-    66780cf3a4dcb2b8: !<reference> cf0e68bb-43ee-49df-8888-6d9b8c1662ea
-    6a2c6cff5074c374: !<reference> 53ed05f0-f673-406b-a885-f13c9675d4f0
-    96f664b015fcd573: !<reference> 7c5b614a-c21e-4910-95ed-3a7a86c1e277
+    4a3e924fad0e2f27: !<reference> 7385d921-be15-4b00-ad93-5e605495dd93
+    66780cf3a4dcb2b8: !<reference> c7c328fb-edf4-4ad8-a91b-dbed07a5f1fd
+    6a2c6cff5074c374: !<reference> 9c1a129b-5736-49a3-8d34-fe66780f6005
+    96f664b015fcd573: !<reference> bbaf37ae-01e4-4a02-9985-0a4324e96434
     Materials/Old_Persian_carpet: !<reference> e6d69ed4-9749-4ff0-9f2c-63b20f76fc76
     Materials/Old_Persian_carpet|Old_Persian_carpet|GraphPassInfo: !<reference> 5ab626dc-ea30-4bee-8346-7039372ad439
     Meshes/Old_Persian_carpet_Old Persian carpet_0: !<reference> b167a7b6-e19e-4942-a2e8-af5cf79142ea
     Scene: !<reference> e2b3da75-4cb6-4894-bc63-ccf1006549ad
     Textures/Old_Persian_carpet_baseColor: !<reference> bbba2db5-4ea7-4bec-ab83-2e2ead88bc7f
     Textures/Old_Persian_carpet_metallicRoughness: !<reference> 2c2e6fb7-c8e4-4ad4-af72-9b0aa1d90e43
-    e59c7fb44f9b0c66: !<reference> d88d435f-6c14-4a1a-80ab-a8d638a35ce6
+    e59c7fb44f9b0c66: !<reference> 92baed53-32dd-4957-aa1c-116ded7abd1c
   ImporterName: GltfImporter
   PrimaryAsset: !<reference> e2b3da75-4cb6-4894-bc63-ccf1006549ad
   PackageType: LegacyPackage
@@ -48,30 +48,15 @@
       png: Performance Compression
     Overrides:
       {}
-- !<SceneObject/53ed05f0-f673-406b-577a-0ec3698a2b0f>
-  PrefabRemaps:
-    []
-  Name: Old_Persian_carpet_Old Persian carpet_0
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.060089, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.005686, y: 0.005686, z: 0.005686}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> d88d435f-6c14-4a1a-7f54-5729c75ca319
 - !<ObjectPrefabAssetData/5f47507a-1719-40a3-a2eb-adf50ad6398f>
   Prototype: !<ObjectOwner/534cda94-124b-43d1-8536-547ccac29cdc>
     PackagePath: ""
     objects:
-      - !<own> cf0e68bb-43ee-49df-7777-926473e99d15
-- !<SceneObject/7c5b614a-c21e-4910-6a12-c585793e1d88>
+      - !<own> c7c328fb-edf4-4ad8-56e4-2412f85a0e02
+- !<SceneObject/7385d921-be15-4b00-526c-a19fab6a226c>
   PrefabRemaps:
     []
-  Name: Scene
+  Name: Scenes
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -80,25 +65,10 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 53ed05f0-f673-406b-577a-0ec3698a2b0f
+    - !<own> bbaf37ae-01e4-4a02-667a-f5bcdb169bcb
   Components:
     []
-- !<SceneObject/cf0e68bb-43ee-49df-7777-926473e99d15>
-  PrefabRemaps:
-    []
-  Name: Vintage_Persian_Rug
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> f1d54fbf-0adc-4933-591f-64873124d630
-  Components:
-    []
-- !<RenderMeshVisual/d88d435f-6c14-4a1a-7f54-5729c75ca319>
+- !<RenderMeshVisual/92baed53-32dd-4957-55e3-ee92128542e3>
   PrefabRemaps:
     []
   Name: Old_Persian_carpet_Old Persian carpet_0
@@ -118,10 +88,25 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/f1d54fbf-0adc-4933-591f-64873124d630>
+- !<SceneObject/9c1a129b-5736-49a3-72cb-019987f09ffa>
   PrefabRemaps:
     []
-  Name: Scenes
+  Name: Old_Persian_carpet_Old Persian carpet_0
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.060089, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.005686, y: 0.005686, z: 0.005686}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 92baed53-32dd-4957-55e3-ee92128542e3
+- !<SceneObject/bbaf37ae-01e4-4a02-667a-f5bcdb169bcb>
+  PrefabRemaps:
+    []
+  Name: Scene
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -130,6 +115,21 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 7c5b614a-c21e-4910-6a12-c585793e1d88
+    - !<own> 9c1a129b-5736-49a3-72cb-019987f09ffa
+  Components:
+    []
+- !<SceneObject/c7c328fb-edf4-4ad8-56e4-2412f85a0e02>
+  PrefabRemaps:
+    []
+  Name: Vintage_Persian_Rug
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7385d921-be15-4b00-526c-a19fab6a226c
   Components:
     []

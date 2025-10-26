@@ -1,9 +1,3 @@
-# Environment & API Keys (DO NOT COMMIT)
-config.js
-.env
-*.env
-Assets/Scene.scene
-
 # Shipped by Lens Studio
 
 # The lines below are automatically generated and updated by Lens Studio.
@@ -22,6 +16,12 @@ Workspaces/**
 *.lock
 
 # Shipped by Lens Studio
+# Environment & API Keys (DO NOT COMMIT)
+config.js
+.env
+*.env
+Assets/Scene.scene
+
 [Ll]ens_Studio_Temp/
 [Bb]uild/
 .DS_Store

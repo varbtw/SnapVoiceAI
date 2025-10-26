@@ -1,13 +1,13 @@
 - !<AssetImportMetadata/609e3b83-8fef-4bae-974b-14d7ef7d8322>
   ImportedAssetIds:
     .hidden/Art: !<reference> 3e863d56-8f67-49ab-8eca-7f25b5822471
-    4a3e924fad0e2f27: !<reference> d6b9beba-683c-4910-b1d7-d1e7e3bb0620
-    66780cf3a4dcb2b8: !<reference> 6f49215f-b1db-481e-b964-c8f2a2ee3b76
-    6dc4d6c09a7c478a: !<reference> 7f58435a-93a4-4de3-8384-dd53a2d61651
-    6dc4d6c09a7c56bb: !<reference> 876ade85-a761-4972-9ab9-c968848c39f9
-    6dc4d6c09a7c61aa: !<reference> 97d7036b-0dcf-4616-ae33-615646435fcd
-    77eefc509d340513: !<reference> 903743ce-8281-499d-9058-3255ac3def0c
-    96f664b015fcd573: !<reference> 0fdc6819-0e45-44dc-a778-92b19b878015
+    4a3e924fad0e2f27: !<reference> 72e9706c-d7f5-4fd2-86fa-031f092e770c
+    66780cf3a4dcb2b8: !<reference> d3b0948f-2a36-4481-aae3-e569bbfbb7e0
+    6dc4d6c09a7c478a: !<reference> bfd4c473-94e5-4dcf-93ba-059196cbbc2b
+    6dc4d6c09a7c56bb: !<reference> 0d97dfa6-7041-4222-98fa-4362f0cfb8f9
+    6dc4d6c09a7c61aa: !<reference> 3144cc36-7c01-485e-9ab2-5f93f5c2b264
+    77eefc509d340513: !<reference> bf518d97-93a8-4e75-a6e2-124debdf0ab6
+    96f664b015fcd573: !<reference> 150f87b6-5d51-4443-8d13-12b65c50380b
     Materials/Art: !<reference> 8d28cfca-2d29-4607-b003-027ce534d420
     Materials/Art|Art|GraphPassInfo: !<reference> 8c43131c-b52f-45c9-b85a-8dcfe5f34057
     Materials/Frame: !<reference> 494bd161-5f09-4560-9028-0eb1e3ad1046
@@ -55,57 +55,7 @@
       png: Performance Compression
     Overrides:
       Textures/Art_(Base_Color): None Compression
-- !<SceneObject/0fdc6819-0e45-44dc-5887-6d4e64787fea>
-  PrefabRemaps:
-    []
-  Name: Scene
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 903743ce-8281-499d-6fa7-cdaa53c210f3
-  Components:
-    []
-- !<SceneObject/6f49215f-b1db-481e-469b-370d5d11c489>
-  PrefabRemaps:
-    []
-  Name: Scandi_Painting 2
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> d6b9beba-683c-4910-4e28-2e181c44f9df
-  Components:
-    []
-- !<RenderMeshVisual/7f58435a-93a4-4de3-7c7b-22ac5d29e9ae>
-  PrefabRemaps:
-    []
-  Name: Plane.002
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 9fba6e76-3d4f-4da0-bf7d-527e2c51879a
-  Mesh: !<reference> f5d79015-06e8-49a9-8c6f-46337ab9ac8b
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<RenderMeshVisual/876ade85-a761-4972-6546-36977b73c606>
+- !<RenderMeshVisual/0d97dfa6-7041-4222-6705-bc9d0f304706>
   PrefabRemaps:
     []
   Name: Plane.002
@@ -125,29 +75,22 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ObjectPrefabAssetData/8b24d884-f857-4818-ace8-e5c843a23520>
-  Prototype: !<ObjectOwner/b0f9ffc6-b2eb-4d9a-980e-ff94a99b80df>
-    PackagePath: ""
-    objects:
-      - !<own> 6f49215f-b1db-481e-469b-370d5d11c489
-- !<SceneObject/903743ce-8281-499d-6fa7-cdaa53c210f3>
+- !<SceneObject/150f87b6-5d51-4443-72ec-ed49a3afc7f4>
   PrefabRemaps:
     []
-  Name: Art  01
+  Name: Scene
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 1.157349, z: 0.002074}
-    Rotation: {x: 0.000000, y: 90.000000, z: 0.000000}
-    Scale: {x: 3.313903, y: 3.313903, z: 3.313903}
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> bf518d97-93a8-4e75-591d-edb21420f549
   Components:
-    - !<own> 97d7036b-0dcf-4616-51cc-9ea9b9bca032
-    - !<own> 876ade85-a761-4972-6546-36977b73c606
-    - !<own> 7f58435a-93a4-4de3-7c7b-22ac5d29e9ae
-- !<RenderMeshVisual/97d7036b-0dcf-4616-51cc-9ea9b9bca032>
+    []
+- !<RenderMeshVisual/3144cc36-7c01-485e-654d-a06c0a3d4d9b>
   PrefabRemaps:
     []
   Name: Plane.002
@@ -167,7 +110,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/d6b9beba-683c-4910-4e28-2e181c44f9df>
+- !<SceneObject/72e9706c-d7f5-4fd2-7905-fce0f6d188f3>
   PrefabRemaps:
     []
   Name: Scenes
@@ -179,6 +122,63 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 0fdc6819-0e45-44dc-5887-6d4e64787fea
+    - !<own> 150f87b6-5d51-4443-72ec-ed49a3afc7f4
+  Components:
+    []
+- !<ObjectPrefabAssetData/8b24d884-f857-4818-ace8-e5c843a23520>
+  Prototype: !<ObjectOwner/b0f9ffc6-b2eb-4d9a-980e-ff94a99b80df>
+    PackagePath: ""
+    objects:
+      - !<own> d3b0948f-2a36-4481-551c-1a964404481f
+- !<SceneObject/bf518d97-93a8-4e75-591d-edb21420f549>
+  PrefabRemaps:
+    []
+  Name: Art  01
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.157349, z: 0.002074}
+    Rotation: {x: 0.000000, y: 90.000000, z: 0.000000}
+    Scale: {x: 3.313903, y: 3.313903, z: 3.313903}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 3144cc36-7c01-485e-654d-a06c0a3d4d9b
+    - !<own> 0d97dfa6-7041-4222-6705-bc9d0f304706
+    - !<own> bfd4c473-94e5-4dcf-6c45-fa6e693443d4
+- !<RenderMeshVisual/bfd4c473-94e5-4dcf-6c45-fa6e693443d4>
+  PrefabRemaps:
+    []
+  Name: Plane.002
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9fba6e76-3d4f-4da0-bf7d-527e2c51879a
+  Mesh: !<reference> f5d79015-06e8-49a9-8c6f-46337ab9ac8b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/d3b0948f-2a36-4481-551c-1a964404481f>
+  PrefabRemaps:
+    []
+  Name: Scandi_Painting 2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 72e9706c-d7f5-4fd2-7905-fce0f6d188f3
   Components:
     []

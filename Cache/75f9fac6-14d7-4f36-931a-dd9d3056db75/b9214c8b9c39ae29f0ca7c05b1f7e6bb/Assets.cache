@@ -9,7 +9,7 @@
     - !<ObjectPrefab/7695719d-651e-438d-a5dc-11357ed1f590>
       PackagePath: ""
       objects:
-        - !<own> b326153a-a214-4ec9-9bb7-b57401cb4db9
+        - !<own> 315d187a-d4e4-4167-8321-d2c983a768be
       LazyLoading: false
       RetainAssets: true
     - !<FileMesh/1c065281-a141-4c80-8025-2330f333f430>
@@ -1872,52 +1872,7 @@
   FileHash: 88b4d72b81180a9f54762d5141f025ca
   NativePackageItems:
     []
-- !<SceneObject/27ad3cb8-e22a-482e-b1b7-e95c2f1e146a>
-  PrefabRemaps:
-    []
-  Name: Scenes
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> fcfb9ed3-0e15-4737-9217-840c7219d49d
-  Components:
-    []
-- !<SceneObject/60988b98-10df-46f1-a254-f2bd07fc253c>
-  PrefabRemaps:
-    []
-  Name: GLTF_SceneRootNode
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 90.000000, y: -0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 84978d8f-192b-4423-9ef0-886022fa9d14
-  Components:
-    []
-- !<SceneObject/84978d8f-192b-4423-9ef0-886022fa9d14>
-  PrefabRemaps:
-    []
-  Name: Rug_2
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: -0.117155, y: 0.013023, z: -0.031621}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 0.500000, y: 1.000000, z: 0.955000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> abd0e1a4-e376-41c4-b58c-8852b5fbb821
-  Components:
-    []
-- !<SceneObject/977747f9-6732-4a01-afc8-bdded1f8e86b>
+- !<SceneObject/01f867dc-6a73-4694-bc4c-f7d345420a6f>
   PrefabRemaps:
     []
   Name: Sketchfab_model
@@ -1929,48 +1884,10 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> d74483eb-45ca-420a-815d-700b9673e9e1
+    - !<own> e4d8ff0b-f2bd-4d63-b4b0-26fb630142b2
   Components:
     []
-- !<SceneObject/abd0e1a4-e376-41c4-b58c-8852b5fbb821>
-  PrefabRemaps:
-    []
-  Name: Object_4
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> caa59002-9cd8-4ab8-8da5-1b3d296c891d
-- !<SceneObject/b326153a-a214-4ec9-9bb7-b57401cb4db9>
-  PrefabRemaps:
-    - 27ad3cb8-e22a-482e-b1b7-e95c2f1e146a: 27ad3cb8-e22a-482e-4e48-16a3d0e1eb95
-    - 60988b98-10df-46f1-a254-f2bd07fc253c: 60988b98-10df-46f1-5dab-0d42f803dac3
-    - 84978d8f-192b-4423-9ef0-886022fa9d14: 84978d8f-192b-4423-610f-779fdd0562eb
-    - 977747f9-6732-4a01-afc8-bdded1f8e86b: 977747f9-6732-4a01-5037-42212e071794
-    - abd0e1a4-e376-41c4-b58c-8852b5fbb821: abd0e1a4-e376-41c4-4a73-77ad4a0447de
-    - b326153a-a214-4ec9-9bb7-b57401cb4db9: b326153a-a214-4ec9-6448-4a8bfe34b246
-    - caa59002-9cd8-4ab8-8da5-1b3d296c891d: caa59002-9cd8-4ab8-725a-e4c2d69376e2
-    - d74483eb-45ca-420a-815d-700b9673e9e1: d74483eb-45ca-420a-7ea2-8ff4698c161e
-    - fcfb9ed3-0e15-4737-9217-840c7219d49d: fcfb9ed3-0e15-4737-6de8-7bf38de62b62
-  Name: Boho_rug
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 27ad3cb8-e22a-482e-b1b7-e95c2f1e146a
-  Components:
-    []
-- !<RenderMeshVisual/caa59002-9cd8-4ab8-8da5-1b3d296c891d>
+- !<RenderMeshVisual/1f3b81dc-0863-4f1a-ad51-e271864d116b>
   PrefabRemaps:
     []
   Name: Object_0
@@ -1990,10 +1907,48 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/d74483eb-45ca-420a-815d-700b9673e9e1>
+- !<SceneObject/315d187a-d4e4-4167-8321-d2c983a768be>
+  PrefabRemaps:
+    - 01f867dc-6a73-4694-bc4c-f7d345420a6f: 01f867dc-6a73-4694-43b3-082cbabdf590
+    - 1f3b81dc-0863-4f1a-ad51-e271864d116b: 1f3b81dc-0863-4f1a-52ae-1d8e79b2ee94
+    - 315d187a-d4e4-4167-8321-d2c983a768be: 315d187a-d4e4-4167-7cde-2d367c589741
+    - 4ee2ce25-ba2c-4753-9bce-d1b6c3419633: 4ee2ce25-ba2c-4753-6431-2e493cbe69cc
+    - 714cdd54-9e08-4d2d-89c4-5b383b2e888f: 714cdd54-9e08-4d2d-763b-a4c7c4d17770
+    - 8a89666b-7df1-493a-9b67-9685b60f5586: 8a89666b-7df1-493a-6498-697a49f0aa79
+    - bbdda580-19b9-4c80-b3b3-00402daea73b: bbdda580-19b9-4c80-4c4c-ffbfd25158c4
+    - e4d8ff0b-f2bd-4d63-b4b0-26fb630142b2: e4d8ff0b-f2bd-4d63-4b4f-d9049cfebd4d
+    - e7a39514-7435-4ea2-82e7-6a80c3b4ca9f: e7a39514-7435-4ea2-7d18-957f3c4b3560
+  Name: Boho_rug
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e7a39514-7435-4ea2-82e7-6a80c3b4ca9f
+  Components:
+    []
+- !<SceneObject/4ee2ce25-ba2c-4753-9bce-d1b6c3419633>
   PrefabRemaps:
     []
-  Name: root
+  Name: GLTF_SceneRootNode
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> bbdda580-19b9-4c80-b3b3-00402daea73b
+  Components:
+    []
+- !<SceneObject/714cdd54-9e08-4d2d-89c4-5b383b2e888f>
+  PrefabRemaps:
+    []
+  Name: Object_4
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -2002,10 +1957,10 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 60988b98-10df-46f1-a254-f2bd07fc253c
-  Components:
     []
-- !<SceneObject/fcfb9ed3-0e15-4737-9217-840c7219d49d>
+  Components:
+    - !<own> 1f3b81dc-0863-4f1a-ad51-e271864d116b
+- !<SceneObject/8a89666b-7df1-493a-9b67-9685b60f5586>
   PrefabRemaps:
     []
   Name: Sketchfab_Scene
@@ -2017,7 +1972,52 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 977747f9-6732-4a01-afc8-bdded1f8e86b
+    - !<own> 01f867dc-6a73-4694-bc4c-f7d345420a6f
+  Components:
+    []
+- !<SceneObject/bbdda580-19b9-4c80-b3b3-00402daea73b>
+  PrefabRemaps:
+    []
+  Name: Rug_2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -0.117155, y: 0.013023, z: -0.031621}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 0.500000, y: 1.000000, z: 0.955000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 714cdd54-9e08-4d2d-89c4-5b383b2e888f
+  Components:
+    []
+- !<SceneObject/e4d8ff0b-f2bd-4d63-b4b0-26fb630142b2>
+  PrefabRemaps:
+    []
+  Name: root
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 4ee2ce25-ba2c-4753-9bce-d1b6c3419633
+  Components:
+    []
+- !<SceneObject/e7a39514-7435-4ea2-82e7-6a80c3b4ca9f>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 8a89666b-7df1-493a-9b67-9685b60f5586
   Components:
     []
 - !<PassInfo/fe4c21a8-481d-4b90-8d68-16aaeeb1b0ee>

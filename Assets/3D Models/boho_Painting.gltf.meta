@@ -1,13 +1,13 @@
 - !<AssetImportMetadata/6fdabdc5-bfee-4a33-8808-4e7e66e79147>
   ImportedAssetIds:
     .hidden/Art: !<reference> eaed7bf7-ca6d-4ca2-ac4f-8c8e1c2b3165
-    4a3e924fad0e2f27: !<reference> 8703fe4d-c3ee-4375-b6e1-03c05a8419bd
-    66780cf3a4dcb2b8: !<reference> 8558a223-94fb-40b5-9133-ac37917707cf
-    6dc4d6c09a7c478a: !<reference> 885be5c0-f646-4651-97da-b84ab34ed66f
-    6dc4d6c09a7c56bb: !<reference> 4b224a92-884a-43ce-aa9c-57c69763cf39
-    6dc4d6c09a7c61aa: !<reference> 36adebba-cfcd-47d8-b78b-4c7e947dbac4
-    77eefc509d340513: !<reference> c3fd6af9-315e-4c15-83cb-ab2e39623e89
-    96f664b015fcd573: !<reference> bce0485e-3f78-4605-9ed1-f22b4a8c55a5
+    4a3e924fad0e2f27: !<reference> a320af11-0e59-4dca-8b5b-2799a8827826
+    66780cf3a4dcb2b8: !<reference> 48fef070-0796-4f9d-a3a8-59bb93164490
+    6dc4d6c09a7c478a: !<reference> 86a4c228-9ad9-463e-be07-5150fb84ff90
+    6dc4d6c09a7c56bb: !<reference> d0b58d6a-9b89-4c02-ac36-b56fc7bef24a
+    6dc4d6c09a7c61aa: !<reference> 1b415783-d13d-4bb2-9660-b579a89ef11d
+    77eefc509d340513: !<reference> 5e27c615-10fe-49b6-ab83-5364b67640ce
+    96f664b015fcd573: !<reference> 78d4a225-6e4b-469a-8b8c-12d471e94d4b
     Materials/Art: !<reference> 9a6f6c4c-b915-4388-8e5b-72c1ae9f35ff
     Materials/Art|Art|GraphPassInfo: !<reference> 96be76fe-5668-400f-abec-316b010eedc2
     Materials/Frame: !<reference> e382499e-396c-459e-85a4-3542507c657a
@@ -55,12 +55,7 @@
       png: Performance Compression
     Overrides:
       {}
-- !<ObjectPrefabAssetData/2d1745bf-1d49-4524-91bb-7a4aae0a91e8>
-  Prototype: !<ObjectOwner/ca21b2c7-18a0-4346-b6e5-fd3c734793e2>
-    PackagePath: ""
-    objects:
-      - !<own> 8558a223-94fb-40b5-6ecc-53c86e88f830
-- !<RenderMeshVisual/36adebba-cfcd-47d8-4874-b3816b82453b>
+- !<RenderMeshVisual/1b415783-d13d-4bb2-699f-4a8657610ee2>
   PrefabRemaps:
     []
   Name: Plane.002
@@ -80,27 +75,12 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<RenderMeshVisual/4b224a92-884a-43ce-5563-a839689c30c6>
-  PrefabRemaps:
-    []
-  Name: Plane.002
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 9a6f6c4c-b915-4388-8e5b-72c1ae9f35ff
-  Mesh: !<reference> e315ce30-c831-4701-83d0-46c6b3dabd45
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/8558a223-94fb-40b5-6ecc-53c86e88f830>
+- !<ObjectPrefabAssetData/2d1745bf-1d49-4524-91bb-7a4aae0a91e8>
+  Prototype: !<ObjectOwner/ca21b2c7-18a0-4346-b6e5-fd3c734793e2>
+    PackagePath: ""
+    objects:
+      - !<own> 48fef070-0796-4f9d-5c57-a6446ce9bb6f
+- !<SceneObject/48fef070-0796-4f9d-5c57-a6446ce9bb6f>
   PrefabRemaps:
     []
   Name: boho_Painting
@@ -112,13 +92,30 @@
     Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 8703fe4d-c3ee-4375-491e-fc3fa57be642
+    - !<own> a320af11-0e59-4dca-74a4-d866577d87d9
   Components:
     []
-- !<SceneObject/8703fe4d-c3ee-4375-491e-fc3fa57be642>
+- !<SceneObject/5e27c615-10fe-49b6-547c-ac9b4989bf31>
   PrefabRemaps:
     []
-  Name: Scenes
+  Name: Art  01
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.157349, z: 0.002074}
+    Rotation: {x: 0.000000, y: 90.000000, z: 0.000000}
+    Scale: {x: 3.313903, y: 3.313903, z: 3.313903}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1b415783-d13d-4bb2-699f-4a8657610ee2
+    - !<own> d0b58d6a-9b89-4c02-53c9-4a9038410db5
+    - !<own> 86a4c228-9ad9-463e-41f8-aeaf047b006f
+- !<SceneObject/78d4a225-6e4b-469a-7473-ed2b8e16b2b4>
+  PrefabRemaps:
+    []
+  Name: Scene
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -127,10 +124,10 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> bce0485e-3f78-4605-612e-0dd4b573aa5a
+    - !<own> 5e27c615-10fe-49b6-547c-ac9b4989bf31
   Components:
     []
-- !<RenderMeshVisual/885be5c0-f646-4651-6825-47b54cb12990>
+- !<RenderMeshVisual/86a4c228-9ad9-463e-41f8-aeaf047b006f>
   PrefabRemaps:
     []
   Name: Plane.002
@@ -150,10 +147,10 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/bce0485e-3f78-4605-612e-0dd4b573aa5a>
+- !<SceneObject/a320af11-0e59-4dca-74a4-d866577d87d9>
   PrefabRemaps:
     []
-  Name: Scene
+  Name: Scenes
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -162,23 +159,26 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> c3fd6af9-315e-4c15-7c34-54d1c69dc176
+    - !<own> 78d4a225-6e4b-469a-7473-ed2b8e16b2b4
   Components:
     []
-- !<SceneObject/c3fd6af9-315e-4c15-7c34-54d1c69dc176>
+- !<RenderMeshVisual/d0b58d6a-9b89-4c02-53c9-4a9038410db5>
   PrefabRemaps:
     []
-  Name: Art  01
+  Name: Plane.002
   Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 1.157349, z: 0.002074}
-    Rotation: {x: 0.000000, y: 90.000000, z: 0.000000}
-    Scale: {x: 3.313903, y: 3.313903, z: 3.313903}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 36adebba-cfcd-47d8-4874-b3816b82453b
-    - !<own> 4b224a92-884a-43ce-5563-a839689c30c6
-    - !<own> 885be5c0-f646-4651-6825-47b54cb12990
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9a6f6c4c-b915-4388-8e5b-72c1ae9f35ff
+  Mesh: !<reference> e315ce30-c831-4701-83d0-46c6b3dabd45
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

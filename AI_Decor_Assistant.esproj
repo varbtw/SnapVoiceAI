@@ -13,16 +13,16 @@ metaInfo:
     []
   tags:
     []
-  lensName: AI Décor Assistant
+  lensName: Voithos
   lensDescriptors:
-    - EXPERIMENTAL_API
+    []
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: 4ebdfdbd8c8b32c7898869210a7e2582
+  iconHash: e4012211849f4ff881bdd49aa61bb926
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.1.0.24090603

@@ -1,11 +1,11 @@
 - !<AssetImportMetadata/4726c881-591b-424d-857a-de9bea11a3b4>
   ImportedAssetIds:
     .hidden/redondo: !<reference> 3b00dea9-5b0b-4bbc-8f6b-8605fbba895c
-    4a3e924fad0e2f27: !<reference> 686028df-26d7-4f8f-94ce-d4f721031976
-    66780cf3a4dcb2b8: !<reference> ba2e00cb-c184-47ff-91f2-b8f5b81611a8
-    6f12b9a2ed4f515c: !<reference> 2b383e75-3a00-443a-a4c5-f0be089e631b
-    7a12b07dfe7bc8a1: !<reference> 661a5e56-bdfd-4140-948e-ae22cf639838
-    96f664b015fcd573: !<reference> c240f6d6-d513-4d95-bd93-11c5b0d17cd3
+    4a3e924fad0e2f27: !<reference> 68386dc9-4e45-4227-a41b-176e9a9ba139
+    66780cf3a4dcb2b8: !<reference> 083150e8-b69c-4c9b-96ca-6dc85b4b4a50
+    6f12b9a2ed4f515c: !<reference> 5c360458-bc5a-42f2-ba3c-902616b67b86
+    7a12b07dfe7bc8a1: !<reference> 8ba18f6c-ec15-4965-8fd0-b5c7389e058d
+    96f664b015fcd573: !<reference> 2b702ebd-482d-4b27-8c8f-405e579c1a94
     Materials/redondo: !<reference> b4de05cb-deef-4586-a28b-6dcb6a93d10e
     Materials/redondo|redondo|GraphPassInfo: !<reference> 97c3c674-0fe9-49e2-9307-dca04274b45f
     Meshes/defaultMaterial: !<reference> 778ac407-8e78-4f07-942d-a2dafb586774
@@ -50,7 +50,42 @@
       jpeg: Performance Compression
     Overrides:
       Textures/redondo_baseColor: None Compression
-- !<SceneObject/2b383e75-3a00-443a-5b3a-0f41f7619ce4>
+- !<SceneObject/083150e8-b69c-4c9b-6935-9237a4b4b5af>
+  PrefabRemaps:
+    []
+  Name: Vintage_Painting 2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 68386dc9-4e45-4227-5be4-e89165645ec6
+  Components:
+    []
+- !<SceneObject/2b702ebd-482d-4b27-7370-bfa1a863e56b>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5c360458-bc5a-42f2-45c3-6fd9e9498479
+  Components:
+    []
+- !<ObjectPrefabAssetData/3623946e-32b5-44d1-a3c8-4605a169d1e9>
+  Prototype: !<ObjectOwner/95f96414-5082-4fb1-8352-8358779c134b>
+    PackagePath: ""
+    objects:
+      - !<own> 083150e8-b69c-4c9b-6935-9237a4b4b5af
+- !<SceneObject/5c360458-bc5a-42f2-45c3-6fd9e9498479>
   PrefabRemaps:
     []
   Name: defaultMaterial
@@ -64,13 +99,23 @@
   Children:
     []
   Components:
-    - !<own> 661a5e56-bdfd-4140-6b71-51dd309c67c7
-- !<ObjectPrefabAssetData/3623946e-32b5-44d1-a3c8-4605a169d1e9>
-  Prototype: !<ObjectOwner/95f96414-5082-4fb1-8352-8358779c134b>
-    PackagePath: ""
-    objects:
-      - !<own> ba2e00cb-c184-47ff-6e0d-470a47e9ee57
-- !<RenderMeshVisual/661a5e56-bdfd-4140-6b71-51dd309c67c7>
+    - !<own> 8ba18f6c-ec15-4965-702f-4a38c761fa72
+- !<SceneObject/68386dc9-4e45-4227-5be4-e89165645ec6>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2b702ebd-482d-4b27-7370-bfa1a863e56b
+  Components:
+    []
+- !<RenderMeshVisual/8ba18f6c-ec15-4965-702f-4a38c761fa72>
   PrefabRemaps:
     []
   Name: defaultMaterial
@@ -90,48 +135,3 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/686028df-26d7-4f8f-6b31-2b08defce689>
-  PrefabRemaps:
-    []
-  Name: Scenes
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> c240f6d6-d513-4d95-426c-ee3a4f2e832c
-  Components:
-    []
-- !<SceneObject/ba2e00cb-c184-47ff-6e0d-470a47e9ee57>
-  PrefabRemaps:
-    []
-  Name: Vintage_Painting 2
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 686028df-26d7-4f8f-6b31-2b08defce689
-  Components:
-    []
-- !<SceneObject/c240f6d6-d513-4d95-426c-ee3a4f2e832c>
-  PrefabRemaps:
-    []
-  Name: Scene
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 2b383e75-3a00-443a-5b3a-0f41f7619ce4
-  Components:
-    []

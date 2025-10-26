@@ -1,11 +1,11 @@
 - !<AssetImportMetadata/43182d41-be17-4de3-8f68-155991927594>
   ImportedAssetIds:
     .hidden/Line001__0: !<reference> a66ba5d2-eec1-4cb1-8ff1-fdb173845681
-    4a3e924fad0e2f27: !<reference> f2cbfc69-c49a-4b32-8c49-78d49f34d28b
-    60282affc2c51f86: !<reference> d4f7dc98-7179-431d-9411-6f17bc0b264f
-    66780cf3a4dcb2b8: !<reference> 334ef841-6909-49f6-826f-11cd9e63cc2f
-    96f664b015fcd573: !<reference> 00816990-efa3-4063-b8ff-53d73ed1a045
-    9b43aa2db32999e6: !<reference> b7d277cf-ce43-4ddc-af20-19b9972561c5
+    4a3e924fad0e2f27: !<reference> 9e2beb07-bb2b-4d63-8e5d-c17cdc5a689d
+    60282affc2c51f86: !<reference> fb70f068-e814-4bf2-af5a-852dfd1e890e
+    66780cf3a4dcb2b8: !<reference> 53527fe9-fbad-4ccf-a8ac-23b996951b90
+    96f664b015fcd573: !<reference> 858166d0-0d1c-4cff-b3ed-f60154ba368a
+    9b43aa2db32999e6: !<reference> 257c9840-7575-45b5-ab66-e43ff7579c83
     Materials/Line001__0: !<reference> 92b5f5cc-fb8a-4d01-b5ac-a42617787ba3
     Materials/Line001__0|Line001__0|GraphPassInfo: !<reference> 85d64994-444b-4e7a-88c3-3b676dd13d60
     Materials/photo: !<reference> 9e36c76c-508a-4b97-8fcb-c7c1a0af4db7
@@ -14,8 +14,8 @@
     Meshes/Plane.006: !<reference> 9bb89457-8374-4b94-b729-742d1f52193f
     Scene: !<reference> 5d1ca8bc-4e7a-4f3e-8d56-49d836412553
     Textures/boho image: !<reference> fbfcc6c1-4367-452b-b1c0-1871dbfafb02
-    b1aeee8688099918: !<reference> 8fccd17d-3b8d-4a59-96d2-23357cac9e90
-    e58c35e7a07dd28a: !<reference> 14105857-17b5-44b3-b8fd-f1efb4bd58e2
+    b1aeee8688099918: !<reference> b46fc970-1be9-4094-932a-0637de42bd44
+    e58c35e7a07dd28a: !<reference> 09cff876-2836-4c42-8e57-737bb0a647a4
   ImporterName: GltfImporter
   PrimaryAsset: !<reference> 5d1ca8bc-4e7a-4f3e-8d56-49d836412553
   PackageType: LegacyPackage
@@ -52,23 +52,7 @@
       png: Performance Compression
     Overrides:
       Textures/boho image: None Compression
-- !<SceneObject/00816990-efa3-4063-4700-ac28c12e5fba>
-  PrefabRemaps:
-    []
-  Name: Scene
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 14105857-17b5-44b3-4702-0e104b42a71d
-    - !<own> b7d277cf-ce43-4ddc-50df-e64668da9e3a
-  Components:
-    []
-- !<SceneObject/14105857-17b5-44b3-4702-0e104b42a71d>
+- !<SceneObject/09cff876-2836-4c42-71a8-8c844f59b85b>
   PrefabRemaps:
     []
   Name: Plane.002
@@ -82,8 +66,23 @@
   Children:
     []
   Components:
-    - !<own> 8fccd17d-3b8d-4a59-692d-dcca8353616f
-- !<SceneObject/334ef841-6909-49f6-7d90-ee32619c33d0>
+    - !<own> b46fc970-1be9-4094-6cd5-f9c821bd42bb
+- !<SceneObject/257c9840-7575-45b5-5499-1bc008a8637c>
+  PrefabRemaps:
+    []
+  Name: Plane.001
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.034000, z: -0.001091}
+    Rotation: {x: 0.000000, y: 0.000000, z: -180.000000}
+    Scale: {x: -21.298193, y: -21.298193, z: -21.298193}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fb70f068-e814-4bf2-50a5-7ad202e176f1
+- !<SceneObject/53527fe9-fbad-4ccf-5753-dc46696ae46f>
   PrefabRemaps:
     []
   Name: Boho_paint
@@ -95,10 +94,41 @@
     Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> f2cbfc69-c49a-4b32-73b6-872b60cb2d74
+    - !<own> 9e2beb07-bb2b-4d63-71a2-3e8323a59762
   Components:
     []
-- !<RenderMeshVisual/8fccd17d-3b8d-4a59-692d-dcca8353616f>
+- !<SceneObject/858166d0-0d1c-4cff-4c12-09feab45c975>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 09cff876-2836-4c42-71a8-8c844f59b85b
+    - !<own> 257c9840-7575-45b5-5499-1bc008a8637c
+  Components:
+    []
+- !<SceneObject/9e2beb07-bb2b-4d63-71a2-3e8323a59762>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 858166d0-0d1c-4cff-4c12-09feab45c975
+  Components:
+    []
+- !<RenderMeshVisual/b46fc970-1be9-4094-6cd5-f9c821bd42bb>
   PrefabRemaps:
     []
   Name: Plane.003
@@ -122,23 +152,8 @@
   Prototype: !<ObjectOwner/77de4a03-1251-4903-9ee2-fa11d9313eb9>
     PackagePath: ""
     objects:
-      - !<own> 334ef841-6909-49f6-7d90-ee32619c33d0
-- !<SceneObject/b7d277cf-ce43-4ddc-50df-e64668da9e3a>
-  PrefabRemaps:
-    []
-  Name: Plane.001
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.034000, z: -0.001091}
-    Rotation: {x: 0.000000, y: 0.000000, z: -180.000000}
-    Scale: {x: -21.298193, y: -21.298193, z: -21.298193}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> d4f7dc98-7179-431d-6bee-90e843f4d9b0
-- !<RenderMeshVisual/d4f7dc98-7179-431d-6bee-90e843f4d9b0>
+      - !<own> 53527fe9-fbad-4ccf-5753-dc46696ae46f
+- !<RenderMeshVisual/fb70f068-e814-4bf2-50a5-7ad202e176f1>
   PrefabRemaps:
     []
   Name: Plane.006
@@ -158,18 +173,3 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/f2cbfc69-c49a-4b32-73b6-872b60cb2d74>
-  PrefabRemaps:
-    []
-  Name: Scenes
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 00816990-efa3-4063-4700-ac28c12e5fba
-  Components:
-    []

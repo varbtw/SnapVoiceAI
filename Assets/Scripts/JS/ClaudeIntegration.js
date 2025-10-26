@@ -11,6 +11,7 @@ const Internet = require("LensStudio:InternetModule");
 let lastSuggestionTime = 0.0;
 let isProcessing = false;
 let pendingTranscript = "";
+let lastUserTranscript = ""; // Store the user's actual question for Tavily
 
 script.createEvent("OnStartEvent").bind(function() {
     safeLog("✅ ClaudeIntegration initialized");
@@ -42,6 +43,10 @@ function handleListeningUpdate(eventData) {
     if (pendingTranscript.length === 0) {
         return;
     }
+    
+    // Store the user's transcript for Tavily to use
+    lastUserTranscript = pendingTranscript;
+    safeLog("📝 Stored user transcript for Tavily: " + lastUserTranscript);
 
     const now = getTime();
     if (now - lastSuggestionTime < Math.max(1.0, script.minInterval)) {
@@ -240,6 +245,11 @@ function safeLog(msg) {
 // Optional external hook if another script wants to forward STT events directly
 script.api.onTranscriptionUpdate = function(eventData) {
     handleListeningUpdate(eventData);
+};
+
+// Expose the user's transcript for Tavily to search
+script.api.getUserTranscript = function() {
+    return lastUserTranscript;
 };
 
 
