@@ -82,24 +82,40 @@ async function requestClaudeSuggestion(transcript, emotion) {
     lastSuggestionTime = getTime();
     setStatus("💭 Thinking...");
 
+    safeLog("========================================");
+    safeLog("🤖 SENDING TO CLAUDE");
+    safeLog("========================================");
+    safeLog("📝 Transcript: " + transcript);
+    safeLog("😊 Emotion: " + emotion);
+    safeLog("🔑 API Key Length: " + script.claudeApiKey.length);
+    safeLog("🔑 API Key First 10 chars: " + script.claudeApiKey.substring(0, 10) + "...");
+    safeLog("🔑 API Key Trimmed: " + script.claudeApiKey.trim().substring(0, 10) + "...");
+    safeLog("========================================");
+
     const prompt = buildPrompt(transcript, emotion);
+    
+    // Trim the API key to remove any whitespace
+    const apiKey = script.claudeApiKey.trim();
 
     const payload = {
         model: script.claudeModel || "claude-3-5-sonnet-20241022",
-        max_tokens: 80,
+        max_tokens: 100,
         temperature: 0.7,
-        system: "You are a concise social AI assistant for AR glasses. Provide one short, natural suggestion.",
+        system: "You are a real-time conversation coach for AR glasses. Analyze the user's speech and emotion to provide ONE short, actionable conversation suggestion that helps them have a more engaging and fruitful conversation. Keep suggestions under 12 words. Be natural and conversational.",
         messages: [
             { role: "user", content: prompt }
         ]
     };
 
     try {
+        safeLog("📤 Sending request to Claude API...");
+        safeLog("🔑 Using API Key: " + apiKey.substring(0, 15) + "..." + apiKey.substring(apiKey.length - 5));
+        
         const resp = await Internet.fetch(new Request("https://api.anthropic.com/v1/messages", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-api-key": script.claudeApiKey,
+                "x-api-key": apiKey,
                 "anthropic-version": "2023-06-01"
             },
             body: JSON.stringify(payload)
@@ -123,6 +139,11 @@ async function requestClaudeSuggestion(transcript, emotion) {
             return;
         }
 
+        safeLog("========================================");
+        safeLog("💡 CLAUDE SUGGESTION:");
+        safeLog(suggestion);
+        safeLog("========================================");
+
         updateSuggestionDisplay(suggestion);
         setStatus("🎯 Ready");
     } catch (e) {
@@ -134,13 +155,33 @@ async function requestClaudeSuggestion(transcript, emotion) {
 }
 
 function buildPrompt(transcript, emotion) {
-    let p = "You are a helpful social coach.\n";
-    if (emotion && emotion !== "Neutral") {
-        p += "Detected emotion: " + emotion + "\n";
+    let p = "CONVERSATION CONTEXT:\n";
+    p += "━━━━━━━━━━━━━━━━━━━━━━\n";
+    p += "User's Emotion: " + (emotion || "Neutral") + "\n";
+    p += "What they said: \"" + transcript + "\"\n\n";
+    
+    p += "TASK:\n";
+    p += "Analyze their emotional state and what they said. Suggest ONE short response or topic they could bring up to:\n";
+    p += "- Build better rapport with the other person\n";
+    p += "- Keep the conversation engaging and natural\n";
+    p += "- Match their emotional tone appropriately\n";
+    if (emotion === "Happy") {
+        p += "- Leverage their positive energy\n";
+    } else if (emotion === "Sad" || emotion === "Fearful") {
+        p += "- Help them feel more comfortable and confident\n";
+    } else if (emotion === "Angry") {
+        p += "- De-escalate and find common ground\n";
+    } else if (emotion === "Surprised") {
+        p += "- Explore what surprised them\n";
     }
-    p += "User just said: \"" + transcript + "\"\n";
-    p += "Provide ONE brief, natural suggestion the user could say next (<= 12 words).\n";
-    p += "Return only the suggestion text, no quotes or punctuation extras.";
+    
+    p += "\nRESPONSE FORMAT:\n";
+    p += "One conversational suggestion (max 12 words). Examples:\n";
+    p += "- 'Ask them about their weekend plans'\n";
+    p += "- 'Share why that made you smile'\n";
+    p += "- 'Tell them that sounds really interesting'\n\n";
+    
+    p += "YOUR SUGGESTION (12 words max):";
     return p;
 }
 

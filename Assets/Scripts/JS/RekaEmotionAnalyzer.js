@@ -94,18 +94,28 @@ async function analyzeEmotion() {
     print("🔍 [Analysis] Starting emotion analysis... (Time: " + lastAnalysisTime.toFixed(2) + ")");
     
     try {
+        // Validate camera texture before encoding
+        if (!script.cameraTexture) {
+            print("❗ [Analysis] Camera texture is null or undefined!");
+            isProcessing = false;
+            return;
+        }
+        
         print("📸 [Analysis] Encoding camera texture to base64...");
+        
         // Convert camera texture to base64
         const base64Image = await encodeTextureToBase64(script.cameraTexture);
         
-        if (base64Image) {
+        if (base64Image && base64Image.length > 0) {
             print("✅ [Analysis] Texture encoded! Size: " + base64Image.length + " chars");
             await sendToRekaAPI(base64Image);
         } else {
-            print("❗ [Analysis] Failed to encode camera texture");
+            print("❗ [Analysis] Failed to encode camera texture - result was empty or undefined");
         }
     } catch (error) {
-        print("❗ [Analysis] ERROR analyzing emotion: " + error);
+        print("❗ [Analysis] ERROR analyzing emotion: " + (error ? error.toString() : "Unknown error"));
+        print("❗ [Analysis] Error type: " + (typeof error));
+        print("❗ [Analysis] Error message: " + (error?.message || "No message"));
     } finally {
         print("✔️ [Analysis] Complete - Setting isProcessing to false");
         isProcessing = false;
@@ -114,13 +124,30 @@ async function analyzeEmotion() {
 
 function encodeTextureToBase64(texture) {
     return new Promise((resolve, reject) => {
-        Base64.encodeTextureAsync(
-            texture,
-            resolve,
-            reject,
-            CompressionQuality.LowQuality,
-            EncodingType.Jpg
-        );
+        try {
+            if (!texture) {
+                reject(new Error("Texture is null or undefined"));
+                return;
+            }
+            
+            Base64.encodeTextureAsync(
+                texture,
+                function(result) {
+                    if (result && result.length > 0) {
+                        resolve(result);
+                    } else {
+                        reject(new Error("Base64 encoding returned empty result"));
+                    }
+                },
+                function(err) {
+                    reject(new Error("Base64 encoding failed: " + (err || "Unknown error")));
+                },
+                CompressionQuality.LowQuality,
+                EncodingType.Jpg
+            );
+        } catch (e) {
+            reject(new Error("Exception in encodeTextureToBase64: " + e));
+        }
     });
 }
 
@@ -138,7 +165,7 @@ async function sendToRekaAPI(base64Image) {
                     },
                     {
                         type: "text",
-                        text: "Analyze the primary emotion visible in this image. Respond with ONLY ONE of these emotions: Happy, Sad, Angry, Surprised, Fearful, Disgusted, or Neutral. Provide only the emotion word, nothing else."
+                        text: "Analyze the human face visible in this image and provide a detailed emotional analysis including: primary emotion (choose from Happy, Sad, Angry, Surprised, Fearful, Disgusted, Neutral), confidence (0–100%), secondary emotion with confidence, key facial indicators, emotional intensity (0.0–1.0), valence (Positive, Neutral, Negative), and arousal level (Low, Medium, High). Respond strictly in JSON format with keys: primary_emotion, confidence, secondary_emotion, secondary_confidence, facial_indicators, intensity, valence, arousal."
                     }
                 ]
             }
