@@ -155,35 +155,49 @@ async function requestClaudeSuggestion(transcript, emotion) {
 }
 
 function buildPrompt(transcript, emotion) {
+    const mood = emotion || "Neutral";
+    
     let p = "CONVERSATION CONTEXT:\n";
     p += "━━━━━━━━━━━━━━━━━━━━━━\n";
-    p += "User's Emotion: " + (emotion || "Neutral") + "\n";
-    p += "What they said: \"" + transcript + "\"\n\n";
-    
+    p += `User's Detected Emotion: ${mood}\n`;
+    p += `What they said: "${transcript}"\n\n`;
+
     p += "TASK:\n";
-    p += "Analyze their emotional state and what they said. Suggest ONE short response or topic they could bring up to:\n";
-    p += "- Build better rapport with the other person\n";
-    p += "- Keep the conversation engaging and natural\n";
-    p += "- Match their emotional tone appropriately\n";
-    if (emotion === "Happy") {
-        p += "- Leverage their positive energy\n";
-    } else if (emotion === "Sad" || emotion === "Fearful") {
-        p += "- Help them feel more comfortable and confident\n";
-    } else if (emotion === "Angry") {
-        p += "- De-escalate and find common ground\n";
-    } else if (emotion === "Surprised") {
-        p += "- Explore what surprised them\n";
+    p += "You are an empathetic conversation coach.\n";
+    p += "Analyze what the user said and their emotional tone carefully.\n";
+    p += "Generate ONE personalized and emotionally intelligent suggestion that:\n";
+    p += "- Builds genuine rapport with the listener\n";
+    p += "- Keeps the dialogue natural and human-like\n";
+    p += "- Matches or gently balances their emotion\n";
+    p += "- Uses language that feels natural for the user’s tone and context\n";
+    
+    if (mood === "Happy") {
+        p += "- Reflect positivity and appreciation of their excitement\n";
+    } else if (mood === "Sad" || mood === "Fearful") {
+        p += "- Offer warmth or reassurance, avoid sounding forced or overly cheerful\n";
+    } else if (mood === "Angry") {
+        p += "- Stay calm, empathetic, and redirect toward understanding\n";
+    } else if (mood === "Surprised") {
+        p += "- Respond with curiosity and shared wonder\n";
+    } else if (mood === "Neutral") {
+        p += "- Keep tone balanced and open-ended\n";
     }
+
+    p += "\nSTRICT RULES:\n";
+    p += "- Output ONLY one sentence (12 words max)\n";
+    p += "- DO NOT use generic filler like 'That's interesting' or 'Cool'\n";
+    p += "- DO NOT fabricate any new facts, names, or emotions\n";
+    p += "- Personalize response to the tone and content of their message\n";
+    p += "- Be specific, natural, and emotionally aligned\n\n";
+
+    p += "OUTPUT FORMAT:\n";
+    p += "Respond with ONLY the suggested sentence — no explanations or prefixes.\n\n";
+
+    p += "YOUR SUGGESTION (max 12 words):";
     
-    p += "\nRESPONSE FORMAT:\n";
-    p += "One conversational suggestion (max 12 words). Examples:\n";
-    p += "- 'Ask them about their weekend plans'\n";
-    p += "- 'Share why that made you smile'\n";
-    p += "- 'Tell them that sounds really interesting'\n\n";
-    
-    p += "YOUR SUGGESTION (12 words max):";
     return p;
 }
+
 
 function extractClaudeText(data) {
     // Claude responses often have { content: [ { type: 'text', text: '...' } ] }

@@ -1,3 +1,9 @@
+# Environment & API Keys (DO NOT COMMIT)
+config.js
+.env
+*.env
+Assets/Scene.scene
+
 # Shipped by Lens Studio
 
 # The lines below are automatically generated and updated by Lens Studio.
