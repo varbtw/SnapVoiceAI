@@ -1,11 +1,11 @@
 - !<AssetImportMetadata/4726c881-591b-424d-857a-de9bea11a3b4>
   ImportedAssetIds:
     .hidden/redondo: !<reference> 3b00dea9-5b0b-4bbc-8f6b-8605fbba895c
-    037fa78313e7430f: !<reference> 20ca9f0d-befb-4db2-8983-98fd0c7baa11
-    4e6c8797971782b8: !<reference> 2113cd07-4c69-4792-a1c8-e65d290928fe
-    624f6792bd6e379e: !<reference> 79133f49-a16c-4b6f-bd7a-464097798eef
-    7a0dd5cd69df73fa: !<reference> 65aa4536-1c30-4666-9ba5-894d85e5f3be
-    85aaf3ada8b469b0: !<reference> 452edb3b-2f15-4216-ae65-49a531f11898
+    4a3e924fad0e2f27: !<reference> 686028df-26d7-4f8f-94ce-d4f721031976
+    66780cf3a4dcb2b8: !<reference> ba2e00cb-c184-47ff-91f2-b8f5b81611a8
+    6f12b9a2ed4f515c: !<reference> 2b383e75-3a00-443a-a4c5-f0be089e631b
+    7a12b07dfe7bc8a1: !<reference> 661a5e56-bdfd-4140-948e-ae22cf639838
+    96f664b015fcd573: !<reference> c240f6d6-d513-4d95-bd93-11c5b0d17cd3
     Materials/redondo: !<reference> b4de05cb-deef-4586-a28b-6dcb6a93d10e
     Materials/redondo|redondo|GraphPassInfo: !<reference> 97c3c674-0fe9-49e2-9307-dca04274b45f
     Meshes/defaultMaterial: !<reference> 778ac407-8e78-4f07-942d-a2dafb586774
@@ -50,7 +50,7 @@
       jpeg: Performance Compression
     Overrides:
       Textures/redondo_baseColor: None Compression
-- !<SceneObject/20ca9f0d-befb-4db2-767c-6702f38455ee>
+- !<SceneObject/2b383e75-3a00-443a-5b3a-0f41f7619ce4>
   PrefabRemaps:
     []
   Name: defaultMaterial
@@ -64,28 +64,13 @@
   Children:
     []
   Components:
-    - !<own> 452edb3b-2f15-4216-519a-b65ace0ee767
-- !<SceneObject/2113cd07-4c69-4792-5e37-19a2d6f6d701>
-  PrefabRemaps:
-    []
-  Name: Scene
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 20ca9f0d-befb-4db2-767c-6702f38455ee
-  Components:
-    []
+    - !<own> 661a5e56-bdfd-4140-6b71-51dd309c67c7
 - !<ObjectPrefabAssetData/3623946e-32b5-44d1-a3c8-4605a169d1e9>
   Prototype: !<ObjectOwner/95f96414-5082-4fb1-8352-8358779c134b>
     PackagePath: ""
     objects:
-      - !<own> 65aa4536-1c30-4666-645a-76b27a1a0c41
-- !<RenderMeshVisual/452edb3b-2f15-4216-519a-b65ace0ee767>
+      - !<own> ba2e00cb-c184-47ff-6e0d-470a47e9ee57
+- !<RenderMeshVisual/661a5e56-bdfd-4140-6b71-51dd309c67c7>
   PrefabRemaps:
     []
   Name: defaultMaterial
@@ -105,22 +90,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/65aa4536-1c30-4666-645a-76b27a1a0c41>
-  PrefabRemaps:
-    []
-  Name: Vintage_Painting 2
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 79133f49-a16c-4b6f-4285-b9bf68867110
-  Components:
-    []
-- !<SceneObject/79133f49-a16c-4b6f-4285-b9bf68867110>
+- !<SceneObject/686028df-26d7-4f8f-6b31-2b08defce689>
   PrefabRemaps:
     []
   Name: Scenes
@@ -132,6 +102,36 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 2113cd07-4c69-4792-5e37-19a2d6f6d701
+    - !<own> c240f6d6-d513-4d95-426c-ee3a4f2e832c
+  Components:
+    []
+- !<SceneObject/ba2e00cb-c184-47ff-6e0d-470a47e9ee57>
+  PrefabRemaps:
+    []
+  Name: Vintage_Painting 2
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 686028df-26d7-4f8f-6b31-2b08defce689
+  Components:
+    []
+- !<SceneObject/c240f6d6-d513-4d95-426c-ee3a4f2e832c>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 2b383e75-3a00-443a-5b3a-0f41f7619ce4
   Components:
     []

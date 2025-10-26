@@ -667,7 +667,7 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: 2fc2f254-9d5e-4301-ac6b-a19229da485d/04ec543d2d0ca727a395f45e50f7d2db/Data/bf73d32/Ghost Material.glsl
+      ShaderPath: 2fc2f254-9d5e-4301-ac6b-a19229da485d/04ec543d2d0ca727a395f45e50f7d2db/Data/b01d0f7/Ghost Material.glsl
       Defines:
         []
       Properties:

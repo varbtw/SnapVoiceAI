@@ -27,7 +27,9 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     audioListener: false
+    enableContinuousListening: false
     outputText: false
+    statusText: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -39,6 +41,8 @@
   DefaultScriptInputs:
     - audioListener: !<reference.AudioListenerComponent> 00000000-0000-0000-0000-000000000000
       outputText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      enableContinuousListening: false
   ScriptTypes:
     -
       {}
