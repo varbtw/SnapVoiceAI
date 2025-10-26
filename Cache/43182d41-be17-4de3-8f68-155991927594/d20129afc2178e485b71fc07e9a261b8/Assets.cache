@@ -8,7 +8,7 @@
     - !<ObjectPrefab/5d1ca8bc-4e7a-4f3e-8d56-49d836412553>
       PackagePath: ""
       objects:
-        - !<own> 8c104120-25ab-494a-828d-0d6b3ea8ed7d
+        - !<own> 334ef841-6909-49f6-826f-11cd9e63cc2f
       LazyLoading: false
       RetainAssets: true
     - !<FileMesh/8e46239a-80b8-4fd8-b723-732329fb1416>
@@ -1861,7 +1861,7 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: 43182d41-be17-4de3-8f68-155991927594/d20129afc2178e485b71fc07e9a261b8/Data/.hidden/bf73d32/photo.glsl
+      ShaderPath: 43182d41-be17-4de3-8f68-155991927594/d20129afc2178e485b71fc07e9a261b8/Data/.hidden/b01d0f7/photo.glsl
       Defines:
         []
       Properties:
@@ -1873,6 +1873,22 @@
   SourceHash: d20129afc2178e485b71fc07e9a261b8
   FileHash: 606135de3e0a50c43b8729b02e6a3bfe
   NativePackageItems:
+    []
+- !<SceneObject/00816990-efa3-4063-b8ff-53d73ed1a045>
+  PrefabRemaps:
+    []
+  Name: Scene
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 14105857-17b5-44b3-b8fd-f1efb4bd58e2
+    - !<own> b7d277cf-ce43-4ddc-af20-19b9972561c5
+  Components:
     []
 - !<PassInfo/12424fc5-d694-45b0-bd11-3e82ab06de84>
   CachedProperties:
@@ -1950,27 +1966,7 @@
       typeIdx: 1
       value: 1.000000
   Pass: !<reference> a66ba5d2-eec1-4cb1-8ff1-fdb173845681
-- !<RenderMeshVisual/21bcf075-a425-4a46-81b9-6c7d0633b3ee>
-  PrefabRemaps:
-    []
-  Name: Plane.003
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 9e36c76c-508a-4b97-8fcb-c7c1a0af4db7
-  Mesh: !<reference> 8e46239a-80b8-4fd8-b723-732329fb1416
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/3b1be087-4e88-4840-9bc8-908a9ccb7f33>
+- !<SceneObject/14105857-17b5-44b3-b8fd-f1efb4bd58e2>
   PrefabRemaps:
     []
   Name: Plane.002
@@ -1984,21 +1980,26 @@
   Children:
     []
   Components:
-    - !<own> 21bcf075-a425-4a46-81b9-6c7d0633b3ee
-- !<SceneObject/641c3a0c-5633-45c4-8649-f4f70bdc09d1>
+    - !<own> 8fccd17d-3b8d-4a59-96d2-23357cac9e90
+- !<SceneObject/334ef841-6909-49f6-826f-11cd9e63cc2f>
   PrefabRemaps:
-    []
-  Name: Scene
+    - 00816990-efa3-4063-b8ff-53d73ed1a045: 00816990-efa3-4063-4700-ac28c12e5fba
+    - 14105857-17b5-44b3-b8fd-f1efb4bd58e2: 14105857-17b5-44b3-4702-0e104b42a71d
+    - 334ef841-6909-49f6-826f-11cd9e63cc2f: 334ef841-6909-49f6-7d90-ee32619c33d0
+    - 8fccd17d-3b8d-4a59-96d2-23357cac9e90: 8fccd17d-3b8d-4a59-692d-dcca8353616f
+    - b7d277cf-ce43-4ddc-af20-19b9972561c5: b7d277cf-ce43-4ddc-50df-e64668da9e3a
+    - d4f7dc98-7179-431d-9411-6f17bc0b264f: d4f7dc98-7179-431d-6bee-90e843f4d9b0
+    - f2cbfc69-c49a-4b32-8c49-78d49f34d28b: f2cbfc69-c49a-4b32-73b6-872b60cb2d74
+  Name: Boho_paint
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 3b1be087-4e88-4840-9bc8-908a9ccb7f33
-    - !<own> de3bfda7-ab0f-4511-8a31-936f97acb69c
+    - !<own> f2cbfc69-c49a-4b32-8c49-78d49f34d28b
   Components:
     []
 - !<PassInfo/85d64994-444b-4e7a-88c3-3b676dd13d60>
@@ -2063,28 +2064,27 @@
       typeIdx: 1
       value: 0.488124
   Pass: !<reference> a66ba5d2-eec1-4cb1-8ff1-fdb173845681
-- !<SceneObject/8c104120-25ab-494a-828d-0d6b3ea8ed7d>
+- !<RenderMeshVisual/8fccd17d-3b8d-4a59-96d2-23357cac9e90>
   PrefabRemaps:
-    - 21bcf075-a425-4a46-81b9-6c7d0633b3ee: 21bcf075-a425-4a46-7e46-9382f9cc4c11
-    - 3b1be087-4e88-4840-9bc8-908a9ccb7f33: 3b1be087-4e88-4840-6437-6f75633480cc
-    - 641c3a0c-5633-45c4-8649-f4f70bdc09d1: 641c3a0c-5633-45c4-79b6-0b08f423f62e
-    - 8c104120-25ab-494a-828d-0d6b3ea8ed7d: 8c104120-25ab-494a-7d72-f294c1571282
-    - de3bfda7-ab0f-4511-8a31-936f97acb69c: de3bfda7-ab0f-4511-75ce-6c9068534963
-    - e791c4c2-a9c4-464d-af71-e34fd01552c6: e791c4c2-a9c4-464d-508e-1cb02feaad39
-    - f7887dc6-02a9-401d-9d15-fae8383cff93: f7887dc6-02a9-401d-62ea-0517c7c3006c
-  Name: Boho_paint
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> f7887dc6-02a9-401d-9d15-fae8383cff93
-  Components:
     []
-- !<SceneObject/de3bfda7-ab0f-4511-8a31-936f97acb69c>
+  Name: Plane.003
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9e36c76c-508a-4b97-8fcb-c7c1a0af4db7
+  Mesh: !<reference> 8e46239a-80b8-4fd8-b723-732329fb1416
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/b7d277cf-ce43-4ddc-af20-19b9972561c5>
   PrefabRemaps:
     []
   Name: Plane.001
@@ -2098,8 +2098,8 @@
   Children:
     []
   Components:
-    - !<own> e791c4c2-a9c4-464d-af71-e34fd01552c6
-- !<RenderMeshVisual/e791c4c2-a9c4-464d-af71-e34fd01552c6>
+    - !<own> d4f7dc98-7179-431d-9411-6f17bc0b264f
+- !<RenderMeshVisual/d4f7dc98-7179-431d-9411-6f17bc0b264f>
   PrefabRemaps:
     []
   Name: Plane.006
@@ -2119,7 +2119,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/f7887dc6-02a9-401d-9d15-fae8383cff93>
+- !<SceneObject/f2cbfc69-c49a-4b32-8c49-78d49f34d28b>
   PrefabRemaps:
     []
   Name: Scenes
@@ -2131,6 +2131,6 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 641c3a0c-5633-45c4-8649-f4f70bdc09d1
+    - !<own> 00816990-efa3-4063-b8ff-53d73ed1a045
   Components:
     []

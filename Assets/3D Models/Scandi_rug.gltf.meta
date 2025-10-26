@@ -1,9 +1,11 @@
 - !<AssetImportMetadata/28acd07f-19f9-4bcd-8b56-6b0b4208a987>
   ImportedAssetIds:
     .hidden/SM_Carpet0102: !<reference> 81a4596e-f960-436a-a5ad-0b7d6e0a1b52
-    4e6c8797971782b8: !<reference> 36fb5ab4-4e06-4db2-ba12-ae39afcd174e
-    624f6792bd6e379e: !<reference> 38f87ec8-705e-4d71-bd49-239273001773
-    7a0dd5cd69df73fa: !<reference> 01e15343-42c7-40a8-941d-2b2ff80a7114
+    4a3e924fad0e2f27: !<reference> ae32d5c2-ea62-47b5-8de2-203862b2c548
+    66780cf3a4dcb2b8: !<reference> 93810bb0-18ec-45eb-919f-4300ed2085a5
+    69c0d65e780239c7: !<reference> 850105f1-910e-4d19-918d-1af2c9608e46
+    8499709f0d3ca7ec: !<reference> 2f476472-8291-4510-9c18-d2d978639682
+    96f664b015fcd573: !<reference> 05bd3fd5-16d2-4981-9df1-77f62785a2a0
     Materials/SM_Carpet0102: !<reference> 09b54b53-6482-4947-bdfc-077cf56969fa
     Materials/SM_Carpet0102|SM_Carpet0102|GraphPassInfo: !<reference> e9c00432-a78a-498c-a42e-c7fbd75dd0a8
     Meshes/Object_0.001: !<reference> 1a151da8-6119-46fd-985b-2c0dd7ae27a8
@@ -11,8 +13,6 @@
     Textures/SM_Carpet0102_baseColor: !<reference> ee8cdf83-c338-4907-85e6-4aaaffc0b641
     Textures/SM_Carpet0102_metallicRoughness: !<reference> 71528728-3513-4248-ac23-2419ccdd7325
     Textures/SM_Carpet0102_normal: !<reference> df232fc5-de35-4a59-b7de-64184c129c9d
-    b5822c82fc38fba6: !<reference> e331a42e-8702-4bf7-a1b7-b85cbb8b5d2f
-    e7be35d1be1d4250: !<reference> 4a49a0dd-8118-409d-8aa2-08eade381144
   ImporterName: GltfImporter
   PrimaryAsset: !<reference> fd0aed39-e45d-4b70-acb3-dba1a3213e96
   PackageType: LegacyPackage
@@ -50,22 +50,7 @@
       png: Performance Compression
     Overrides:
       {}
-- !<SceneObject/01e15343-42c7-40a8-6be2-d4d007f58eeb>
-  PrefabRemaps:
-    []
-  Name: Scandi_rug
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 38f87ec8-705e-4d71-42b6-dc6d8cffe88c
-  Components:
-    []
-- !<SceneObject/36fb5ab4-4e06-4db2-45ed-51c65032e8b1>
+- !<SceneObject/05bd3fd5-16d2-4981-620e-8809d87a5d5f>
   PrefabRemaps:
     []
   Name: Scene
@@ -77,30 +62,10 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> e331a42e-8702-4bf7-5e48-47a34474a2d0
+    - !<own> 850105f1-910e-4d19-6e72-e50d369f71b9
   Components:
     []
-- !<SceneObject/38f87ec8-705e-4d71-42b6-dc6d8cffe88c>
-  PrefabRemaps:
-    []
-  Name: Scenes
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    - !<own> 36fb5ab4-4e06-4db2-45ed-51c65032e8b1
-  Components:
-    []
-- !<ObjectPrefabAssetData/4344d5bb-3709-4917-9fdc-d70026fd1b81>
-  Prototype: !<ObjectOwner/cf796b78-8d9e-4b2f-b892-d6ab73d45398>
-    PackagePath: ""
-    objects:
-      - !<own> 01e15343-42c7-40a8-6be2-d4d007f58eeb
-- !<RenderMeshVisual/4a49a0dd-8118-409d-755d-f71521c7eebb>
+- !<RenderMeshVisual/2f476472-8291-4510-63e7-2d26879c697d>
   PrefabRemaps:
     []
   Name: Object_0.001
@@ -120,7 +85,12 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/e331a42e-8702-4bf7-5e48-47a34474a2d0>
+- !<ObjectPrefabAssetData/4344d5bb-3709-4917-9fdc-d70026fd1b81>
+  Prototype: !<ObjectOwner/cf796b78-8d9e-4b2f-b892-d6ab73d45398>
+    PackagePath: ""
+    objects:
+      - !<own> 93810bb0-18ec-45eb-6e60-bcff12df7a5a
+- !<SceneObject/850105f1-910e-4d19-6e72-e50d369f71b9>
   PrefabRemaps:
     []
   Name: Scandi_rug
@@ -134,4 +104,34 @@
   Children:
     []
   Components:
-    - !<own> 4a49a0dd-8118-409d-755d-f71521c7eebb
+    - !<own> 2f476472-8291-4510-63e7-2d26879c697d
+- !<SceneObject/93810bb0-18ec-45eb-6e60-bcff12df7a5a>
+  PrefabRemaps:
+    []
+  Name: Scandi_rug
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> ae32d5c2-ea62-47b5-721d-dfc79d4d3ab7
+  Components:
+    []
+- !<SceneObject/ae32d5c2-ea62-47b5-721d-dfc79d4d3ab7>
+  PrefabRemaps:
+    []
+  Name: Scenes
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 05bd3fd5-16d2-4981-620e-8809d87a5d5f
+  Components:
+    []
