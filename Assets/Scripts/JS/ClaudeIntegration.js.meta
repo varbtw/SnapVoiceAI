@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/19d6cc0e-3c70-4a7f-a57b-8a8feffa04f4>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 371c3169-727b-4e76-931f-4e4f9efa4f53
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 371c3169-727b-4e76-931f-4e4f9efa4f53
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> c561f31c-a33e-47be-8233-30a6648ed1f7
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/c561f31c-a33e-47be-8233-30a6648ed1f7>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 6349e5a0-1fe3-452e-bdf1-3ef348dbc9e1
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    claudeApiKey: false
+    claudeModel: false
+    enableDebug: false
+    minInterval: false
+    rekaEmotionScript: false
+    statusText: false
+    suggestionText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - suggestionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      rekaEmotionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      claudeApiKey: ""
+      claudeModel: claude-3-5-sonnet-20241022
+      minInterval: !<float> 5.000000
+      enableDebug: true
+  ScriptTypes:
+    -
+      {}
