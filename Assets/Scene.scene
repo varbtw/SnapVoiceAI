@@ -127,6 +127,21 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<SceneObject/0c160ed8-4892-4690-9c11-41cd07649493>
+  PrefabRemaps:
+    []
+  Name: ClaudeIntegration
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 27a1217d-9940-4b02-b6aa-11acffb59cd6
 - !<SceneObject/11cb1887-73b6-4245-b7fb-1c09eaaff59f>
   PrefabRemaps:
     []
@@ -187,6 +202,38 @@
     - !<own> 1a72bc0d-09e4-4b3d-aa42-bb44c14a9c28
   Components:
     []
+- !<ScriptComponent/136843f5-4deb-4f73-89ce-184689f2eb75>
+  PrefabRemaps:
+    []
+  Name: TavilySuggestions
+  Enabled: true
+  ScriptAsset: !<reference> ced899c6-0bf1-46df-893f-bb9407ca81a7
+  ScriptInputsDefault:
+    webResultsText: true
+    statusText: true
+    claudeSuggestionText: true
+    claudeIntegrationScript: true
+    tavilyApiKey: true
+    maxResults: true
+    enableDebug: true
+    systemPrompt: true
+    autoRewriteQuery: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      webResultsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      claudeSuggestionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      claudeIntegrationScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      tavilyApiKey: ""
+      maxResults: 3
+      enableDebug: true
+      systemPrompt: "Provide factual and up-to-date information related to: "
+      autoRewriteQuery: true
+  ScriptTypes:
+    "":
+      {}
 - !<ScriptComponent/13dd4999-57af-4ab5-96bb-d082caa06753>
   PrefabRemaps:
     []
@@ -685,6 +732,34 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ScriptComponent/27a1217d-9940-4b02-b6aa-11acffb59cd6>
+  PrefabRemaps:
+    []
+  Name: ClaudeIntegration
+  Enabled: true
+  ScriptAsset: !<reference> 371c3169-727b-4e76-931f-4e4f9efa4f53
+  ScriptInputsDefault:
+    statusText: true
+    claudeApiKey: true
+    minInterval: true
+    enableDebug: true
+    maxHistorySize: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      suggestionText: !<reference.Text> 76c32313-9154-44d0-9ae4-0f8d31a0d859
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      rekaEmotionScript: !<reference.ScriptComponent> c4f6fa50-eab5-41bd-a0d3-460733a90444
+      groqSceneAnalyzerScript: !<reference.ScriptComponent> dc530ba7-2889-4970-920b-281451492a61
+      claudeApiKey: ""
+      claudeModel: claude-haiku-4-5
+      minInterval: !<float> 5.000000
+      enableDebug: true
+      maxHistorySize: 25
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/28f5176d-cf5e-40dc-af18-328ff6056391>
   PrefabRemaps:
     []
@@ -979,6 +1054,21 @@
     []
   Name: Audio Listener
   Enabled: true
+- !<SceneObject/3fe44cd1-9815-4f48-ad69-e9f3e942152f>
+  PrefabRemaps:
+    []
+  Name: TavilySuggestions
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 136843f5-4deb-4f73-89ce-184689f2eb75
 - !<SceneObject/400fc4aa-3607-4a85-a072-838aeacc4324>
   PrefabRemaps:
     []
@@ -1291,6 +1381,21 @@
     []
   Components:
     - !<own> e668bbe1-e66b-4821-911c-a70b0023a3f6
+- !<SceneObject/5d65ae1f-be03-49b8-a7a7-9a09f126ed47>
+  PrefabRemaps:
+    []
+  Name: GroqSceneAnalyzer
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> dc530ba7-2889-4970-920b-281451492a61
 - !<SceneObject/5eae0126-f176-43d8-82a5-0a6f94554527>
   PrefabRemaps:
     []
@@ -1830,13 +1935,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
-    -talk about how hiking, the person has a hiking instragram page
-    -the quadratic formula was made in 1967
+  Text: ""
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1966,6 +2065,9 @@
     - !<own> 323dbb43-fb63-43f4-801d-93dbdd02934c
     - !<own> 2b73dbfc-15b2-46ee-8a75-4e56c9dbcdad
     - !<own> fe128032-6381-4a82-95a9-d343da98d893
+    - !<own> 3fe44cd1-9815-4f48-ad69-e9f3e942152f
+    - !<own> 0c160ed8-4892-4690-9c11-41cd07649493
+    - !<own> 5d65ae1f-be03-49b8-a7a7-9a09f126ed47
   Components:
     []
 - !<SceneObject/7d330596-072d-4080-b6a5-2013263c8648>
@@ -3434,6 +3536,29 @@
     - !<own> 604759ef-9c93-44ba-97f4-4843f965b4fc
   Components:
     []
+- !<ScriptComponent/dc530ba7-2889-4970-920b-281451492a61>
+  PrefabRemaps:
+    []
+  Name: GroqSceneAnalyzer
+  Enabled: true
+  ScriptAsset: !<reference> 3595984b-834d-4adb-a94b-ac24aa5d27bc
+  ScriptInputsDefault:
+    sceneText: true
+    analysisInterval: true
+    groqApiKey: true
+    enableDebugMode: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      cameraTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
+      sceneText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      analysisInterval: !<float> 5.000000
+      groqApiKey: ""
+      enableDebugMode: true
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/dd7da9e2-251f-4540-9fd7-fa3efda5af38>
   PrefabRemaps:
     []

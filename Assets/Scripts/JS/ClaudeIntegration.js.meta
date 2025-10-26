@@ -29,6 +29,8 @@
     claudeApiKey: false
     claudeModel: false
     enableDebug: false
+    groqSceneAnalyzerScript: false
+    maxHistorySize: false
     minInterval: false
     rekaEmotionScript: false
     statusText: false
@@ -45,10 +47,12 @@
     - suggestionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       rekaEmotionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      groqSceneAnalyzerScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       claudeApiKey: ""
       claudeModel: claude-3-5-sonnet-20241022
       minInterval: !<float> 5.000000
       enableDebug: true
+      maxHistorySize: 25
   ScriptTypes:
     -
       {}
