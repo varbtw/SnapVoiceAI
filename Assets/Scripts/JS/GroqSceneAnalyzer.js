@@ -107,7 +107,7 @@ async function sendToGroqAPI(base64Image) {
     
     // Use Meta's latest Llama 4 Scout model - supports vision and super fast on Groq
     const imageDataUri = `data:image/jpeg;base64,${base64Image}`;
-    const prompt = "Analyze this image and describe what you see. Include: objects, people, text, scene description, colors, and notable details. Keep it concise.";
+    const prompt = "Analyze this scene captured through AR glasses. If there are PEOPLE in the frame, analyze them in extreme detail: exactly what they're doing (actions, gestures, body language), their emotional state and expressions, whether they're speaking or listening, what they're wearing (clothing details, accessories), hair style and color, eye contact and direction, facial expressions, posture, and everything about them. If NO PEOPLE are in the frame, analyze everything visible: objects, furniture, environment, lighting, colors, layout, and notable details. Provide specific, detailed observations that could help someone start a natural conversation or understand the situation.";
     
     const requestPayload = {
         model: "meta-llama/llama-4-scout-17b-16e-instruct",

@@ -1,7 +1,7 @@
 // @input Component.Text webResultsText {"hint":"Text component to display web search results"}
 // @input Component.Text statusText {"hint":"Optional status indicator"}
-// @input Component.Text claudeSuggestionText {"hint":"Drag the SAME text component that ClaudeIntegration uses (suggestionText)"}
-// @input Component.ScriptComponent claudeIntegrationScript {"hint":"Drag the ClaudeIntegration script component here"}
+// @input Component.Text claudeSuggestionText {"hint":"Drag the SAME text component that GroqModelSuggestions uses (suggestionText)"}
+// @input Component.ScriptComponent claudeIntegrationScript {"hint":"Drag the GroqModelSuggestions script component here"}
 // @input string tavilyApiKey {"hint":"Tavily API Key"}
 // @input int maxResults = 3 {"hint":"Maximum number of search results to display"}
 // @input bool enableDebug = true
@@ -17,6 +17,7 @@ const Internet = require("LensStudio:InternetModule");
 
 let isSearching = false;
 let lastClaudeSuggestion = "";
+let lastSearchResults = null;
 
 script.createEvent("OnStartEvent").bind(function() {
     print("========================================");
@@ -33,16 +34,16 @@ script.createEvent("OnStartEvent").bind(function() {
     
     if (!script.claudeSuggestionText) {
         print("❌ ERROR: Claude suggestion text not connected!");
-        print("Please drag the SAME text component that ClaudeIntegration uses to 'Claude Suggestion Text'");
+        print("Please drag the SAME text component that GroqModelSuggestions uses to 'Claude Suggestion Text'");
     } else {
         print("✓ Claude suggestion text connected");
     }
     
     if (!script.claudeIntegrationScript) {
-        print("❌ ERROR: ClaudeIntegration script not connected!");
-        print("Please drag the ClaudeIntegration script component to 'Claude Integration Script'");
+        print("❌ ERROR: GroqModelSuggestions script not connected!");
+        print("Please drag the GroqModelSuggestions script component to 'Claude Integration Script'");
     } else {
-        print("✓ ClaudeIntegration script connected");
+        print("✓ GroqModelSuggestions script connected");
     }
     
     if (script.webResultsText) {
@@ -77,11 +78,13 @@ script.createEvent("OnStartEvent").bind(function() {
 });
 
 function setupClaudeListener() {
-    print("🔧 Setting up Claude output listener...");
+    print("🔧 [TAVILY] Setting up Claude output listener...");
     
     // Poll every 2 seconds to check for new Claude suggestions
     const updateEvent = script.createEvent("UpdateEvent");
     let lastCheckTime = 0;
+    
+    print("✅ [TAVILY] UpdateEvent created - polling will begin");
     
     updateEvent.bind(function() {
         const now = getTime();
@@ -96,30 +99,42 @@ function setupClaudeListener() {
         // Get Claude's suggestion
         const suggestion = getClaudeSuggestion();
         
+        debugLog("🔍 [TAVILY POLL] Checking for new Claude suggestion...");
+        debugLog("   Last suggestion: " + (lastClaudeSuggestion || "(none)"));
+        debugLog("   Current suggestion: " + (suggestion || "(none)"));
+        
         if (suggestion && suggestion !== lastClaudeSuggestion && suggestion.length > 0) {
             print("========================================");
-            print("🆕 NEW CLAUDE SUGGESTION DETECTED");
+            print("🆕 [TAVILY] NEW CLAUDE SUGGESTION DETECTED");
             print("========================================");
             print("💡 Claude said: " + suggestion);
+            print("🕐 Time: " + now.toFixed(2));
+            print("========================================");
             
-            // Get the user's original question from ClaudeIntegration
+            // Get the user's original question from GroqModelSuggestions
             let userQuestion = "";
             if (script.claudeIntegrationScript && script.claudeIntegrationScript.api && script.claudeIntegrationScript.api.getUserTranscript) {
                 userQuestion = script.claudeIntegrationScript.api.getUserTranscript();
-                print("👤 User asked: " + userQuestion);
+                print("👤 [TAVILY] User transcript retrieved: " + userQuestion);
+            } else {
+                print("⚠️ [TAVILY] Could not get user transcript - GroqModelSuggestions API not available");
             }
             
             // If we have the user's question, search for that instead of Claude's suggestion
             const searchQuery = userQuestion && userQuestion.length > 0 ? userQuestion : suggestion;
-            print("🔍 Will search Tavily for: " + searchQuery);
+            print("📋 [TAVILY] Query source: " + (userQuestion && userQuestion.length > 0 ? "User transcript" : "suggestion"));
+            print("🔍 [TAVILY] Will search Tavily for: " + searchQuery);
             print("========================================");
             
             lastClaudeSuggestion = suggestion;
+            
+            print("▶️ [TAVILY] Triggering search...");
             searchTavily(searchQuery);
         } else if (suggestion === lastClaudeSuggestion) {
             // Duplicate suggestion - don't search again
-        } else {
-            // No suggestion yet
+            debugLog("⏭️ [TAVILY] Duplicate suggestion detected - skipping search");
+        } else if (!suggestion || suggestion.length === 0) {
+            debugLog("⏳ [TAVILY] No suggestion yet - waiting...");
         }
     });
 }
@@ -156,22 +171,27 @@ function getClaudeSuggestion() {
 }
 
 async function searchTavily(query) {
+    print("🚀 [TAVILY] searchTavily() called with query: " + query);
+    print("   isSearching: " + isSearching);
+    print("   has API key: " + (script.tavilyApiKey && script.tavilyApiKey.length > 0));
+    
     if (isSearching) {
-        debugLog("⏸️ Already searching...");
+        debugLog("⏸️ [TAVILY] Already searching - skipping duplicate request");
         return;
     }
     
     if (!script.tavilyApiKey || script.tavilyApiKey.length === 0) {
-        debugLog("❗ Missing Tavily API Key");
+        print("❗ [TAVILY] ERROR: Missing Tavily API Key");
         setStatus("⚠️ No API Key");
         return;
     }
     
     if (!query || query.length === 0) {
-        debugLog("⚠️ Empty query - skipping search");
+        print("⚠️ [TAVILY] Empty query - skipping search");
         return;
     }
     
+    print("✅ [TAVILY] All checks passed - starting search process");
     isSearching = true;
     setStatus("🔍 Searching...");
     
@@ -267,7 +287,7 @@ async function searchTavily(query) {
         
     } catch (e) {
         print("========================================");
-        print("❌ TAVILY EXCEPTION");
+        print("❌ [TAVILY] TAVILY EXCEPTION");
         print("========================================");
         print("Error: " + e);
         print("Error type: " + (typeof e));
@@ -277,7 +297,9 @@ async function searchTavily(query) {
         displayError("Network error");
     } finally {
         isSearching = false;
-        print("🔄 Search completed, isSearching reset to false\n");
+        print("🏁 [TAVILY] Search completed, isSearching reset to false");
+        print("   Query was: " + query);
+        print("   Ready for next search\n");
     }
 }
 
@@ -292,6 +314,14 @@ function processSearchResults(data) {
     print("========================================");
     
     try {
+        // Store results for API access
+        lastSearchResults = {
+            answer: data.answer || "",
+            results: data.results || [],
+            query: data.query || "",
+            timestamp: getTime()
+        };
+        
         let displayText = "";
         
         // Ultra-compact format for AR glasses
@@ -396,11 +426,13 @@ function processSearchResults(data) {
             print("⚠️ webResultsText not connected - results only in console");
         }
         
+        print("========================================");
+        print("✅ [TAVILY] Results processing complete!");
         print("========================================\n");
         
     } catch (e) {
-        print("❗ Error processing results: " + e);
-        print("❗ Error stack: " + (e.stack || "No stack"));
+        print("❌ [TAVILY] ERROR processing results: " + e);
+        print("Error stack: " + (e.stack || "No stack"));
         displayError("Failed to process results");
     }
 }
@@ -438,6 +470,7 @@ function debugLog(msg) {
 // Export API for other scripts
 script.api.search = searchTavily;
 script.api.isSearching = function() { return isSearching; };
+script.api.getLastResults = function() { return lastSearchResults; };
 
 print("========================================");
 print("✅ TAVILY WEB SEARCH - READY!");

@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/19d6cc0e-3c70-4a7f-a57b-8a8feffa04f4>
+- !<AssetImportMetadata/837a1f8f-35e9-4cb4-8dc0-0b04781006f0>
   ImportedAssetIds:
-    JavaScriptAsset: !<reference> 371c3169-727b-4e76-931f-4e4f9efa4f53
+    JavaScriptAsset: !<reference> 2da8e857-bb8f-4517-98d4-17d58e4a69b2
   ImporterName: JavaScriptAssetImporter
-  PrimaryAsset: !<reference> 371c3169-727b-4e76-931f-4e4f9efa4f53
+  PrimaryAsset: !<reference> 2da8e857-bb8f-4517-98d4-17d58e4a69b2
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    JavaScriptAsset: !<own> c561f31c-a33e-47be-8233-30a6648ed1f7
+    JavaScriptAsset: !<own> 895b89ae-d432-41dd-a57c-e6edff31dd1c
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptAssetData/c561f31c-a33e-47be-8233-30a6648ed1f7>
+- !<ScriptAssetData/895b89ae-d432-41dd-a57c-e6edff31dd1c>
   SvgIcon: ""
   SetupScript:
     code: ""
@@ -22,17 +22,20 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 6349e5a0-1fe3-452e-bdf1-3ef348dbc9e1
+  ComponentUid: f8bba816-460c-4e65-8e58-12d5d1908522
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
-    claudeApiKey: false
-    claudeModel: false
     enableDebug: false
+    enableSceneOnlySuggestions: false
+    groqApiKey: false
+    groqModel: false
     groqSceneAnalyzerScript: false
     maxHistorySize: false
     minInterval: false
     rekaEmotionScript: false
+    sceneCheckInterval: false
+    snapchatSTTText: false
     statusText: false
     suggestionText: false
   ScriptTypesHidden:
@@ -48,11 +51,14 @@
       statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       rekaEmotionScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
       groqSceneAnalyzerScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      claudeApiKey: ""
-      claudeModel: claude-3-5-sonnet-20241022
+      snapchatSTTText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      groqApiKey: ""
+      groqModel: llama-3.1-8b-instant
       minInterval: !<float> 5.000000
       enableDebug: true
       maxHistorySize: 25
+      sceneCheckInterval: !<float> 8.000000
+      enableSceneOnlySuggestions: true
   ScriptTypes:
     -
       {}
