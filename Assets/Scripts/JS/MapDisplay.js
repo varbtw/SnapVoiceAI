@@ -1,6 +1,6 @@
 // @input Component.ScriptComponent locationTrackerScript {"hint":"Drag the LocationTracker script component"}
 // @input Component.Text mapText {"hint":"Text component to display map coordinates"}
-// @input Asset.Texture mapTexture {"hint":"Texture asset to display the actual map image"}
+// @input Component.Material mapMaterial {"hint":"Material component from a Plane/Quad to display the map image"}
 // @input string mapboxToken {"hint":"Optional Mapbox access token for better maps (get from mapbox.com)"}
 // @input bool enableDebug = true
 // @input float mapScale = 0.001 {"hint":"How much map to show (higher = more zoomed in)"}
@@ -79,8 +79,8 @@ function updateMapTexture() {
             "🌍 " + convertToDMS(currentLatitude, currentLongitude);
     }
     
-    // Load actual map image if texture is connected
-    if (script.mapTexture) {
+    // Load actual map image if material is connected
+    if (script.mapMaterial) {
         loadMapImage(); // Call async function
     }
 }
@@ -102,8 +102,8 @@ function convertToDMS(lat, lon) {
 async function loadMapImage() {
     debugLog("🌐 [MAP] Loading map image...");
     
-    if (!script.mapTexture) {
-        debugLog("⚠️ [MAP] No mapTexture connected - showing coordinates only");
+    if (!script.mapMaterial) {
+        debugLog("⚠️ [MAP] No mapMaterial connected - showing coordinates only");
         return;
     }
     
@@ -143,17 +143,21 @@ async function loadMapImage() {
         if (response.status === 200) {
             debugLog("✅ [MAP] Map image received");
             
-            // Get image data (this is a PNG)
-            const imageBuffer = await response.arrayBuffer();
-            debugLog("📊 [MAP] Image size: " + imageBuffer.byteLength + " bytes");
-            
-            // Note: Applying texture from fetched data in Lens Studio requires
-            // additional setup. The image is now in the buffer.
-            debugLog("💡 [MAP] Map image loaded successfully!");
-            debugLog("📱 [MAP] Map URL ready: " + mapURL.substring(0, 80));
-            
-            // Store for potential use
-            mapImageBuffer = imageBuffer;
+            // Apply texture to material
+            try {
+                // Load texture from URL and apply to material
+                const texture = await Texture.fromUrl(mapURL);
+                debugLog("🎨 [MAP] Texture loaded from URL");
+                
+                // Apply texture to the material's main texture property
+                if (script.mapMaterial) {
+                    script.mapMaterial.mainPass.texture = texture;
+                    debugLog("✅ [MAP] Texture applied to material!");
+                }
+            } catch (textureError) {
+                debugLog("⚠️ [MAP] Could not load texture from URL: " + textureError);
+                debugLog("💡 [MAP] Map URL: " + mapURL);
+            }
             
         } else {
             debugLog("❌ [MAP] Failed to load map: " + response.status);
