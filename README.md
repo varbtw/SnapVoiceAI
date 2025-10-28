@@ -5,6 +5,10 @@
 🔗 **Built on Snap's [AI Assistant Sample](https://github.com/Snapchat/Spectacles-Sample/tree/main/AI%20Assistant)**  
 *(Original features: Text-to-Speech, Camera Access, AI Vision, Fetch API)*
 
+## Demo
+
+https://user-images.githubusercontent.com/your-account-id/demo_snap.mp4
+
 ---
 
 ## Project Description

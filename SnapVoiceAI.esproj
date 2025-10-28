@@ -13,16 +13,16 @@ metaInfo:
     []
   tags:
     []
-  lensName: Voithos
+  lensName: SnapVoiceAI
   lensDescriptors:
-    []
+    - GEN_AI_ICON
   lensApplicability:
     - Front
     - Back
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: e4012211849f4ff881bdd49aa61bb926
+  iconHash: a5cf986d4bf5c9eecd0d77105105ef78
   videoPreviewHash: ""
   fromTemplateName: Default
   fromTemplateUrl: Lens Studio 5.1.0.24090603
