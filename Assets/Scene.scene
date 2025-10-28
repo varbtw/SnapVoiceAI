@@ -1661,7 +1661,7 @@
       snapchatSTTText: !<reference.Text> a03f3af6-8a8e-44b0-a069-769c489d4230
       groqApiKey: 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
       groqModel: llama-3.1-8b-instant
-      minInterval: !<float> 5.000000
+      minInterval: !<float> 2.000000
       enableDebug: true
       maxHistorySize: 25
       sceneCheckInterval: !<float> 8.000000

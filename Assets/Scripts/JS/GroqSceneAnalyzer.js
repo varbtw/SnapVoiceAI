@@ -11,8 +11,6 @@ let lastAnalysisTime = 0;
 let currentAnalysis = "Analyzing...";
 let analysisHistory = [];
 const MAX_HISTORY = 3;
-let hasPersonInFrame = false;
-let isListeningForTranscription = false;
 
 script.createEvent("OnStartEvent").bind(() => {
     if (!script.cameraTexture) {
@@ -35,44 +33,8 @@ script.createEvent("OnStartEvent").bind(() => {
         print("✅ GroqSceneAnalyzer initialized");
     }
     
-    // Subscribe to VoiceML to detect transcription events
-    try {
-        const VoiceMLModule = require("LensStudio:VoiceMLModule");
-        VoiceMLModule.onListeningUpdate.add(function(eventData) {
-            if (eventData && eventData.transcription && eventData.isFinalTranscription && hasPersonInFrame) {
-                if (script.enableDebugMode) {
-                    print("🎤 [Voice Trigger] Final transcription detected with person in frame - triggering analysis");
-                }
-                if (!isProcessing) {
-                    analyzeScene();
-                }
-            }
-        });
-        isListeningForTranscription = true;
-        if (script.enableDebugMode) {
-            print("✅ Subscribed to VoiceML for transcription-triggered analysis");
-        }
-    } catch (e) {
-        if (script.enableDebugMode) {
-            print("⚠️ Could not subscribe to VoiceML: " + e);
-        }
-    }
-    
-    // Start the analysis loop (for non-person scenarios)
+    // Start the analysis loop
     scheduleNextAnalysis();
-    
-    // Run initial analysis to detect if person is in frame
-    if (script.enableDebugMode) {
-        print("🔄 Running initial analysis to detect people...");
-    }
-    // Start initial analysis after a short delay to let everything initialize
-    const initialDelay = script.createEvent("DelayedCallbackEvent");
-    initialDelay.bind(() => {
-        if (!isProcessing) {
-            analyzeScene();
-        }
-    });
-    initialDelay.reset(1.0);
 });
 
 function scheduleNextAnalysis() {
@@ -82,21 +44,14 @@ function scheduleNextAnalysis() {
     
     const delayedEvent = script.createEvent("DelayedCallbackEvent");
     delayedEvent.bind(() => {
-        // Only run if no person in frame (person scenarios trigger on transcription)
-        if (!hasPersonInFrame) {
-            if (script.enableDebugMode) {
-                print("🔄 [Loop] Timer fired (no person detected)! Processing: " + isProcessing);
-            }
-            
-            if (!isProcessing) {
-                analyzeScene();
-            } else {
-                print("⏸️ [Loop] Skipping analysis - still processing previous request");
-            }
+        if (script.enableDebugMode) {
+            print("🔄 [Loop] Timer fired! Processing: " + isProcessing);
+        }
+        
+        if (!isProcessing) {
+            analyzeScene();
         } else {
-            if (script.enableDebugMode) {
-                print("⏸️ [Loop] Skipping - person in frame (waiting for transcription trigger)");
-            }
+            print("⏸️ [Loop] Skipping analysis - still processing previous request");
         }
         scheduleNextAnalysis(); // Continue the loop
     });
@@ -227,18 +182,6 @@ async function sendToGroqAPI(base64Image) {
 
             if (analysisText) {
                 print("🎯 [API] Raw analysis text: '" + analysisText + "'");
-
-                // Check if person is in frame
-                const personDetected = analysisText.toLowerCase().includes("person") || 
-                                       analysisText.toLowerCase().includes("people") ||
-                                       analysisText.toLowerCase().includes("they're") ||
-                                       analysisText.toLowerCase().includes("he ") ||
-                                       analysisText.toLowerCase().includes("she ");
-                
-                if (personDetected !== hasPersonInFrame) {
-                    hasPersonInFrame = personDetected;
-                    print("👤 [Detection] Person status changed: " + (hasPersonInFrame ? "PERSON DETECTED" : "NO PERSON"));
-                }
 
                 // Add to history
                 analysisHistory.push(analysisText);

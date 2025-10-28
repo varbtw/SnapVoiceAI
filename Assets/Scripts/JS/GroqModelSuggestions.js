@@ -2,12 +2,13 @@
 // @input Component.Text statusText {"hint":"Optional status text UI"}
 // @input Component.ScriptComponent rekaEmotionScript {"hint":"Drag the RekaEmotionAnalyzer script component"}
 // @input Component.ScriptComponent groqSceneAnalyzerScript {"hint":"Drag the GroqSceneAnalyzer script component"}
+// @input Component.Text snapchatSTTText {"hint":"Drag the SnapchatSTT outputText to monitor voice input"}
 // @input string groqApiKey {"hint":"Groq API Key"}
 // @input string groqModel = "llama-3.1-8b-instant" {"hint":"Groq model"}
 // @input float minInterval = 5.0 {"hint":"Min seconds between suggestions"}
 // @input bool enableDebug = true
 // @input int maxHistorySize = 25 {"hint":"Max conversation history items (~12 exchanges)"}
-// @input float sceneCheckInterval = 8.0 {"hint":"Seconds between scene-only suggestion checks"}
+// @input float sceneCheckInterval = 100.0 {"hint":"Seconds between scene-only suggestion checks"}
 // @input bool enableSceneOnlySuggestions = true {"hint":"Enable suggestions when only scene data is available"}
 
 const Internet = require("LensStudio:InternetModule");
@@ -20,18 +21,24 @@ let conversationHistory = []; // Store conversation history [{role: "user", cont
 let lastSceneAnalysis = "";
 
 script.createEvent("OnStartEvent").bind(function() {
-    safeLog("✅ GroqModelSuggestions initialized");
+    safeLog("GroqModelSuggestions initialized - API Key: " + (script.groqApiKey ? "SET" : "NOT SET"));
 
-    // Subscribe to VoiceML updates directly (like Claude version)
-    try {
-        const VoiceMLModule = require("LensStudio:VoiceMLModule");
-        VoiceMLModule.onListeningUpdate.add(function(eventData) {
-            handleListeningUpdate(eventData);
-        });
-        safeLog("🎧 Subscribed to VoiceML onListeningUpdate");
-    } catch (e) {
-        safeLog("⚠️ VoiceMLModule not available: " + e);
-    }
+    // Subscribe to VoiceML updates
+    const delayedSubscription = script.createEvent("DelayedCallbackEvent");
+    delayedSubscription.bind(function() {
+        try {
+            const VoiceMLModule = require("LensStudio:VoiceMLModule");
+            VoiceMLModule.onListeningUpdate.add(function(eventData) {
+                handleListeningUpdate(eventData);
+            });
+        } catch (e) {
+            safeLog("VoiceMLModule ERROR: " + e);
+        }
+    });
+    delayedSubscription.reset(3.0);
+    
+    // Start voice input polling
+    startVoiceInputPolling();
     
     // Start scene-only suggestions
     if (script.enableSceneOnlySuggestions) {
@@ -40,28 +47,25 @@ script.createEvent("OnStartEvent").bind(function() {
 });
 
 function handleListeningUpdate(eventData) {
-    // Log for debugging
-    if (eventData && eventData.transcription) {
-        safeLog("📝 STT update | final=" + eventData.isFinalTranscription + " | text='" + eventData.transcription + "'");
-    }
-
-    // Only act on final transcriptions
-    if (!eventData || !eventData.isFinalTranscription || !eventData.transcription) {
+    // Only process FINAL transcriptions
+    if (!eventData || !eventData.transcription || !eventData.isFinalTranscription) {
         return;
     }
 
     pendingTranscript = (eventData.transcription || "").trim();
+    
     if (pendingTranscript.length === 0) {
         return;
     }
     
     // Store the user's transcript for Tavily to use
     lastUserTranscript = pendingTranscript;
-    safeLog("📝 Stored user transcript for Tavily: " + lastUserTranscript);
 
     const now = getTime();
-    if (now - lastSuggestionTime < Math.max(1.0, script.minInterval)) {
-        safeLog("⏳ Throttled; waiting min interval before next suggestion");
+    const timeSinceLast = now - lastSuggestionTime;
+    const minInterval = Math.max(1.0, script.minInterval);
+    
+    if (timeSinceLast < minInterval) {
         return;
     }
 
@@ -71,6 +75,48 @@ function handleListeningUpdate(eventData) {
     const sceneAnalysis = getCurrentSceneAnalysisSafe();
     
     requestGroqSuggestion(pendingTranscript, emotion, sceneAnalysis);
+}
+
+function startVoiceInputPolling() {
+    if (script.snapchatSTTText) {
+        safeLog("✅ SnapchatSTT text component connected");
+    } else {
+        safeLog("⚠️ No SnapchatSTT text component connected");
+    }
+    
+    const updateEvent = script.createEvent("UpdateEvent");
+    let lastPolledTranscript = "";
+    
+    updateEvent.bind(function() {
+        if (!script.snapchatSTTText) {
+            return;
+        }
+        
+        const currentText = script.snapchatSTTText.text || "";
+        
+        // Only process FINAL transcriptions (those with ✅ prefix)
+        if (currentText.indexOf("✅ ") === 0 && currentText !== lastPolledTranscript && currentText.length > 0) {
+            // Extract the actual transcript
+            let transcript = currentText.substring(2).trim();
+            
+            if (transcript && transcript.length > 0) {
+                lastPolledTranscript = currentText;
+                
+                // Get emotion and scene
+                const emotion = getCurrentEmotionSafe();
+                const sceneAnalysis = getCurrentSceneAnalysisSafe();
+                
+                // Check throttling
+                const now = getTime();
+                const timeSinceLast = now - lastSuggestionTime;
+                const minInterval = Math.max(0.5, script.minInterval);
+                
+                if (timeSinceLast >= minInterval) {
+                    requestGroqSuggestion(transcript, emotion, sceneAnalysis);
+                }
+            }
+        }
+    });
 }
 
 function scheduleSceneCheck() {
@@ -130,24 +176,26 @@ function getCurrentSceneAnalysisSafe() {
 }
 
 async function requestGroqSuggestion(transcript, emotion, sceneAnalysis) {
+    // Log raw inputs
+    safeLog("📥 [RAW INPUTS]");
+    safeLog("Transcript: '" + transcript + "'");
+    safeLog("Emotion: " + emotion);
+    safeLog("Scene Analysis: '" + (sceneAnalysis || "(none)") + "'");
+    safeLog("========================================");
+    
     if (isProcessing) {
-        safeLog("⏸️ Already processing a suggestion");
         return;
     }
+    
     if (!script.groqApiKey || script.groqApiKey.length === 0) {
-        safeLog("❗ Missing Groq API Key");
+        safeLog("Missing Groq API Key");
         return;
     }
 
     isProcessing = true;
     lastSuggestionTime = getTime();
     setStatus("💭 Thinking...");
-
-    safeLog("🤖 SENDING TO GROQ");
-    safeLog("📝 Transcript: " + transcript);
-    safeLog("😊 Emotion: " + emotion);
-    safeLog("👁️ Scene Analysis: " + (sceneAnalysis || "No scene data"));
-
+    
     const prompt = buildPrompt(transcript, emotion, sceneAnalysis);
     const apiKey = script.groqApiKey.trim();
 
@@ -156,6 +204,12 @@ async function requestGroqSuggestion(transcript, emotion, sceneAnalysis) {
         messages = messages.concat(conversationHistory);
     }
     messages.push({ role: "user", content: prompt });
+    
+    let systemPrompt = "You are a real-time conversation coach on Snap Spectacles AR glasses. You see through the user's first-person camera view. Generate SUGGESTIONS for what the user should SAY in response. DO NOT answer questions - suggest what THEY should say. 12 words max. Be brief and natural.";
+    
+    if (sceneAnalysis && sceneAnalysis.length > 0) {
+        systemPrompt += ` Through the glasses camera, you see: ${sceneAnalysis}.`;
+    }
     
     // Check if there's a person in the scene
     const hasPeople = sceneAnalysis && (
@@ -166,34 +220,39 @@ async function requestGroqSuggestion(transcript, emotion, sceneAnalysis) {
         sceneAnalysis.toLowerCase().includes("she ")
     );
     
-    let systemPrompt = "You are a real-time conversational AI assistant for AR glasses. Your role is to help users understand conversations and respond appropriately by providing brief, natural conversation suggestions.";
-    
     if (hasPeople) {
-        // Person in frame - focus on conversation suggestions
-        if (sceneAnalysis && sceneAnalysis.length > 0) {
-            systemPrompt += ` The user can see and is talking with: ${sceneAnalysis}.`;
-        }
-        systemPrompt += " Give suggestions for what the user should SAY TO THE PERSON they're talking with. Base your suggestions on the conversation context and what you observe about the person. Keep suggestions under 12 words, natural, and conversational.";
+        systemPrompt += " There is a PERSON in view - they are the person the user is currently talking to. Suggest what the user should say to THAT PERSON based on what they heard. MAXIMUM 12 WORDS. Be brief.";
+    } else if (sceneAnalysis && sceneAnalysis.length > 0) {
+        systemPrompt += " No person in view - suggest what the user could comment about what they're seeing. MAXIMUM 12 WORDS.";
     } else {
-        // No person in frame - focus on scene analysis and observations
-        if (sceneAnalysis && sceneAnalysis.length > 0) {
-            systemPrompt += ` The user is looking at: ${sceneAnalysis}.`;
-        }
-        systemPrompt += " Analyze what the user is seeing - their environment, objects, lighting, layout, and any notable details. Help them understand or discuss what they're observing. Keep responses under 12 words, natural, and insightful.";
+        systemPrompt += " MAXIMUM 12 WORDS. Be brief.";
     }
     
     const payload = {
         model: script.groqModel || "llama-3.1-8b-instant",
-        max_tokens: 50,
-        temperature: 0.7,
+        max_tokens: 30,
+        temperature: 0.3,
         messages: [
             { role: "system", content: systemPrompt },
             ...messages
         ]
     };
 
+    // Log API INPUT
+    safeLog("========================================");
+    safeLog("📥 [GROQ API INPUT]");
+    safeLog("========================================");
+    safeLog("Model: " + payload.model);
+    safeLog("Max tokens: " + payload.max_tokens);
+    safeLog("Temperature: " + payload.temperature);
+    safeLog("Message count: " + payload.messages.length);
+    safeLog("System prompt: " + systemPrompt);
+    safeLog("User prompt: " + prompt);
+    safeLog("Conversation history: " + (conversationHistory.length > 0 ? "YES (" + conversationHistory.length + " msgs)" : "NO"));
+    safeLog("========================================");
+
     try {
-        safeLog("📤 Sending request to Groq API...");
+        safeLog("🚀 Sending request to Groq API...");
         const resp = await Internet.fetch(new Request("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -202,38 +261,59 @@ async function requestGroqSuggestion(transcript, emotion, sceneAnalysis) {
             },
             body: JSON.stringify(payload)
         }));
-
-        safeLog("📥 Groq status: " + resp.status);
+        
+        safeLog("📊 Response status: " + resp.status);
+        
         if (resp.status !== 200) {
             const t = await resp.text();
-            safeLog("❗ Groq error: " + t);
+            safeLog("❌ [GROQ API ERROR] Status: " + resp.status);
+            safeLog("Error response: " + t);
             setStatus("⚠️ Error");
             isProcessing = false;
             return;
         }
 
         const data = await resp.json();
+        safeLog("========================================");
+        safeLog("📤 [GROQ API OUTPUT]");
+        safeLog("========================================");
+        safeLog("Response keys: " + Object.keys(data || {}).join(', '));
+        
         let suggestion = extractGroqText(data) || "";
         suggestion = (suggestion || "").trim();
+        
+        safeLog("Extracted suggestion: '" + suggestion + "'");
+        safeLog("========================================");
+        
         if (suggestion.length === 0) {
+            safeLog("⚠️ No suggestion - empty response");
             setStatus("⚠️ No suggestion");
             isProcessing = false;
             return;
         }
 
-        safeLog("💡 GROQ SUGGESTION:");
-        safeLog(suggestion);
-
-        // Store this exchange in conversation history
-        addToConversationHistory(transcript, suggestion);
-    
-        updateSuggestionDisplay(suggestion);
-        setStatus("🎯 Ready");
+        safeLog("✅ Suggestion generated: " + suggestion);
+        
+        const hasTranscript = transcript && transcript.trim().length > 0;
+        if (hasTranscript) {
+            addToConversationHistory(transcript, suggestion);
+            safeLog("💾 Added to conversation history");
+            
+            // Only update display for real user transcriptions (not scene-only triggers)
+            updateSuggestionDisplay(suggestion);
+            setStatus("🎯 Ready");
+        } else {
+            safeLog("⏭️ Scene-only suggestion - NOT updating display");
+            setStatus("🎯 Ready");
+        }
     } catch (e) {
-        safeLog("❗ Groq exception: " + e);
+        safeLog("❌ [GROQ API EXCEPTION]");
+        safeLog("Error: " + e);
+        safeLog("Type: " + (typeof e));
         setStatus("⚠️ Error");
     } finally {
         isProcessing = false;
+        safeLog("🏁 [COMPLETE] Request finished");
     }
 }
 
@@ -246,32 +326,53 @@ function buildPrompt(transcript, emotion, sceneAnalysis) {
         sceneAnalysis.toLowerCase().includes("people") ||
         sceneAnalysis.toLowerCase().includes("they're") ||
         sceneAnalysis.toLowerCase().includes("he ") ||
-        sceneAnalysis.toLowerCase().includes("she ")
+        sceneAnalysis.toLowerCase().includes("she ") ||
+        sceneAnalysis.toLowerCase().includes("wearing") ||
+        sceneAnalysis.toLowerCase().includes("smiling") ||
+        sceneAnalysis.toLowerCase().includes("looking") ||
+        sceneAnalysis.toLowerCase().includes("talking") ||
+        sceneAnalysis.toLowerCase().includes("speaking")
     );
     
     if (hasTranscript) {
-        // User spoke - give them a suggestion based on the conversation
-        let p = `The user said: "${transcript}"\n`;
+        // User spoke - make transcript the MOST IMPORTANT part
+        let p = `The user is on Snap Spectacles glasses. Someone said to them: "${transcript}"\n`;
         
-        // Add emotion context
-        if (emotion && emotion !== "Neutral") {
-            p += `User's emotional tone: ${emotion}\n`;
-        }
-        
-        // Add visual scene context
+        // Add visual scene context (secondary)
         if (sceneAnalysis && sceneAnalysis.length > 0) {
-            p += `Context: ${sceneAnalysis}\n`;
+            p += `What the glasses see: ${sceneAnalysis}\n`;
         }
         
+        // Add emotion context (tertiary)
+        if (emotion && emotion !== "Neutral") {
+            p += `User's tone: ${emotion}\n`;
+        }
+        
+        // Adjust prompt based on whether people are present
         if (hasPeople) {
-            p += "\nA person is in the scene and the user is conversing with them. Suggest what the user should say next to continue the conversation naturally. Make it relevant to what was said and what you observe about the person. Keep it under 12 words.\n";
+            p += "\nSTRICT: Maximum 12 words. The person in view is who said that to the user. Suggest what the user should SAY BACK to that person. DO NOT answer the question yourself - suggest their response.\n";
+        } else if (sceneAnalysis && sceneAnalysis.length > 0) {
+            p += "\nSTRICT: Maximum 12 words. The user said that. Suggest a natural response they could give based on what they're seeing.\n";
         } else {
-            p += "\nNo person in view - the user is observing their environment. Analyze what they're seeing and suggest what they could comment on or notice. Help them understand their surroundings. Keep it under 12 words.\n";
+            p += "\nSTRICT: Maximum 12 words. Suggest what the user could say in response.\n";
         }
         return p;
+    } else {
+        // No transcript - scene only
+        if (sceneAnalysis && sceneAnalysis.length > 0) {
+            let p = `The user is on Snap Spectacles. Through the glasses camera, you see: ${sceneAnalysis}\n`;
+            
+            // Adjust prompt based on whether people are present
+            if (hasPeople) {
+                p += "\nSTRICT: Maximum 12 words. The PERSON visible is who the user is talking to. Suggest what the user could say TO THAT PERSON based on what you see about them (appearance, actions, etc.).\n";
+            } else {
+                p += "\nSTRICT: Maximum 12 words. No person visible. Suggest what the user could say or think about what they're seeing.\n";
+            }
+            return p;
+        }
     }
     
-    return "Provide a suggestion (12 words max).\n";
+    return "Suggest a natural conversational response (12 words max).\n";
 }
 
 
