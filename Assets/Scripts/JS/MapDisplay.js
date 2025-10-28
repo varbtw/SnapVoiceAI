@@ -1,6 +1,6 @@
 // @input Component.ScriptComponent locationTrackerScript {"hint":"Drag the LocationTracker script component"}
 // @input Component.Text mapText {"hint":"Text component to display map coordinates"}
-// @input Component.SpriteVisual mapSprite {"hint":"SpriteVisual to display the actual map image"}
+// @input Asset.Texture mapTexture {"hint":"Texture asset to display the actual map image"}
 // @input string mapboxToken {"hint":"Optional Mapbox access token for better maps (get from mapbox.com)"}
 // @input bool enableDebug = true
 // @input float mapScale = 0.001 {"hint":"How much map to show (higher = more zoomed in)"}
@@ -79,8 +79,8 @@ function updateMapTexture() {
             "🌍 " + convertToDMS(currentLatitude, currentLongitude);
     }
     
-    // Load actual map image if sprite is connected
-    if (script.mapSprite) {
+    // Load actual map image if texture is connected
+    if (script.mapTexture) {
         loadMapImage(); // Call async function
     }
 }
@@ -102,8 +102,8 @@ function convertToDMS(lat, lon) {
 async function loadMapImage() {
     debugLog("🌐 [MAP] Loading map image...");
     
-    if (!script.mapSprite) {
-        debugLog("⚠️ [MAP] No mapSprite connected - showing coordinates only");
+    if (!script.mapTexture) {
+        debugLog("⚠️ [MAP] No mapTexture connected - showing coordinates only");
         return;
     }
     
@@ -150,7 +150,7 @@ async function loadMapImage() {
             // Note: Applying texture from fetched data in Lens Studio requires
             // additional setup. The image is now in the buffer.
             debugLog("💡 [MAP] Map image loaded successfully!");
-            debugLog("📱 [MAP] To display: Connect mapSprite to a Plane and use Texture.fromUrl()");
+            debugLog("📱 [MAP] Map URL ready: " + mapURL.substring(0, 80));
             
             // Store for potential use
             mapImageBuffer = imageBuffer;
