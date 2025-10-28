@@ -1274,6 +1274,28 @@
     - !<own> ae40155d-c43d-48f6-bba8-54fbc4af0f5b
   Components:
     []
+- !<ScriptComponent/56c017cc-c5ec-42a7-a795-e09eda6b3a33>
+  PrefabRemaps:
+    []
+  Name: SnapchatSTT
+  Enabled: true
+  ScriptAsset: !<reference> 2cdffac3-dc8c-4c83-92d0-0582c847ad7f
+  ScriptInputsDefault:
+    audioListener: true
+    outputText: true
+    statusText: true
+    enableContinuousListening: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      audioListener: !<reference.AudioListenerComponent> 00000000-0000-0000-0000-000000000000
+      outputText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      enableContinuousListening: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/593d9da3-bac7-41ea-b24d-f7286f99af82>
   PrefabRemaps:
     []
@@ -1636,7 +1658,8 @@
       statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       rekaEmotionScript: !<reference.ScriptComponent> c4f6fa50-eab5-41bd-a0d3-460733a90444
       groqSceneAnalyzerScript: !<reference.ScriptComponent> dc530ba7-2889-4970-920b-281451492a61
-      groqApiKey: GroqModelSuggestions.js
+      snapchatSTTText: !<reference.Text> a03f3af6-8a8e-44b0-a069-769c489d4230
+      groqApiKey: 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
       groqModel: llama-3.1-8b-instant
       minInterval: !<float> 5.000000
       enableDebug: true
@@ -2019,6 +2042,21 @@
     - !<own> 6fa24305-adf4-4c18-9076-5b765e4bdd2e
   Components:
     []
+- !<SceneObject/7b05659a-bcc5-46ab-8b97-a5df36df2de6>
+  PrefabRemaps:
+    []
+  Name: SnapchatSTT
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 56c017cc-c5ec-42a7-a795-e09eda6b3a33
 - !<SceneObject/7bb133b7-6767-4ea5-a82b-9bf7effe3899>
   PrefabRemaps:
     []
@@ -2038,6 +2076,7 @@
     - !<own> 3fe44cd1-9815-4f48-ad69-e9f3e942152f
     - !<own> 5d65ae1f-be03-49b8-a7a7-9a09f126ed47
     - !<own> 218cae75-53c0-495e-b6b7-59f3b295aa51
+    - !<own> 7b05659a-bcc5-46ab-8b97-a5df36df2de6
   Components:
     []
 - !<SceneObject/7d330596-072d-4080-b6a5-2013263c8648>
