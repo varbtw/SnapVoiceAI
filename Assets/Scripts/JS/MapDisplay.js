@@ -143,20 +143,25 @@ async function loadMapImage() {
         if (response.status === 200) {
             debugLog("✅ [MAP] Map image received");
             
-            // Apply texture to material
+            // Store map URL for use
+            debugLog("💡 [MAP] Map image URL: " + mapURL);
+            debugLog("📱 [MAP] To see the map:");
+            debugLog("   1. Copy this URL");
+            debugLog("   2. Open in browser to verify it loads");
+            debugLog("   3. In Lens Studio, you may need to use a WebTexture component");
+            
+            // Try to load texture if Lens Studio supports it
             try {
-                // Load texture from URL and apply to material
-                const texture = await Texture.fromUrl(mapURL);
-                debugLog("🎨 [MAP] Texture loaded from URL");
-                
-                // Apply texture to the material's main texture property
                 if (script.mapMaterial) {
-                    script.mapMaterial.mainPass.texture = texture;
-                    debugLog("✅ [MAP] Texture applied to material!");
+                    debugLog("🎨 [MAP] Attempting to load texture...");
+                    
+                    // Note: Texture.fromUrl() requires Lens Studio's specific API
+                    // This may not be available in all versions
+                    debugLog("⚠️ [MAP] Direct texture loading may not be supported");
+                    debugLog("💡 [MAP] Consider using WebTexture component instead");
                 }
             } catch (textureError) {
-                debugLog("⚠️ [MAP] Could not load texture from URL: " + textureError);
-                debugLog("💡 [MAP] Map URL: " + mapURL);
+                debugLog("❌ [MAP] Texture loading error: " + textureError);
             }
             
         } else {
