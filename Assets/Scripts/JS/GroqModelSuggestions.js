@@ -157,13 +157,30 @@ async function requestGroqSuggestion(transcript, emotion, sceneAnalysis) {
     }
     messages.push({ role: "user", content: prompt });
     
+    // Check if there's a person in the scene
+    const hasPeople = sceneAnalysis && (
+        sceneAnalysis.toLowerCase().includes("person") ||
+        sceneAnalysis.toLowerCase().includes("people") ||
+        sceneAnalysis.toLowerCase().includes("they're") ||
+        sceneAnalysis.toLowerCase().includes("he ") ||
+        sceneAnalysis.toLowerCase().includes("she ")
+    );
+    
     let systemPrompt = "You are a real-time conversational AI assistant for AR glasses. Your role is to help users understand conversations and respond appropriately by providing brief, natural conversation suggestions.";
     
-    if (sceneAnalysis && sceneAnalysis.length > 0) {
-        systemPrompt += ` The user can see: ${sceneAnalysis}. Use this visual context to make suggestions.`;
+    if (hasPeople) {
+        // Person in frame - focus on conversation suggestions
+        if (sceneAnalysis && sceneAnalysis.length > 0) {
+            systemPrompt += ` The user can see and is talking with: ${sceneAnalysis}.`;
+        }
+        systemPrompt += " Give suggestions for what the user should SAY TO THE PERSON they're talking with. Base your suggestions on the conversation context and what you observe about the person. Keep suggestions under 12 words, natural, and conversational.";
+    } else {
+        // No person in frame - focus on scene analysis and observations
+        if (sceneAnalysis && sceneAnalysis.length > 0) {
+            systemPrompt += ` The user is looking at: ${sceneAnalysis}.`;
+        }
+        systemPrompt += " Analyze what the user is seeing - their environment, objects, lighting, layout, and any notable details. Help them understand or discuss what they're observing. Keep responses under 12 words, natural, and insightful.";
     }
-    
-    systemPrompt += " If there's a PERSON in the scene, give suggestions for what to SAY TO THEM based on what you observe about them. If there's no person, help the user think about or discuss what they're seeing. Keep suggestions under 12 words, natural, and conversational.";
     
     const payload = {
         model: script.groqModel || "llama-3.1-8b-instant",
@@ -229,16 +246,11 @@ function buildPrompt(transcript, emotion, sceneAnalysis) {
         sceneAnalysis.toLowerCase().includes("people") ||
         sceneAnalysis.toLowerCase().includes("they're") ||
         sceneAnalysis.toLowerCase().includes("he ") ||
-        sceneAnalysis.toLowerCase().includes("she ") ||
-        sceneAnalysis.toLowerCase().includes("wearing") ||
-        sceneAnalysis.toLowerCase().includes("smiling") ||
-        sceneAnalysis.toLowerCase().includes("looking") ||
-        sceneAnalysis.toLowerCase().includes("talking") ||
-        sceneAnalysis.toLowerCase().includes("speaking")
+        sceneAnalysis.toLowerCase().includes("she ")
     );
     
     if (hasTranscript) {
-        // User spoke
+        // User spoke - give them a suggestion based on the conversation
         let p = `The user said: "${transcript}"\n`;
         
         // Add emotion context
@@ -248,34 +260,18 @@ function buildPrompt(transcript, emotion, sceneAnalysis) {
         
         // Add visual scene context
         if (sceneAnalysis && sceneAnalysis.length > 0) {
-            p += `What they're seeing: ${sceneAnalysis}\n`;
+            p += `Context: ${sceneAnalysis}\n`;
         }
         
-        // Adjust prompt based on whether people are present
         if (hasPeople) {
-            p += "\nThere is a PERSON in the scene. As a conversational assistant, suggest what the user could say TO THAT PERSON to continue or enhance the conversation. Make it relevant to what you see about them. Keep it natural (12 words max).\n";
-        } else if (sceneAnalysis && sceneAnalysis.length > 0) {
-            p += "\nAs a conversational assistant, suggest what the user could say next about what they're seeing. Keep it natural (12 words max).\n";
+            p += "\nA person is in the scene and the user is conversing with them. Suggest what the user should say next to continue the conversation naturally. Make it relevant to what was said and what you observe about the person. Keep it under 12 words.\n";
         } else {
-            p += "\nAs a conversational assistant, suggest what they could say next to continue or enhance this conversation. Keep it natural (12 words max).\n";
+            p += "\nNo person in view - the user is observing their environment. Analyze what they're seeing and suggest what they could comment on or notice. Help them understand their surroundings. Keep it under 12 words.\n";
         }
         return p;
-    } else {
-        // No transcript - scene only
-        if (sceneAnalysis && sceneAnalysis.length > 0) {
-            let p = `The user is looking at this scene: ${sceneAnalysis}\n`;
-            
-            // Adjust prompt based on whether people are present
-            if (hasPeople) {
-                p += "\nThere is a PERSON in the scene. As a conversational assistant, suggest what the user could say TO THAT PERSON to start an engaging conversation. Make it relevant to what you see about them (their appearance, what they're doing, etc.). Keep it natural (12 words max).\n";
-            } else {
-                p += "\nAs a conversational assistant, suggest what the user could say or think about what they're seeing. Help them engage with the environment. Keep it natural (12 words max).\n";
-            }
-            return p;
-        }
     }
     
-    return "Suggest a natural conversational response (12 words max).\n";
+    return "Provide a suggestion (12 words max).\n";
 }
 
 
