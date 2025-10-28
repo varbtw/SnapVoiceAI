@@ -6,6 +6,7 @@
 *(Original features: Text-to-Speech, Camera Access, AI Vision, Fetch API)*
 
 ---
+https://www.youtube.com/watch?v=_a314_yfQq8
 
 ## Project Description
 A real-time AI conversation assistant for Snap Spectacles. Helps users understand conversations and respond appropriately by providing contextual suggestions based on speech, emotion, and visual scene analysis.
