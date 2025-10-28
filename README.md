@@ -7,7 +7,7 @@
 
 ## Demo
 
-https://user-images.githubusercontent.com/your-account-id/demo_snap.mp4
+https://raw.githubusercontent.com/varbtw/SnapVoiceAI/main/demo_snap.mp4
 
 ---
 
