@@ -20,18 +20,12 @@ This project uses several AI services that require API keys. **DO NOT commit you
 - **Format:** Custom Reka format
 - **Cost:** Check Reka pricing
 
-### 3. **Tavily API Key** (for web search)
-- **Get it from:** https://tavily.com/
-- **Used in:** TavilySuggestions.js
-- **Format:** `tvly-...`
-- **Cost:** Free tier available, check Tavily pricing
-
-### 4. **Deepgram API Key** (optional - if using external STT)
+### 3. **Deepgram API Key** (optional - if using external STT)
 - **Get it from:** https://deepgram.com/
 - **Used in:** DeepgramSTT.js (if enabled)
 - **Format:** Custom Deepgram format
 
-### 5. **OpenAI API Key** (optional - for TTS/Vision)
+### 4. **OpenAI API Key** (optional - for TTS/Vision)
 - **Get it from:** https://platform.openai.com/
 - **Used in:** TextToSpeechOpenAI.js, VisionOpenAI_DALLE.js
 - **Format:** `sk-...`
@@ -89,7 +83,6 @@ This project uses several AI services that require API keys. **DO NOT commit you
 |---------|--------|------------------|--------|
 | Claude | ClaudeIntegration.js | `claudeApiKey` | Required |
 | Reka | RekaEmotionAnalyzer.js | `rekaApiKey` | Required |
-| Tavily | TavilySuggestions.js | `tavilyApiKey` | Required |
 | Deepgram | DeepgramSTT.js | N/A (using Snapchat STT) | Optional |
 | OpenAI | TextToSpeechOpenAI.js | N/A | Optional |
 

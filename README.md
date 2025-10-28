@@ -15,7 +15,6 @@ A real-time AI conversation assistant for Snap Spectacles. Helps users understan
 - **Live AI Suggestions**: Groq-powered conversation coaching with sub-second response times
 - **Visual Context**: AI analyzes the scene to provide contextually relevant suggestions
 - **Emotion Detection**: Tracks emotional tone to tailor suggestions
-- **Web Search Integration**: Tavily-powered background search for relevant information
 
 ## Technical Stack
 | Component | Technology |
@@ -24,7 +23,6 @@ A real-time AI conversation assistant for Snap Spectacles. Helps users understan
 | Speech-to-Text | Snapchat STT |
 | AI Models | Groq (Llama 3.1 8B Instant) |
 | Scene Analysis | Groq Vision (Meta Llama 4 Scout) |
-| Web Search | Tavily API |
 | Emotion Detection | Reka Emotion Analyzer |
 
 ## Setup
@@ -33,7 +31,6 @@ A real-time AI conversation assistant for Snap Spectacles. Helps users understan
 - Lens Studio (v5.7.2.25 or later)
 - API Keys:
   - Groq API key
-  - Tavily API key
 
 ### Configuration
 1. Clone the repository:
@@ -46,7 +43,6 @@ A real-time AI conversation assistant for Snap Spectacles. Helps users understan
 3. Configure API keys in the Inspector:
    - `GroqModelSuggestions`: Set your Groq API key
    - `GroqSceneAnalyzer`: Set your Groq API key
-   - `TavilySuggestions`: Set your Tavily API key
 
 4. Connect components as shown in the Scene hierarchy
 

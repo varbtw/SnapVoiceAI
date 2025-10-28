@@ -13,10 +13,6 @@ const API_KEYS = {
     // Get from: https://www.reka.ai/
     REKA_API_KEY: "your-reka-key-here",
     
-    // Tavily API Key (for web search)
-    // Get from: https://tavily.com/
-    TAVILY_API_KEY: "tvly-your-key-here",
-    
     // Deepgram API Key (optional)
     DEEPGRAM_API_KEY: "your-deepgram-key-here",
     

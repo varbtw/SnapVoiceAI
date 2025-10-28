@@ -187,35 +187,6 @@
     - !<own> 1a72bc0d-09e4-4b3d-aa42-bb44c14a9c28
   Components:
     []
-- !<ScriptComponent/136843f5-4deb-4f73-89ce-184689f2eb75>
-  PrefabRemaps:
-    []
-  Name: TavilySuggestions
-  Enabled: true
-  ScriptAsset: !<reference> ced899c6-0bf1-46df-893f-bb9407ca81a7
-  ScriptInputsDefault:
-    statusText: true
-    claudeSuggestionText: true
-    maxResults: true
-    enableDebug: true
-    systemPrompt: true
-    autoRewriteQuery: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      webResultsText: !<reference.Text> 848ff10b-3da0-4cb3-8acb-d98865ae7ea4
-      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      claudeSuggestionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
-      claudeIntegrationScript: !<reference.ScriptComponent> 6dfce2ed-13b0-4fe1-93e3-f4ec2a7b0bc5
-      tavilyApiKey: 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
-      maxResults: 3
-      enableDebug: true
-      systemPrompt: "Provide factual and up-to-date information related to: "
-      autoRewriteQuery: true
-  ScriptTypes:
-    "":
-      {}
 - !<ScriptComponent/13dd4999-57af-4ab5-96bb-d082caa06753>
   PrefabRemaps:
     []
@@ -1022,21 +993,6 @@
     []
   Name: Audio Listener
   Enabled: true
-- !<SceneObject/3fe44cd1-9815-4f48-ad69-e9f3e942152f>
-  PrefabRemaps:
-    []
-  Name: TavilySuggestions
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 136843f5-4deb-4f73-89ce-184689f2eb75
 - !<SceneObject/400fc4aa-3607-4a85-a072-838aeacc4324>
   PrefabRemaps:
     []
