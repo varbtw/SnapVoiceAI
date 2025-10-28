@@ -1,10 +1,6 @@
 // @input Component.ScriptComponent locationTrackerScript {"hint":"Drag the LocationTracker script component"}
-// @input Component.Text mapText {"hint":"Text component to display map coordinates"}
-// @input Component.Material mapMaterial {"hint":"Material component from a Plane/Quad to display the map image"}
-// @input string mapboxToken {"hint":"Optional Mapbox access token for better maps (get from mapbox.com)"}
+// @input Component.Text mapText {"hint":"Text component to display GPS coordinates"}
 // @input bool enableDebug = true
-// @input float mapScale = 0.001 {"hint":"How much map to show (higher = more zoomed in)"}
-// @input int mapZoom = 15 {"hint":"Map zoom level (10-18, higher = more zoomed in)"}
 
 const Internet = require("LensStudio:InternetModule");
 
@@ -12,8 +8,6 @@ print("🗺️ [MAP DISPLAY] Initializing...");
 
 let currentLatitude = 37.7749; // Default San Francisco
 let currentLongitude = -122.4194;
-let currentMapURL = "";
-let mapImageBuffer = null;
 
 script.createEvent("OnStartEvent").bind(function() {
     print("🗺️ [MAP DISPLAY] Starting...");
@@ -78,11 +72,6 @@ function updateMapTexture() {
             "\n" +
             "🌍 " + convertToDMS(currentLatitude, currentLongitude);
     }
-    
-    // Load actual map image if material is connected
-    if (script.mapMaterial) {
-        loadMapImage(); // Call async function
-    }
 }
 
 function convertToDMS(lat, lon) {
@@ -97,79 +86,6 @@ function convertToDMS(lat, lon) {
     const lonMin = Math.abs(Math.floor((lon - Math.floor(lon)) * 60));
     
     return `${latDeg}°${latMin}'${latDir}, ${lonDeg}°${lonMin}'${lonDir}`;
-}
-
-async function loadMapImage() {
-    debugLog("🌐 [MAP] Loading map image...");
-    
-    if (!script.mapMaterial) {
-        debugLog("⚠️ [MAP] No mapMaterial connected - showing coordinates only");
-        return;
-    }
-    
-    let mapURL = "";
-    
-    // Generate map URL (Mapbox or OpenStreetMap)
-    if (script.mapboxToken && script.mapboxToken.length > 0) {
-        // Use Mapbox Static API (high quality, requires token)
-        const style = "mapbox/streets-v12"; // Options: streets-v12, dark-v10, satellite-v9
-        const size = "512x512";
-        const zoom = script.mapZoom || 15;
-        mapURL = `https://api.mapbox.com/styles/v1/${style}/static/${currentLongitude},${currentLatitude},${zoom}/${size}?access_token=${script.mapboxToken}`;
-        debugLog("🗺️ [MAP] Using Mapbox");
-    } else {
-        // Use OpenStreetMap tile server (free, no token)
-        debugLog("🗺️ [MAP] Using OpenStreetMap (free)");
-        // For OSM, we need to calculate the tile coordinates
-        const zoom = script.mapZoom || 15;
-        const n = Math.pow(2, zoom);
-        const lat_rad = currentLatitude * Math.PI / 180;
-        const tileX = Math.floor((currentLongitude + 180) / 360 * n);
-        const tileY = Math.floor((1 - Math.log(Math.tan(lat_rad) + 1 / Math.cos(lat_rad)) / Math.PI) / 2 * n);
-        
-        // Use a static map service that doesn't require auth
-        mapURL = `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/${currentLongitude},${currentLatitude},${zoom}/512x512?access_token=sk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emcwcXd5cGM3b2ZjZjYifQ.4YxzJNzTi8jhpRs5hYhPQA`;
-        debugLog("💡 [MAP] Note: Using demo token. Get your own at mapbox.com");
-    }
-    
-    currentMapURL = mapURL;
-    debugLog("📍 [MAP] Current location: " + currentLatitude.toFixed(6) + ", " + currentLongitude.toFixed(6));
-    debugLog("🌐 [MAP] Loading: " + mapURL.substring(0, 100));
-    
-    try {
-        // Fetch the map image
-        const response = await Internet.fetch(new Request(mapURL));
-        
-        if (response.status === 200) {
-            debugLog("✅ [MAP] Map image received");
-            
-            // Store map URL for use
-            debugLog("💡 [MAP] Map image URL: " + mapURL);
-            debugLog("📱 [MAP] To see the map:");
-            debugLog("   1. Copy this URL");
-            debugLog("   2. Open in browser to verify it loads");
-            debugLog("   3. In Lens Studio, you may need to use a WebTexture component");
-            
-            // Try to load texture if Lens Studio supports it
-            try {
-                if (script.mapMaterial) {
-                    debugLog("🎨 [MAP] Attempting to load texture...");
-                    
-                    // Note: Texture.fromUrl() requires Lens Studio's specific API
-                    // This may not be available in all versions
-                    debugLog("⚠️ [MAP] Direct texture loading may not be supported");
-                    debugLog("💡 [MAP] Consider using WebTexture component instead");
-                }
-            } catch (textureError) {
-                debugLog("❌ [MAP] Texture loading error: " + textureError);
-            }
-            
-        } else {
-            debugLog("❌ [MAP] Failed to load map: " + response.status);
-        }
-    } catch (e) {
-        debugLog("❌ [MAP] Error loading map: " + e);
-    }
 }
 
 function debugLog(msg) {
@@ -190,10 +106,6 @@ script.api.getCurrentLocation = function() {
         latitude: currentLatitude,
         longitude: currentLongitude
     };
-};
-
-script.api.getMapURL = function() {
-    return currentMapURL;
 };
 
 print("✅ [MAP DISPLAY] Ready!");

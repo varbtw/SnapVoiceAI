@@ -16,7 +16,7 @@ const Internet = require("LensStudio:InternetModule");
 let lastSuggestionTime = 0.0;
 let isProcessing = false;
 let pendingTranscript = "";
-let lastUserTranscript = ""; // Store the user's actual question
+let lastUserTranscript = ""; // Store the user's actual question for Tavily
 let conversationHistory = []; // Store conversation history [{role: "user", content: "..."}, {role: "assistant", content: "..."}]
 let lastSceneAnalysis = "";
 
@@ -58,7 +58,7 @@ function handleListeningUpdate(eventData) {
         return;
     }
     
-    // Store the user's transcript
+    // Store the user's transcript for Tavily to use
     lastUserTranscript = pendingTranscript;
 
     const now = getTime();
@@ -437,7 +437,7 @@ script.api.onTranscriptionUpdate = function(eventData) {
     handleListeningUpdate(eventData);
 };
 
-// Expose the user's transcript
+// Expose the user's transcript for Tavily to search
 script.api.getUserTranscript = function() {
     return lastUserTranscript;
 };
