@@ -1,0 +1,43 @@
+- !<AssetImportMetadata/a1b2c3d4-35e9-4cb4-8dc0-0b04781006f0>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 3e4f5g6h-7i8j-9k0l-1m2n-3o4p5q6r7s8t
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 3e4f5g6h-7i8j-9k0l-1m2n-3o4p5q6r7s8t
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 8u9v0w1x-2y3z-4a5b-6c7d-8e9f0g1h2i3j
+- !<ScriptAssetData/8u9v0w1x-2y3z-4a5b-6c7d-8e9f0g1h2i3j>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: "Location tracking for Snap Spectacles GPS coordinates"
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: k4l5m6n7-o8p9-q0r1-s2t3-u4v5w6x7y8z
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enableDebug: false
+    locationText: false
+    coordinatesText: false
+    updateInterval: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - locationText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      coordinatesText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      enableDebug: true
+      updateInterval: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}

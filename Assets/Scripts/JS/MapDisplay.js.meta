@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/b2c3d4e5-46fa-5dc5-9ed1-1c15892017f1>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 4f5g6h7i-8j9k-0l1m-2n3o-4p5q6r7s8t9u
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 4f5g6h7i-8j9k-0l1m-2n3o-4p5q6r7s8t9u
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 9v0w1x2y-3z4a-5b6c-7d8e-9f0g1h2i3j4k
+- !<ScriptAssetData/9v0w1x2y-3z4a-5b6c-7d8e-9f0g1h2i3j4k>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: "Map display showing GPS location for Snap Spectacles AR glasses"
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: l5m6n7o8-p9q0-r1s2-t3u4-v5w6x7y8z9a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enableDebug: false
+    locationTrackerScript: false
+    mapText: false
+    mapScale: false
+    mapVisual: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - locationTrackerScript: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      mapText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      mapVisual: !<reference.SpriteVisual> 00000000-0000-0000-0000-000000000000
+      enableDebug: true
+      mapScale: !<float> 0.001000
+  ScriptTypes:
+    -
+      {}
