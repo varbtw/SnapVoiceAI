@@ -2,9 +2,6 @@
 
 [![Experimental API](https://img.shields.io/badge/Spectacles-Experimental_API-FFFC00?logo=snapchat&labelColor=000000)](https://spectacles.snap.dev)
 
-🔗 **Built on Snap's [AI Assistant Sample](https://github.com/Snapchat/Spectacles-Sample/tree/main/AI%20Assistant)**  
-*(Original features: Text-to-Speech, Camera Access, AI Vision, Fetch API)*
-
 ---
 https://www.youtube.com/watch?v=_a314_yfQq8
 
